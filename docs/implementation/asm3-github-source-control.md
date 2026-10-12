@@ -26,7 +26,13 @@ Merged missing ignore rules for venvs, Python/tool caches, coverage, generated T
 
 ## H–K. Commit, push and clone evidence
 
-The audited comprehensive initial source commit is prepared using the real current timestamp and student-approved local author identity. Commit SHA evidence will be appended after successful execution. No first push is approved or attempted. Remote commit/file verification and the mandatory post-push clean GitHub clone are NOT EXECUTED. Visibility must be PRIVATE and audited commits concrete before requesting first-push approval. No remote PASS is claimed.
+The audited comprehensive initial source commit succeeded (exit 0), using the real current timestamp and student-approved local author identity:
+
+| Commit | Message | Evidence |
+|---|---|---|
+| `1759441d3693776a19b3d86f58489b4a93f8bfe9` | `chore: import current Student Money Runway ASM3 source` | 250 audited source/resource files. No earlier history fabricated. |
+
+This record is updated separately after executing that real commit. No first push is approved or attempted. Remote commit/file verification and the mandatory post-push clean GitHub clone are NOT EXECUTED. Visibility must be PRIVATE and audited commits concrete before requesting first-push approval. No remote PASS is claimed.
 
 ## L. Local quality evidence
 
