@@ -1,0 +1,14 @@
+{
+  "name": "student-money-runway-demo-recorder",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "verify": "node verify-product-flow.mjs",
+    "record:desktop": "node record-product-demo.mjs",
+    "record:mobile": "node record-mobile-demo.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

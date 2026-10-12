@@ -1,0 +1,251 @@
+Audited source candidates for the initial snapshot (250 paths expected before subsequent fixes):
+.env.example
+.gitattributes
+.gitignore
+.prettierrc
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/Bottom Navigation Bar-1.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/Bottom Navigation Bar.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/DS-01 — Foundations.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/DS-02 — Responsive Navigation.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/DS-03 — Forms & Core Controls.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/DS-04 — Financial Product Components.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/DS-05 — Management & Data Components.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/DS-06 — Feedback, States & Accessibility.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/DS-07 — Landing Website Components.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/DS-08 — Responsive Behavior & Figma Architecture.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/E1 — Protected Shortfall (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/E1 — Protected Shortfall.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/E2 — Manual Planning Horizon (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/E2 — Manual Planning Horizon.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/E3 — Stale Data (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/E3 — Stale Data.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-E1 — Mobile Protected Shortfall (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-E1 — Mobile Protected Shortfall.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-E2 — Mobile Manual Planning Horizon (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-E2 — Mobile Manual Planning Horizon.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-E3 — Mobile Stale Data (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-E3 — Mobile Stale Data.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P1 — Mobile Landing (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P1 — Mobile Landing.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P10 — Mobile Adjust Flexible Allowance (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P10 — Mobile Adjust Flexible Allowance.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P11 — Mobile Income Received/New Cycle (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P11 — Mobile Income Received/New Cycle.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P2 — Mobile Runway Setup (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P2 — Mobile Runway Setup.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P3 — Mobile Protect Essentials (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P3 — Mobile Protect Essentials.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P4 — Mobile Runway Dashboard (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P4 — Mobile Runway Dashboard.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P4-B — Updated Mobile Dashboard (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P5 — Mobile Purchase Check (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P5 — Mobile Purchase Check.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P6 — Mobile Purchase Impact Preview (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P6 — Mobile Purchase Impact Preview.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P7 — Mobile Manage Current Cycle (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P7 — Mobile Manage Current Cycle.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P8 — Mobile Update Available Funds (Hi-Fi)-1.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P8 — Mobile Update Available Funds (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P8 — Mobile Update Available Funds.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P9 — Mobile Manage Essentials (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/M-P9 — Mobile Manage Essentials.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/MOB-1 — Landing.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/MOB-2 — Runway Setup.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/MOB-3 — Runway Dashboard.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/MOB-4 — Manage Current Cycle.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P1 — Home/Landing (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P1 — Home/Landing.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P10 — Adjust Flexible Allowance (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P10 — Adjust Flexible Allowance.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P11 — Income Received/New Cycle (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P11 — Income Received/New Cycle.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P2 — Runway Setup (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P2 — Runway Setup.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P3 — Protect Essentials (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P3 — Protect Essentials.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P4 — Runway Dashboard (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P4 — Runway Dashboard.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P4-B — Updated Dashboard (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P5 — Purchase Check (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P5 — Purchase Check.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P6 — Purchase Impact Preview (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P6 — Purchase Impact Preview.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P7 — Manage Current Cycle (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P7 — Manage Current Cycle.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P8 — Update Available Funds (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P8 — Update Available Funds.png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P9 — Manage Essentials (Hi-Fi).png
+BUS4012 AS01 — Student Money Runway — Mobile-First Responsive Web Application/P9 — Manage Essentials.png
+README.md
+api/index.py
+backend/__init__.py
+backend/app/__init__.py
+backend/app/config.py
+backend/app/errors.py
+backend/app/main.py
+backend/app/models.py
+backend/app/repository.py
+backend/app/security.py
+backend/app/services.py
+backend/dev.py
+backend/inspect_auth.py
+backend/register_test_users.py
+backend/setup_test_credentials.py
+backend/tests/__init__.py
+backend/tests/integration/README.md
+backend/tests/integration/__init__.py
+backend/tests/integration/conftest.py
+backend/tests/integration/test_live_supabase.py
+backend/tests/test_api.py
+backend/tests/test_security.py
+backend/tests/test_setup_test_credentials.py
+docs/assessment/00-asm2-requirements-traceability.md
+docs/assessment/01-development-tool-declaration.md
+docs/assessment/02-starting-prompt-evidence.md
+docs/assessment/03-key-follow-up-prompts.md
+docs/assessment/04-custom-component-evidence.md
+docs/assessment/05-21st-dev-evidence.md
+docs/assessment/06-props-callback-data-flow.md
+docs/assessment/07-ethics-and-data-handling-evidence.md
+docs/assessment/08-prompt-document-source.md
+docs/assessment/09-screenshot-capture-plan.md
+docs/assessment/10-video-recording-source.md
+docs/assessment/11-final-submission-readiness.md
+docs/assessment/12-final-hd-evidence-reconciliation.md
+docs/assessment/ASM3_FE_UIUX_FUNCTIONAL_FREEZE_AUDIT.md
+docs/assessment/ASM3_P05B_CLOUD_ONBOARDING_VERIFICATION.md
+docs/assessment/ASM3_P05_AUTONOMOUS_ENVIRONMENT_SETUP.md
+docs/assessment/ASM3_P0_SCOPE_FREEZE_ARCHITECTURE_BLUEPRINT.md
+docs/assessment/ASM3_PREDEVELOPMENT_SOURCE_AND_FUNCTIONAL_AUDIT.md
+docs/assessment/README.md
+docs/assessment/p11-evidence-matrix.md
+docs/assessment/p11-prompt-document-outline.md
+docs/assessment/p11-rubric-traceability.md
+docs/assessment/p11-video-recording-plan.md
+docs/evidence/runtime/final-runtime-test-report.md
+docs/evidence/screenshots/desktop/D01-login.png
+docs/evidence/screenshots/desktop/D02-runway-setup.png
+docs/evidence/screenshots/desktop/D03-protect-essentials.png
+docs/evidence/screenshots/desktop/D04-runway-215.png
+docs/evidence/screenshots/desktop/D05-shortfall-84.png
+docs/evidence/screenshots/desktop/D06-purchase-check.png
+docs/evidence/screenshots/desktop/D07-preview-remaining-55.png
+docs/evidence/screenshots/desktop/D08-preview-exact-0.png
+docs/evidence/screenshots/desktop/D09-preview-excess-85.png
+docs/evidence/screenshots/desktop/D10-confirmed-runway-55.png
+docs/evidence/screenshots/manifest.md
+docs/evidence/screenshots/mobile/M01-login-390.png
+docs/evidence/screenshots/mobile/M02-setup-390.png
+docs/evidence/screenshots/mobile/M03-essentials-390.png
+docs/evidence/screenshots/mobile/M04-runway-215-390.png
+docs/evidence/screenshots/mobile/M05-shortfall-84-390.png
+docs/evidence/screenshots/mobile/M06-purchase-check-390.png
+docs/evidence/screenshots/mobile/M07-preview-remaining-55-390.png
+docs/evidence/screenshots/mobile/M08-preview-exact-0-390.png
+docs/evidence/screenshots/mobile/M09-preview-excess-85-390.png
+docs/evidence/screenshots/mobile/M10-confirmed-runway-55-390.png
+docs/evidence/screenshots/validation/V01-login-required.png
+docs/evidence/screenshots/validation/V02-login-invalid-email.png
+docs/evidence/screenshots/validation/V03-setup-negative-money.png
+docs/evidence/screenshots/validation/V04-purchase-invalid.png
+docs/evidence/video/automated-demo-recording-report.md
+docs/evidence/video/manual-ide-segment-runbook.md
+docs/evidence/video/product-demo-cues.md
+docs/evidence/video/product-demo-narration.md
+docs/figma-reference/README.md
+docs/figma-reference/components/bottom-navigation.png
+docs/figma-reference/design-system/ds-01-foundations.png
+docs/figma-reference/design-system/ds-02-responsive-navigation.png
+docs/figma-reference/design-system/ds-03-forms-core-controls.png
+docs/figma-reference/design-system/ds-04-financial-components.png
+docs/figma-reference/design-system/ds-06-feedback-accessibility.png
+docs/figma-reference/design-system/ds-07-landing-components.png
+docs/figma-reference/design-system/ds-08-responsive-architecture.png
+docs/figma-reference/prompts/p01-design-system.md
+docs/figma-reference/screens/desktop/p01-home-landing-hifi.png
+docs/figma-reference/screens/desktop/p02-runway-setup-hifi.png
+docs/figma-reference/screens/desktop/p03-protect-essentials-hifi.png
+docs/figma-reference/screens/desktop/p04-runway-dashboard-hifi.png
+docs/figma-reference/screens/desktop/p05-purchase-check-hifi.png
+docs/figma-reference/screens/desktop/p06-purchase-impact-preview-hifi.png
+docs/figma-reference/screens/mobile/mp01-mobile-landing-hifi.png
+docs/figma-reference/screens/mobile/mp02-mobile-runway-setup-hifi.png
+docs/figma-reference/screens/mobile/mp03-mobile-protect-essentials-hifi.png
+docs/figma-reference/screens/mobile/mp04-mobile-runway-dashboard-hifi.png
+docs/figma-reference/screens/mobile/mp05-mobile-purchase-check-hifi.png
+docs/figma-reference/screens/mobile/mp06-mobile-purchase-impact-preview-hifi.png
+docs/figma-reference/states/failure-protected-shortfall-desktop.png
+docs/figma-reference/states/failure-protected-shortfall-mobile.png
+docs/figma-reference/states/success-updated-dashboard-desktop.png
+docs/figma-reference/states/success-updated-dashboard-mobile.png
+docs/implementation/asm3-github-source-control.md
+docs/implementation/asm3-p1-database.md
+docs/implementation/asm3-p2-fastapi.md
+docs/implementation/asm3-p2b-live-integration.md
+docs/implementation/asm3-source-inventory.txt
+docs/implementation/p1-design-system-mapping.md
+docs/implementation/p10-validation-accessibility-ethics-source-hygiene.md
+docs/implementation/p11-final-qa-assessment-evidence.md
+docs/implementation/p2-component-matrix.md
+docs/implementation/p3-21st-dev-integration.md
+docs/implementation/p4-route-map.md
+docs/implementation/p5-state-and-calculation-model.md
+docs/implementation/p6-login-and-runway-setup.md
+docs/implementation/p7-protect-essentials-runway-result.md
+docs/implementation/p8-purchase-check-result-confirmation.md
+docs/implementation/p9-responsive-figma-qa.md
+docs/prompts/00-master-project-context.md
+docs/prompts/p03-21st-dev-integration.md
+docs/prompts/p03-21st-dev-original-prompt.md
+docs/prompts/p06-login-runway-setup.md
+docs/prompts/p07-protect-essentials-runway-result.md
+docs/prompts/p08-purchase-check-result-confirmation.md
+docs/prompts/p09-responsive-figma-matching.md
+docs/prompts/p10-validation-accessibility-ethics-source-hygiene.md
+docs/prompts/p11-final-qa-assessment-evidence.md
+eslint.config.js
+index.html
+package-lock.json
+package.json
+postcss.config.js
+public/favicon.svg
+public/icons.svg
+requirements-dev.txt
+requirements-lock.txt
+requirements.txt
+src/App.tsx
+src/components/layout/AppShell.tsx
+src/components/ui/FormSection.tsx
+src/components/ui/MoneyInput.tsx
+src/components/ui/StatusActionButton.tsx
+src/components/ui/SummaryRow.tsx
+src/index.css
+src/main.tsx
+src/pages/LoginPage.tsx
+src/pages/ProtectEssentialsPage.tsx
+src/pages/PurchaseCheckPage.tsx
+src/pages/ResultPage.tsx
+src/pages/RunwayResultPage.tsx
+src/pages/RunwaySetupPage.tsx
+src/types/runway.ts
+src/utils/moneyValidation.ts
+src/utils/runwayCalculations.ts
+supabase/.gitignore
+supabase/config.toml
+supabase/migrations/20261012020847_initial_schema.sql
+supabase/tests/001_schema_assertions.sql
+supabase/tests/README.md
+tailwind.config.js
+tools/check-repository-secrets.py
+tools/demo-recorder/.gitignore
+tools/demo-recorder/README.md
+tools/demo-recorder/package-lock.json
+tools/demo-recorder/package.json
+tools/demo-recorder/record-mobile-demo.mjs
+tools/demo-recorder/record-product-demo.mjs
+tools/demo-recorder/recorder-utils.mjs
+tools/demo-recorder/verify-product-flow.mjs
+tsconfig.app.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
