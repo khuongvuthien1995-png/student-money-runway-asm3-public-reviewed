@@ -4,7 +4,7 @@ A student budgeting application for planning a short financial horizon, protecti
 
 ## Current status and architecture
 
-The six screens now use real Supabase Auth and the typed FastAPI services. Authenticated startup loads the saved plan, setup edits a separate draft, essentials saves through PUT, and purchase confirmation uses POST with a stable retry key. Server responses supply the saved balances; previews never write. C1–C4 local implementation, backend hardening and offline browser/loopback HTTP checks are complete. P2B live integration is pending test-account email confirmation; real cloud purchase acceptance and Vercel deployment remain pending. Local mocked/cryptographic tests do not prove live persistence.
+The six screens now use real Supabase Auth and the typed FastAPI services. Authenticated startup loads the saved plan, setup edits a separate draft, essentials saves through PUT, and purchase confirmation uses POST with a stable retry key. Server responses supply the saved balances; previews never write. C1–C5 local checks and C6 private GitHub publication/clean-clone verification are complete. The public [Vercel Preview](https://student-money-runway-asm3-preview.vercel.app/login) has verified HTTPS routing and anonymous browser checks. Live Auth remains blocked by email delivery/confirmation; authenticated cloud persistence and purchases remain unverified. Production has not been approved. Local mocked/cryptographic tests do not prove live persistence.
 
 Implemented source architecture:
 
@@ -57,7 +57,7 @@ py -3.12 -m venv .venv
 
 `package-lock.json` pins the frontend install. `requirements.txt` contains self-contained production pins compatible with Vercel's Python builder; their versions match `requirements-lock.txt`, which also constrains local test dependencies. `.python-version` selects Python 3.12; `package.json` selects Node 24. Platform-specific dependencies can differ on other operating systems and must be verified in C6's Linux build. Do not copy another machine's virtual environment or node_modules.
 
-The clone commands describe the intended source repository. C1–C5 work is currently uncommitted locally; an older remote branch is not proof that it contains this application. C6 must publish and verify the audited latest source before another machine relies on that clone.
+The private GitHub repository contains the audited C1–C6 source. C6 verified the remote commit and a credential-free clean clone; see [publication and clean-clone evidence](docs/implementation/asm3-c6-execution.md). Repository access must be granted to each developer or marker separately; a private URL alone does not grant access.
 
 ## Safe environment configuration
 

@@ -1,0 +1,56 @@
+{
+  "category": "C7 REAL HTTPS; NO FINANCIAL WRITES",
+  "routes": [
+    {
+      "path": "/login",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/setup",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/runway",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/api/plans/current",
+      "status": 401,
+      "redirect": false
+    },
+    {
+      "path": "/api/plans/current/purchases",
+      "status": 401,
+      "redirect": false
+    }
+  ],
+  "auth": [
+    {
+      "identity": "A",
+      "status": 400,
+      "code": "email_not_confirmed",
+      "sessionAccepted": false
+    },
+    {
+      "identity": "B",
+      "status": 400,
+      "code": "email_not_confirmed",
+      "sessionAccepted": false
+    }
+  ],
+  "github": {
+    "name": "khuongvuthien1995-png/student-money-runway-asm3",
+    "private": true,
+    "defaultBranch": "main"
+  },
+  "remoteSha": "0a6b4a02752c181bd8f1e4fab0550385dc8d7bfa",
+  "localSha": "0a6b4a02752c181bd8f1e4fab0550385dc8d7bfa"
+}

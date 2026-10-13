@@ -1,0 +1,22 @@
+{
+  "projectRef": "mnjmugwkjtihqswssiwa",
+  "projectStatus": "ACTIVE_HEALTHY",
+  "smtpHostConfigured": false,
+  "smtpPort": null,
+  "smtpUserConfigured": false,
+  "smtpPasswordConfigured": false,
+  "smtpSenderConfigured": false,
+  "emailSendHookEnabled": false,
+  "emailPerHour": 2,
+  "emailMinimumInterval": 60,
+  "signupDisabled": false,
+  "autoConfirm": false,
+  "siteUrl": "https://student-money-runway-asm3-preview.vercel.app",
+  "redirectAllowlist": "https://student-money-runway-asm3-preview.vercel.app/login",
+  "organizationMembersStatus": 200,
+  "dedicatedAccountsAreOrganizationMembers": {
+    "A": false,
+    "B": false
+  },
+  "organizationEmailsInspected": 1
+}

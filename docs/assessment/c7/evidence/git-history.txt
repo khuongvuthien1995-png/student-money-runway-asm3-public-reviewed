@@ -1,0 +1,9 @@
+0a6b4a02752c181bd8f1e4fab0550385dc8d7bfa 2026-10-14T01:56:57+11:00 docs: verify approved Supabase Preview Auth URLs
+e707a5b6fefda5de6de2dfefc5d1a30ea55de5fa 2026-10-14T01:50:55+11:00 docs: record real Preview Auth rate-limit and login results
+08c2f38d97b3c580fcf73f3b6e2808d609c79ae9 2026-10-14T01:48:19+11:00 fix: report live Auth email delivery errors accurately
+ce95d0f6a21e5a952c152b9bb92faa07ca1e96ba 2026-10-14T01:16:46+11:00 docs: record verified Preview and refreshed clean clone
+8f0e9f566132bd46576cd8db1dc44f801fd94fbd 2026-10-14T01:15:48+11:00 fix: pin Vercel Python dependencies and verify Preview HTTPS
+9293da928425ffbfc0ac11127ce26fbc9989cdbe 2026-10-14T00:54:33+11:00 docs: record verified C6 privacy and authentication checkpoints
+9d4bb51981c710a310642673ea9070360532d511 2026-10-14T00:49:35+11:00 feat: integrate and verify ASM3 full-stack deployment source
+c0422f1fbc20e9da6fc0d3d1edec83d5482b0626 2026-10-13T02:35:40+11:00 docs: record initial source checkpoint
+1759441d3693776a19b3d86f58489b4a93f8bfe9 2026-10-13T02:35:02+11:00 chore: import current Student Money Runway ASM3 source

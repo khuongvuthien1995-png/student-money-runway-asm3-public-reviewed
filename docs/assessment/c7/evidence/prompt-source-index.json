@@ -1,0 +1,80 @@
+[
+  {
+    "label": "00-master-project-context",
+    "source": "docs/prompts/00-master-project-context.md",
+    "sha256": "aa706a9bebe033273866b46090f173c2244ec9b5f35fac09c54240fef8d3a5ce",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "p03-21st-dev-integration",
+    "source": "docs/prompts/p03-21st-dev-integration.md",
+    "sha256": "ac9bbc9f277cf7f4035a572c21b2adb50f71b625b231b53355400850d5465e1b",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "p03-21st-dev-original-prompt",
+    "source": "docs/prompts/p03-21st-dev-original-prompt.md",
+    "sha256": "b46523d28bc2f446c91b63f51426bfd69e3d1e94ab800bd38e05efc98cd17cbc",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "p06-login-runway-setup",
+    "source": "docs/prompts/p06-login-runway-setup.md",
+    "sha256": "acf23413d858b5dd1b482e808a26b5cdd7426ccc67ab679ccbe60edcde860050",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "p07-protect-essentials-runway-result",
+    "source": "docs/prompts/p07-protect-essentials-runway-result.md",
+    "sha256": "d1e294cccfe0d00457ee7d44d4cad69555f055159c8c9e59c5ec454b5f0e7e44",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "p08-purchase-check-result-confirmation",
+    "source": "docs/prompts/p08-purchase-check-result-confirmation.md",
+    "sha256": "124e923fdacc078ff42f54cfed1161e4c69978abca9f2ceac7342d2bdc2f9a1a",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "p09-responsive-figma-matching",
+    "source": "docs/prompts/p09-responsive-figma-matching.md",
+    "sha256": "06dff3f7cc2b52515a58dc430d62e5aaa7608304146daa0411d39808a98e70c3",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "p10-validation-accessibility-ethics-source-hygiene",
+    "source": "docs/prompts/p10-validation-accessibility-ethics-source-hygiene.md",
+    "sha256": "057d77d9f3b8bec8fb38480b88b604b37ecb3b12003e44c6f9fb4dd9b4d2cc7b",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "p11-final-qa-assessment-evidence",
+    "source": "docs/prompts/p11-final-qa-assessment-evidence.md",
+    "sha256": "98a2aa33e55f045fa3c35aa525aba0005841ef66d8ba9515c8bae498d5429e1a",
+    "provenance": "Preserved repository instruction text; not an independently exported AI execution transcript"
+  },
+  {
+    "label": "C4 request",
+    "source": "User-supplied Codex attachment: acded5a6-fe96-4dbe-8c77-7ec1148e3ec7/Pasted text.txt",
+    "sha256": "09405202dd2f5fad44f3bad2f8ab6b44b0c26efbcb2a906b0a0569205ee55052",
+    "provenance": "Original request supplied by user; exact text copied during C7"
+  },
+  {
+    "label": "C5 request",
+    "source": "User-supplied Codex attachment: f56de76f-bf19-4cb9-89a5-c167938daa61/Pasted text.txt",
+    "sha256": "e780309466e71977ab2d6b032fa4b9fe324d6dcecff3e7915175d7b6d763b03d",
+    "provenance": "Original request supplied by user; exact text copied during C7"
+  },
+  {
+    "label": "C6 Auth hotfix request",
+    "source": "User-supplied Codex attachment: 85196b0c-cea5-4443-9a9b-67f911c9b47d/Pasted text.txt",
+    "sha256": "20997df6b926ba318fd45818139c473c854a8b4680a662ac7874f799903b8825",
+    "provenance": "Original request supplied by user; exact text copied during C7"
+  },
+  {
+    "label": "ASM3 Master Plan",
+    "source": "docs/implementation/Student_Money_Runway_ASM3_CODE_FIRST_MASTER_PLAN.md",
+    "sha256": "4130689a14b44f9faccd9d254326a0ee29f5d5a82621f90a803c7fc84020acd3",
+    "provenance": "Supplied implementation plan; not a transcript"
+  }
+]

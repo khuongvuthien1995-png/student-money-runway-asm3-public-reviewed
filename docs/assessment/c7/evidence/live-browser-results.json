@@ -1,0 +1,54 @@
+{
+  "origin": "https://student-money-runway-asm3-preview.vercel.app",
+  "mocks": false,
+  "credentialsEntered": false,
+  "video": "raw-live-preview-anonymous.webm",
+  "narration": false,
+  "finalDemo": false,
+  "results": [
+    {
+      "width": 390,
+      "login": true,
+      "signupForm": true,
+      "anonymousRouteGuard": true,
+      "refresh": true,
+      "noOverflow": true,
+      "pageErrors": 0,
+      "financialWrites": 0,
+      "localhostRequests": 0
+    },
+    {
+      "width": 768,
+      "login": true,
+      "signupForm": true,
+      "anonymousRouteGuard": true,
+      "refresh": true,
+      "noOverflow": true,
+      "pageErrors": 0,
+      "financialWrites": 0,
+      "localhostRequests": 0
+    },
+    {
+      "width": 1024,
+      "login": true,
+      "signupForm": true,
+      "anonymousRouteGuard": true,
+      "refresh": true,
+      "noOverflow": true,
+      "pageErrors": 0,
+      "financialWrites": 0,
+      "localhostRequests": 0
+    },
+    {
+      "width": 1280,
+      "login": true,
+      "signupForm": true,
+      "anonymousRouteGuard": true,
+      "refresh": true,
+      "noOverflow": true,
+      "pageErrors": 0,
+      "financialWrites": 0,
+      "localhostRequests": 0
+    }
+  ]
+}
