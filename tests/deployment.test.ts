@@ -74,7 +74,13 @@ describe('deployment configuration against the official schema and Vercel route 
   it('pins supported runtimes and production Python constraints', () => {
     expect(read('.python-version').trim()).toBe('3.12')
     expect(JSON.parse(read('package.json')).engines.node).toBe('24.x')
-    expect(read('requirements.txt')).toContain('-c requirements-lock.txt')
+    const production = read('requirements.txt').split(/\r?\n/).filter(line => line && !line.startsWith('#'))
+    const constraints = read('requirements-lock.txt').split(/\r?\n/)
+    expect(production.length).toBeGreaterThan(5)
+    for (const requirement of production) {
+      expect(requirement).toMatch(/^[A-Za-z0-9_-]+==[0-9][A-Za-z0-9.+-]*$/)
+      expect(constraints).toContain(requirement)
+    }
     expect(read('requirements.txt')).not.toMatch(/pytest|Windows|C:\\/)
   })
   it('excludes private files and QA evidence from deployment while keeping source entrypoints', () => {

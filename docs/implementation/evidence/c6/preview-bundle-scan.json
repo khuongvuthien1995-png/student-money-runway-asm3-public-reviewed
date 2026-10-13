@@ -1,0 +1,7 @@
+{
+  "origin": "https://student-money-runway-asm3-preview.vercel.app",
+  "assetsChecked": 2,
+  "unsafePaths": [],
+  "secretPrefixValidationLiterals": 1,
+  "note": "Bare key-type validation prefix is code, not a credential."
+}

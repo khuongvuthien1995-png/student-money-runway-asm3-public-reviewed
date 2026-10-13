@@ -1,0 +1,38 @@
+{
+  "origin": "https://student-money-runway-asm3-preview.vercel.app",
+  "category": "REAL HTTPS ANONYMOUS UI; NO AUTH OR FINANCIAL SUBMISSIONS",
+  "results": [
+    {
+      "width": 390,
+      "anonymousRoutes": 6,
+      "signupToggle": true,
+      "horizontalOverflow": false,
+      "pageErrors": 0,
+      "financialWrites": 0
+    },
+    {
+      "width": 768,
+      "anonymousRoutes": 6,
+      "signupToggle": true,
+      "horizontalOverflow": false,
+      "pageErrors": 0,
+      "financialWrites": 0
+    },
+    {
+      "width": 1024,
+      "anonymousRoutes": 6,
+      "signupToggle": true,
+      "horizontalOverflow": false,
+      "pageErrors": 0,
+      "financialWrites": 0
+    },
+    {
+      "width": 1280,
+      "anonymousRoutes": 6,
+      "signupToggle": true,
+      "horizontalOverflow": false,
+      "pageErrors": 0,
+      "financialWrites": 0
+    }
+  ]
+}

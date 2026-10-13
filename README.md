@@ -55,7 +55,7 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt -c requirements-lock.txt
 ```
 
-`package-lock.json` pins the frontend install. `requirements.txt` automatically loads `requirements-lock.txt` constraints for both production and local installs. `.python-version` selects Python 3.12; `package.json` selects Node 24. Platform-specific dependencies can differ on other operating systems and must be verified in C6's Linux build. Do not copy another machine's virtual environment or node_modules.
+`package-lock.json` pins the frontend install. `requirements.txt` contains self-contained production pins compatible with Vercel's Python builder; their versions match `requirements-lock.txt`, which also constrains local test dependencies. `.python-version` selects Python 3.12; `package.json` selects Node 24. Platform-specific dependencies can differ on other operating systems and must be verified in C6's Linux build. Do not copy another machine's virtual environment or node_modules.
 
 The clone commands describe the intended source repository. C1–C5 work is currently uncommitted locally; an older remote branch is not proof that it contains this application. C6 must publish and verify the audited latest source before another machine relies on that clone.
 

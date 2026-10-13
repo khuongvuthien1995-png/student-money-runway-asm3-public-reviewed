@@ -1,0 +1,62 @@
+{
+  "origin": "https://student-money-runway-asm3-preview.vercel.app",
+  "category": "REAL HTTPS; NO VALID AUTH OR FINANCIAL WRITES",
+  "results": [
+    {
+      "check": "health",
+      "passed": true
+    },
+    {
+      "check": "API cache disabled",
+      "passed": true
+    },
+    {
+      "check": "SPA /login",
+      "passed": true
+    },
+    {
+      "check": "SPA /setup",
+      "passed": true
+    },
+    {
+      "check": "SPA /essentials",
+      "passed": true
+    },
+    {
+      "check": "SPA /runway",
+      "passed": true
+    },
+    {
+      "check": "SPA /purchase",
+      "passed": true
+    },
+    {
+      "check": "SPA /result",
+      "passed": true
+    },
+    {
+      "check": "GET bearer rejection",
+      "passed": true
+    },
+    {
+      "check": "PUT bearer rejection",
+      "passed": true
+    },
+    {
+      "check": "GET bearer rejection",
+      "passed": true
+    },
+    {
+      "check": "POST bearer rejection",
+      "passed": true
+    },
+    {
+      "check": "Exact Preview CORS",
+      "passed": true
+    },
+    {
+      "check": "Unknown API is JSON 404",
+      "passed": true
+    }
+  ]
+}
