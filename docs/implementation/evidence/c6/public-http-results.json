@@ -1,0 +1,70 @@
+{
+  "origin": "https://student-money-runway-asm3-preview.vercel.app",
+  "vercelCredentials": false,
+  "checks": [
+    {
+      "path": "/login",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/setup",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/essentials",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/runway",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/purchase",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/result",
+      "status": 200,
+      "redirect": false
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "json": true
+    },
+    {
+      "path": "/api/plans/current",
+      "method": "GET",
+      "status": 401
+    },
+    {
+      "path": "/api/plans/current",
+      "method": "PUT",
+      "status": 401
+    },
+    {
+      "path": "/api/plans/current/purchases",
+      "method": "GET",
+      "status": 401
+    },
+    {
+      "path": "/api/plans/current/purchases",
+      "method": "POST",
+      "status": 401
+    },
+    {
+      "path": "/assets/index-CXspYy2J.js",
+      "status": 200
+    },
+    {
+      "path": "/assets/index-OnpO4RXq.css",
+      "status": 200
+    }
+  ],
+  "passed": 13
+}

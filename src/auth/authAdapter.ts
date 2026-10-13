@@ -11,6 +11,9 @@ export class AuthFailure extends Error {
       weak_password: 'Choose a stronger password.',
       signup_disabled: 'New account registration is unavailable.',
       over_request_rate_limit: 'Too many attempts. Please wait before retrying.',
+      over_email_send_rate_limit: 'Verification email sending is rate-limited. Please wait before retrying. Contact the project owner if this continues.',
+      email_address_invalid: 'The authentication provider rejected this email address. Check the address or contact the project owner for help.',
+      email_address_not_authorized: 'Verification email delivery is unavailable for this address. Contact the project owner for help.',
       AUTH_NOT_READY: 'Authentication is not ready.',
       NO_SESSION: 'Sign-in did not return a session.',
     }
