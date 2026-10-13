@@ -1,4 +1,4 @@
-# ASM3 Prompt Document ? Thien Khuong Vu
+# ASM3 Prompt Document — Thien Khuong Vu
 
 ## Provenance and assessment boundary
 
@@ -10,18 +10,18 @@ The official ASM3 brief/rubric is unavailable; tool-use and submission complianc
 
 | Stage / prompt provenance | Purpose | Actual source/resources | Evidence and observed result |
 |---|---|---|---|
-| Preserved master context and P3/P6?P11 instructions | Student planning MVP, reusable React UI, controlled inputs, validation and responsive flow | Six `src/pages`, `App`, UI components, monetary helpers; Figma exports | ASM2 implementation/assessment records. Historic demo/login was local; not live Auth. Exact retained texts appear below. |
+| Preserved master context and P3/P6–P11 instructions | Student planning MVP, reusable React UI, controlled inputs, validation and responsive flow | Six `src/pages`, `App`, UI components, monetary helpers; Figma exports | ASM2 implementation/assessment records. Historic demo/login was local; not live Auth. Exact retained texts appear below. |
 | Preserved P3 original third-party instructions | Adapt Dynamic Status Button | `src/components/ui/StatusActionButton.tsx` | P3 attribution report; not a student-authored original prompt. |
-| ASM3 Master Plan, supplied instruction document | Extend latest ASM2 source without overwriting newer local work | `docs/implementation/Student_Money_Runway_ASM3_CODE_FIRST_MASTER_PLAN.md` | C0 contract map and all C1?C6 reports. Snapshot statements are historical, not current feature claims. |
-| P1/P2 backend/schema ? RECONSTRUCTED phase description | Versioned cents schema, RLS, JWT-gated plan/history/purchase API | `supabase/migrations/20261012020847_initial_schema.sql`, `backend/app`, `api/index.py` | P1/P2/P2B evidence: schema deployed; live Auth remained partial. Full original phase requests are not preserved as separate files here. |
-| C1 foundation ? RECONSTRUCTED phase description | Real SDK/provider, typed bearer API, exact AUD/cents | `src/lib`, `src/auth`, `src/services`, `src/utils/moneyCents.ts` | C1: 72 frontend, 24 backend passed; two live skipped. No full original C1 transcript is fabricated. |
-| C2 integration ? RECONSTRUCTED phase description | Wire six screens, serverPlan truth, immutable retry proposal | `src/App.tsx`, pages, state hooks, App integration tests | C2: 117 frontend passed; offline Chromium four widths. Mock results are not hosted persistence. |
-| C3 hardening ? RECONSTRUCTED phase description | Strict contracts, SDK edge cases, JWT/provider errors, ownership | Backend errors/main/models/repository/security/services and tests | C3: 150 backend passed, two skipped; missing C3 prompt was explicitly replaced by conversational authorization. No missing file is fabricated. |
+| ASM3 Master Plan, supplied instruction document | Extend latest ASM2 source without overwriting newer local work | `docs/implementation/Student_Money_Runway_ASM3_CODE_FIRST_MASTER_PLAN.md` | C0 contract map and all C1–C6 reports. Snapshot statements are historical, not current feature claims. |
+| P1/P2 backend/schema — RECONSTRUCTED phase description | Versioned cents schema, RLS, JWT-gated plan/history/purchase API | `supabase/migrations/20261012020847_initial_schema.sql`, `backend/app`, `api/index.py` | P1/P2/P2B evidence: schema deployed; live Auth remained partial. Full original phase requests are not preserved as separate files here. |
+| C1 foundation — RECONSTRUCTED phase description | Real SDK/provider, typed bearer API, exact AUD/cents | `src/lib`, `src/auth`, `src/services`, `src/utils/moneyCents.ts` | C1: 72 frontend, 24 backend passed; two live skipped. No full original C1 transcript is fabricated. |
+| C2 integration — RECONSTRUCTED phase description | Wire six screens, serverPlan truth, immutable retry proposal | `src/App.tsx`, pages, state hooks, App integration tests | C2: 117 frontend passed; offline Chromium four widths. Mock results are not hosted persistence. |
+| C3 hardening — RECONSTRUCTED phase description | Strict contracts, SDK edge cases, JWT/provider errors, ownership | Backend errors/main/models/repository/security/services and tests | C3: 150 backend passed, two skipped; missing C3 prompt was explicitly replaced by conversational authorization. No missing file is fabricated. |
 | Original C4 attachment | Local E2E QA and stabilization | Response correlation, JWT syntax rejection, responsive Result classes, browser/HTTP tools | C4: 124 offline browser cases, 19 local HTTP checks, 122 frontend and 157 backend passed; two live skipped. |
 | Original C5 attachment | Deployment-ready packaging/configuration, reproducibility | `vercel.json`, exclusions, manifests, cache controls, setup/routing verifiers | C5: 149 frontend and 171 backend passed; 16 fresh-copy steps. Original Windows checks did not prove hosted deployment. |
-| C6 GitHub/Vercel ? RECONSTRUCTED phase description | Private publication, clean clone, Preview and real HTTPS | Repository history, Python pins, Preview tooling/evidence | C6: private remote/clean clone and public Preview verified. First deployment unexpectedly labelled Production and failed; successful releases were Preview. |
+| C6 GitHub/Vercel — RECONSTRUCTED phase description | Private publication, clean clone, Preview and real HTTPS | Repository history, Python pins, Preview tooling/evidence | C6: private remote/clean clone and public Preview verified. First deployment unexpectedly labelled Production and failed; successful releases were Preview. |
 | Original C6 Auth-hotfix attachment | Diagnose generic Auth unavailable message | `src/auth/authAdapter.ts`, regression tests, real browser tool | Real signup 429 email-send limit; accurate UI message deployed, 152 frontend passed. Auth URL correction approved separately; confirmed login remains pending. |
-| C7 ? current execution summary, not a historical original prompt | Prepare demo/evidence/peer templates and honest audit | `docs/assessment/c7`, real anonymous capture tool | Current login attempts return 400 email_not_confirmed; no authenticated financial flow/video PASS. |
+| C7 — current execution summary, not a historical original prompt | Prepare demo/evidence/peer templates and honest audit | `docs/assessment/c7`, real anonymous capture tool | Current login attempts return 400 email_not_confirmed; no authenticated financial flow/video PASS. |
 
 ## Real Git history
 
@@ -31,7 +31,7 @@ The initial source snapshot and later grouped implementation commit preserve hon
 
 The following are exact selected user-message excerpts available in this session. They were transcribed during C7, not recovered from a complete exported historical log. They are excerpts, not the full prompts; the stage descriptions above remain reconstructed summaries. Their source/changed-file/results mappings are the corresponding C1/C2/C3/GitHub/C6 rows above.
 
-### C0/C1 implementation boundary ? user request excerpt
+### C0/C1 implementation boundary — user request excerpt
 
 > Implement actual Auth and API integration source.
 > Use test-only mocks for offline verification.
@@ -40,7 +40,7 @@ The following are exact selected user-message excerpts available in this session
 
 Purpose: genuine production integrations with offline verification and preserved schema. Actual files: Auth SDK/provider, bearer services and cents conversion. Result: C1 local code gate; no live cloud claim.
 
-### C2 state ownership ? user request excerpt
+### C2 state ownership — user request excerpt
 
 > serverPlan is authoritative.
 > planDraft is editable.
@@ -49,19 +49,19 @@ Purpose: genuine production integrations with offline verification and preserved
 
 Purpose: one persisted financial truth. Actual files: App, financial state hook and six pages. Result: C2/C4 rendered tests; real persistence remains pending.
 
-### C3 replacement authorization ? user reply excerpt
+### C3 replacement authorization — user reply excerpt
 
 > The C3 prompt file is not available on disk. Please proceed with C3 using the existing ASM3 Master Plan, previous C2 implementation report, and C3 instructions already provided in this conversation. Do not claim to have read the missing file.
 
 Purpose: proceed honestly despite a missing requested document. Actual files: backend hardening and focused tests. Result: C3 code PASS, local security/isolation only.
 
-### GitHub privacy authorization ? user reply excerpt
+### GitHub privacy authorization — user reply excerpt
 
 > I authorize you to change the visibility of ONLY the GitHub repository `khuongvuthien1995-png/student-money-runway-asm3` from Public to Private.
 
 Purpose: restrict exact target before publication. Actual action: authenticated visibility update; independent Private verification. Results/real commits: C6 execution report and Git history. This excerpt is not permission to modify other repositories.
 
-### C6 access authorization ? user request excerpt
+### C6 access authorization — user request excerpt
 
 > I explicitly authorize changing Deployment
 > Protection for the Student Money Runway Vercel

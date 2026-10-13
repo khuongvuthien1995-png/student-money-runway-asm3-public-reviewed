@@ -8,10 +8,10 @@ User-provided deadline: **15 October 2026, 23:59 AEST (UTC+10)**. This is **16 O
 
 | Deliverable | Required by official brief? | File/link | Status and evidence | Missing action |
 |---|---|---|---|---|
-| Public live application | UNKNOWN; requested | [Preview login](https://student-money-runway-asm3-preview.vercel.app/login) | PARTIAL: anonymous HTTPS/browser pass; real Auth blocked | Resolve email delivery/confirmation, then complete authenticated live acceptance |
+| Public live application | UNKNOWN; requested | [Preview login](https://student-money-runway-asm3-preview.vercel.app/login) | PARTIAL: anonymous HTTPS/browser pass; personal organization-member signup/confirmation/session corroborated; dedicated A/B still unconfirmed | Keep working settings; complete permitted independent sign-in/financial acceptance; broader nonmember signup is a separate provider decision |
 | GitHub source | UNKNOWN; requested | [Private repository](https://github.com/khuongvuthien1995-png/student-money-runway-asm3) | DONE: remote verified; C6 clean clone | Grant intended marker least-required access; verify their access; keep PRIVATE |
 | Reproducible setup | UNKNOWN; requested | [README](../../../README.md), [C6 report](../../implementation/asm3-c6-execution.md) | DONE for verified source; private credentials must be supplied independently | Marker/developer auth and approved private configuration |
-| Five-minute storyboard | UNKNOWN; requested | [Storyboard](ASM3_DEMO_STORYBOARD.md) | DONE plan; exact 00:00?05:00 timeline | Execute only after live gates pass |
+| Five-minute storyboard | UNKNOWN; requested | [Storyboard](ASM3_DEMO_STORYBOARD.md) | DONE plan; exact 00:00–05:00 timeline | Execute only after live gates pass |
 | English narration | UNKNOWN; requested | [Script](ASM3_DEMO_SCRIPT_EN.md) | DONE script, 607 words; estimate below five minutes | Record personal narration; measure actual final duration |
 | Vietnamese rehearsal | UNKNOWN; requested | [Rehearsal](ASM3_DEMO_REHEARSAL_VI.md) | DONE | Rehearse and record |
 | Shot list | UNKNOWN; requested | [Shot list](ASM3_DEMO_SHOT_LIST.md) | DONE conditional list | Capture pending real financial/Table Editor shots |
@@ -32,7 +32,7 @@ No final narrated MP4/complete demo is claimed. No local/mock screen is labelled
 | # | Check | Status | Evidence / boundary |
 |---|---|---|---|
 | 1 | Public URL / no access screen | VERIFIED LIVE | Fresh unauthenticated HTTPS 200; no redirect. |
-| 2 | Real signup | BLOCKED / LAST LIVE C6 REJECTION | C6 real browser signup returned 429 over_email_send_rate_limit. C7 did not create arbitrary accounts or repeat signup. |
+| 2 | Real signup | PARTIAL LIVE | Personal organization-member signup 200 and normal confirmation/session are corroborated. Dedicated attempts were rejected earlier. No signup was sent during reassessment. |
 | 3 | Email confirmation | PARTIAL | Requirement enabled and approved Site URL/allowlist verified in C6; inbox delivery/completion not verified. |
 | 4 | Approved-account sign-in | FAILED LIVE | C7 User A/B each HTTP 400 email_not_confirmed. |
 | 5 | Authenticated refresh | PENDING LIVE | Anonymous refresh verified; saved-session refresh cannot be tested without confirmed login. |
@@ -49,4 +49,6 @@ No final narrated MP4/complete demo is claimed. No local/mock screen is labelled
 | 16 | README/clean setup | VERIFIED C6; DOCUMENTATION UPDATED C7 | C6 credential-free clone install/lint/build/tests pass. C7 corrects stale status, not setup commands. |
 | 17 | Table Editor demonstration | MISSING | Schema deployment evidence exists; no genuine filtered Table Editor screenshot captured in C7. |
 
-Primary current evidence: [HTTPS/Auth](evidence/live-acceptance.json), [real browser](evidence/live-browser-results.json), [raw duration](evidence/raw-video-metadata.json). Earlier C0?C6 reports are phase-dated historical evidence, not proof of new C7 live actions.
+Primary current evidence: [HTTPS/Auth](evidence/live-acceptance.json), [real browser](evidence/live-browser-results.json), [raw duration](evidence/raw-video-metadata.json). Earlier C0–C6 reports are phase-dated historical evidence, not proof of new C7 live actions.
+
+Latest correction: custom SMTP is paused. The newly registered organization-member account is confirmed and has a logged Auth session; independent password sign-in/persistence footage is still pending. The built-in sender can deliver to that permitted personal account, so SMTP is not necessary for that individual test. General nonmember signup remains limited by the built-in recipient policy. See `../../implementation/asm3-c6-auth-readonly-reassessment.md` and `evidence/auth-readonly-reassessment.json`. Do not follow historical app-password setup requests while paused.

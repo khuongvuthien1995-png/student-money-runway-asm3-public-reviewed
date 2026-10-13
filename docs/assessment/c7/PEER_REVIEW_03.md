@@ -1,8 +1,8 @@
-# ASM3 peer review 03 ? Peer application owner 03
+# ASM3 peer review 03 — Peer application owner 03
 
-Reviewer: Thien Khuong Vu. Application owner: **Peer application owner 03 ? [student ID retained privately]** (user-supplied identity).
+Reviewer: Thien Khuong Vu. Application owner: **Peer application owner 03 — [student ID retained privately]** (user-supplied identity).
 
-**PENDING ? TEMPLATE ONLY.** URL, application purpose, permitted test access and genuine screenshots are unavailable. No strengths, defects or recommendations are asserted as observed facts. Requirements below come from the C7 request, not an independently verified official rubric.
+**PENDING — TEMPLATE ONLY.** URL, application purpose, permitted test access and genuine screenshots are unavailable. No strengths, defects or recommendations are asserted as observed facts. Requirements below come from the C7 request, not an independently verified official rubric.
 
 ## Access and scope
 
@@ -13,7 +13,7 @@ Reviewer: Thien Khuong Vu. Application owner: **Peer application owner 03 ? [stu
 - Tested user journey and expected behavior: PENDING.
 - No real financial/payment/destructive action without specific permission.
 
-## Genuine screenshot evidence ? minimum five
+## Genuine screenshot evidence — minimum five
 
 | ID | Genuine image / annotation | Actual URL and action | Expected / observed behavior | Viewport and reproducibility |
 |---|---|---|---|---|
@@ -35,7 +35,7 @@ Capture the actual application; preserve original images and create annotated co
 | Keyboard access, labels and focus | PENDING | PENDING | PENDING |
 | Privacy and visible data handling | PENDING | PENDING | PENDING |
 
-## Actionable recommendations ? minimum three
+## Actionable recommendations — minimum three
 
 | ID | Reproduced problem / impact | Specific recommended change | Supporting screenshot/test | Priority | Retest acceptance |
 |---|---|---|---|---|---|

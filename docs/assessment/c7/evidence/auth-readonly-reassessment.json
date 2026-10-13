@@ -1,0 +1,156 @@
+{
+  "projectRef": "mnjmugwkjtihqswssiwa",
+  "smtpHostConfigured": false,
+  "smtpUserConfigured": false,
+  "smtpPasswordConfigured": false,
+  "sendHookEnabled": false,
+  "emailPerHour": 2,
+  "minimumIntervalSeconds": 60,
+  "confirmationRequired": true,
+  "siteUrl": "https://student-money-runway-asm3-preview.vercel.app",
+  "logInspection": {
+    "httpStatus": 200,
+    "windowHours": 6,
+    "rowsInspected": 32,
+    "categoryCounts": {
+      "email_not_confirmed": 10,
+      "over_email_send_rate_limit": 3,
+      "email_address_invalid": 2,
+      "user_signedup": 1,
+      "user_confirmed": 0,
+      "login": 1,
+      "confirmation": 7
+    },
+    "sanitizedRelevantEvents": [
+      {
+        "timestamp": "2026-10-13T15:02:20.000000",
+        "confirmedAccountReferenced": true,
+        "categories": [],
+        "status": "204",
+        "path": null
+      },
+      {
+        "timestamp": "2026-10-13T14:59:22.000000",
+        "confirmedAccountReferenced": true,
+        "categories": [
+          "verify"
+        ],
+        "status": "303",
+        "path": "/verify"
+      },
+      {
+        "timestamp": "2026-10-13T14:59:22.000000",
+        "confirmedAccountReferenced": true,
+        "categories": [
+          "login"
+        ],
+        "status": null,
+        "path": null
+      },
+      {
+        "timestamp": "2026-10-13T14:58:23.000000",
+        "confirmedAccountReferenced": true,
+        "categories": [
+          "confirmation"
+        ],
+        "status": null,
+        "path": null
+      },
+      {
+        "timestamp": "2026-10-13T14:58:23.000000",
+        "confirmedAccountReferenced": true,
+        "categories": [
+          "signup",
+          "confirmation"
+        ],
+        "status": "200",
+        "path": "/signup"
+      },
+      {
+        "timestamp": "2026-10-13T14:49:22.000000",
+        "confirmedAccountReferenced": false,
+        "categories": [
+          "over_email_send_rate_limit",
+          "signup",
+          "confirmation"
+        ],
+        "status": "429",
+        "path": "/signup"
+      },
+      {
+        "timestamp": "2026-10-13T14:44:44.000000",
+        "confirmedAccountReferenced": false,
+        "categories": [
+          "over_email_send_rate_limit",
+          "signup",
+          "confirmation"
+        ],
+        "status": "429",
+        "path": "/signup"
+      },
+      {
+        "timestamp": "2026-10-13T14:37:47.000000",
+        "confirmedAccountReferenced": false,
+        "categories": [
+          "over_email_send_rate_limit",
+          "signup",
+          "confirmation"
+        ],
+        "status": "429",
+        "path": "/signup"
+      },
+      {
+        "timestamp": "2026-10-13T13:53:36.000000",
+        "confirmedAccountReferenced": false,
+        "categories": [
+          "email_address_invalid",
+          "confirmation"
+        ],
+        "status": "400",
+        "path": "/resend"
+      },
+      {
+        "timestamp": "2026-10-13T13:53:35.000000",
+        "confirmedAccountReferenced": false,
+        "categories": [
+          "email_address_invalid",
+          "confirmation"
+        ],
+        "status": "400",
+        "path": "/resend"
+      }
+    ],
+    "timestampsAreUTC": true
+  },
+  "accounts": [
+    {
+      "label": "organization-member account",
+      "organizationMember": true,
+      "createdAt": "2026-10-13T14:58:20.648972Z",
+      "emailConfirmedAt": "2026-10-13T14:59:22.165379Z",
+      "lastSignInAt": "2026-10-13T14:59:22.17563Z",
+      "confirmationSentAt": "2026-10-13T14:58:20.671758Z"
+    },
+    {
+      "label": "B",
+      "organizationMember": false,
+      "createdAt": "2026-10-12T13:57:32.472939Z",
+      "emailConfirmedAt": null,
+      "lastSignInAt": null,
+      "confirmationSentAt": "2026-10-12T13:57:32.493023Z"
+    },
+    {
+      "label": "A",
+      "organizationMember": false,
+      "createdAt": "2026-10-12T13:57:28.965265Z",
+      "emailConfirmedAt": null,
+      "lastSignInAt": null,
+      "confirmationSentAt": "2026-10-12T13:57:29.00644Z"
+    }
+  ],
+  "smtpPort": null,
+  "smtpSenderConfigured": false,
+  "readOnly": true,
+  "emailsSentByThisInspection": 0,
+  "smtpChangesApplied": false
+}

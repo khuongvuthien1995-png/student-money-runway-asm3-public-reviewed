@@ -1,5 +1,7 @@
 # ASM3 C6 — Live Preview Auth hotfix
 
+> Latest 14 October reassessment: custom SMTP is paused. A new organization-member account has confirmed email and a recorded login event. A/B remain unconfirmed nonmembers. See [current read-only evidence and limitations](asm3-c6-auth-readonly-reassessment.md); earlier blanket-blocker statements below are historical.
+
 > Updated: 2026-10-14 (Australia/Sydney)
 > Verification in progress; no signup or confirmed-login PASS claimed
 

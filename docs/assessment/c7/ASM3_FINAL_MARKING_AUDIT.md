@@ -1,4 +1,4 @@
-# ASM3 final marking audit ? provisional
+# ASM3 final marking audit — provisional
 
 **Official rubric NOT reviewed. Official compliance PENDING.** The user confirmed its absence and approved proceeding with existing project records as provisional references. This audit does not estimate a mark, assert HD readiness or import ASM2 requirements into ASM3.
 
@@ -33,3 +33,7 @@ Both existing dedicated identities return `email_not_confirmed` in C7. C6 signup
 The user's deadline is 15 October 2026 23:59 AEST, equivalent to 16 October 00:59 AEDT in Sydney. Confirm against LMS; no official deadline was independently verified.
 
 **Not submission-ready.** See [submission manifest](ASM3_SUBMISSION_MANIFEST.md) for exact files and current statuses.
+
+## Latest read-only correction
+
+Custom SMTP is explicitly paused. The user's successful personal email receipt is now corroborated by a confirmed organization-member account and signup/verify/login server events. The built-in sender is working for that allowed recipient. Dedicated A/B remain unconfirmed nonmembers; prior recipient/quota errors must not be generalized to every account. Independent password login and authenticated financial footage remain unverified. Preserve working settings; do not create app passwords or apply SMTP merely to finish this audit. See the latest C6 reassessment. Official rubric and completed video/peer reviews remain pending.

@@ -1,7 +1,9 @@
 # ASM3 C6 — Authorized SMTP repair preparation
 
 > Updated: 2026-10-14 Australia/Sydney
-> SMTP CONFIGURATION PENDING — PRIVATE GOOGLE APP CREDENTIAL REQUIRED
+> SMTP SETUP PAUSED — DO NOT CREATE APP PASSWORDS OR APPLY THE PREPARED PATCH
+
+**Latest steering:** the user explicitly paused custom SMTP after successful personal registration/email receipt. No SMTP change was applied. [Read-only reassessment](asm3-c6-auth-readonly-reassessment.md) corroborates a confirmed organization-member account and a login event while A/B remain unconfirmed nonmembers. The configuration proposal below is historical preparation, not a current instruction to enter credentials or apply settings. Broader nonmember registration and the student's successful personal test are distinct.
 
 The user authorized custom SMTP only for project `mnjmugwkjtihqswssiwa`, free service selection and autonomous setup while preserving required confirmation and all existing accounts/security. No paid subscription is authorized or created.
 

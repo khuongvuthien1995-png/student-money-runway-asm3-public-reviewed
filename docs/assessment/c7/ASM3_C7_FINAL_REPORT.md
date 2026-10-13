@@ -2,11 +2,11 @@
 
 > Student: Thien Khuong Vu
 > Verified: 2026-10-14 (Australia/Sydney)
-> C7 BLOCKED ? CRITICAL SUBMISSION ISSUE
+> C7 PARTIAL — SPECIFIC DELIVERABLES REMAIN
 
 ## Completed work
 
-Used actual local source at starting HEAD `0a6b4a02752c181bd8f1e4fab0550385dc8d7bfa` and the existing C0?C6 records; no prior ZIP was restored. Inspected README, routes/Auth/provider, typed FastAPI contracts, migration and retained prompt/assessment records. Official brief/rubric was not found; the user confirmed absence and authorized a provisional audit. No official marking criteria, weights or tool-compliance claims were invented.
+Used actual local source at starting HEAD `0a6b4a02752c181bd8f1e4fab0550385dc8d7bfa` and the existing C0–C6 records; no prior ZIP was restored. Inspected README, routes/Auth/provider, typed FastAPI contracts, migration and retained prompt/assessment records. Official brief/rubric was not found; the user confirmed absence and authorized a provisional audit. No official marking criteria, weights or tool-compliance claims were invented.
 
 Verified real public Preview GET responses: `/login`, `/setup`, `/runway` HTML 200, `/api/health` JSON 200, current-plan/history JSON 401 without bearer. Both existing approved Auth identities returned **400 email_not_confirmed**. No hosted financial write, signup, migration execution, key retrieval, deployment or Production release occurred in C7.
 
@@ -26,7 +26,7 @@ Prepared all eleven requested Markdown deliverables:
 - `ASM3_FINAL_MARKING_AUDIT.md`
 - `ASM3_C7_FINAL_REPORT.md`
 
-The narration plan spans exactly 00:00?05:00, with 607 spoken words and a 291-second estimate at 125 words/minute. This is not measured final-video compliance. GitHub structure/ignore explanation is allocated 25 seconds. Successful-flow wording is explicitly gated on obtaining genuine live evidence; the blocked fallback discloses limitations and does not claim to fulfil missing functional demonstrations.
+The narration plan spans exactly 00:00–05:00, with 607 spoken words and a 291-second estimate at 125 words/minute. This is not measured final-video compliance. GitHub structure/ignore explanation is allocated 25 seconds. Successful-flow wording is explicitly gated on obtaining genuine live evidence; the blocked fallback discloses limitations and does not claim to fulfil missing functional demonstrations.
 
 The Prompt Document includes 13 actual-text appendices: preserved ASM2 instruction files, supplied C4/C5/C6 attachments and the supplied master plan. Source hashes and Git history are retained. Reconstructed backend/C1/C2/C3/C6 descriptions are labelled; a missing C3 prompt is not fabricated. Five selected exact user-message excerpts are also transcribed with explicit excerpt provenance; they are not complete exported conversations. No claim of a Cline session or a complete historical chat export is made.
 
@@ -60,13 +60,13 @@ Corrected two stale README status paragraphs: audited source is now published in
 
 No final video, peer-review completion, hosted persistence or official rubric PASS is invented. Missing inputs did not stop independent C7 preparation. The complete authenticated live demonstration remains a critical submission issue, so this pack must not be described as ready.
 
-**C7 BLOCKED ? CRITICAL SUBMISSION ISSUE**
+**C7 PARTIAL — SPECIFIC DELIVERABLES REMAIN**
 
 ## Current C7 artifact checks
 
 `npm run lint` passed for the new capture tool. `tools/validate-c7.py` verified all eleven Markdown deliverables, 18 local links with zero broken links, 13 actual-text appendices, explicit empty peer-review counts and the real raw clip metadata. Python compilation of the artifact checker passed. Repository secret scan checked 444 working candidates with zero flagged paths; selected genuine screenshots were visually inspected and contain empty credential fields. No new frontend/backend runtime change justified rerunning the earlier 152/171 local suites; those counts are clearly prior C6 results, not new C7 execution.
 
-See `evidence/changed-files.json` for all 39 C7 continuation paths, including README, two verification tools and every generated document/capture. Actual deployment inspection again confirms the existing Preview is READY; no release operation occurred. Official rubric, complete personal video and real peer-review evidence remain unavailable.
+See `evidence/changed-files.json` for all 41 C7 continuation paths, including README, two verification tools and every generated document/capture. Actual deployment inspection again confirms the existing Preview is READY; no release operation occurred. Official rubric, complete personal video and real peer-review evidence remain unavailable.
 
 ## Definitive email-delivery diagnosis during C7
 
@@ -81,3 +81,11 @@ The audited credential-free 12.64-second raw clip has a narrow `.gitignore` exce
 Custom SMTP setup is explicitly authorized. Selected no-subscription Gmail SMTP for the low-volume demo, prepared ignored `.env.smtp.local` with blank credential fields and implemented `tools/configure_supabase_smtp.py`. Nine focused offline safety cases pass; full backend regression now **180 passed, two hosted skipped (4.09s)**, lint/compilation and secret scans pass. Both existing scanners include SMTP private values and normalized app-password forms. No real SMTP authentication/configuration has been attempted without the missing credentials. Google verification/private app-password entry is the necessary human checkpoint; no provider account or paid subscription was created. See `../../implementation/asm3-c6-smtp-repair.md`.
 
 The audited C7 source pack and raw clip were published to PRIVATE GitHub as **3bb535df294973470548e01b29368f0dfc1306b5**. The original credential-free clone fast-forwarded, its C7 artifact checker passed all eleven files/18 links and lint passed. Subsequent SMTP preparation is separately audited. The complete personal demo, peer URLs/reviews, official rubric and actual live persistence are still missing; no submission was performed.
+
+## Latest user-directed read-only reassessment — SMTP paused
+
+The user reported successful real verification-email delivery and explicitly paused all custom SMTP work. No app password, SMTP login or configuration patch was performed. Current Management API configuration still shows the built-in sender (no custom SMTP or send hook), two emails/hour and required confirmation. A newly registered organization-member identity now has email_confirmed_at and last_sign_in_at populated; sanitized logs correlate signup 200, verify 303 and a login event. This supports real personal registration/confirmation/session creation, without claiming an independent password-login or financial flow.
+
+A/B remain unconfirmed and are not organization members. Recipient authorization and the previously observed transient quota exhaustion explain the distinction; it is incorrect to describe all email delivery as broken. Custom SMTP is not needed for the successful personal test but is needed for broader nonmember registration under the built-in policy. The previous app-password/private-entry request is withdrawn while setup is paused. See [read-only reassessment](../../implementation/asm3-c6-auth-readonly-reassessment.md) and `evidence/auth-readonly-reassessment.json`.
+
+Continue using existing working settings. No new SMTP change is requested. Agent-run independent password verification needs privately supplied access; the user's personal financial data must not be modified without applicable authorization. Full live demo footage, personal narration, peer URLs/reviews and the official rubric remain pending. The current C7 verdict is **C7 PARTIAL — SPECIFIC DELIVERABLES REMAIN**, replacing the earlier blanket live-Auth blocker.
