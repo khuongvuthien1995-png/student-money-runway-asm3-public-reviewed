@@ -19,12 +19,15 @@ TEST_MARKERS = (b"test-only-browser-token", b"test-only-browser-password", b"tes
 
 def main() -> int:
     private_values = set()
-    for name in (".env.local", ".env.live-tests.local"):
+    for name in (".env.local", ".env.live-tests.local", ".env.smtp.local"):
         path = ROOT / name
         if path.exists():
             for key, value in dotenv_values(path, interpolate=False).items():
-                if value and len(value) >= 6 and ("PASSWORD" in key or key in ("SUPABASE_SECRET_KEY", "SUPABASE_JWT_SECRET")):
+                if value and len(value) >= 6 and ("PASSWORD" in key or key in ("SUPABASE_SECRET_KEY", "SUPABASE_JWT_SECRET")
+                                                 or (name == ".env.smtp.local" and key == "SMTP_USERNAME")):
                     private_values.add(value.encode())
+                    if name == ".env.smtp.local" and key == "SMTP_PASSWORD":
+                        private_values.add(value.replace(" ", "").encode())
     files = [path for path in (ROOT / "dist").rglob("*") if path.is_file()]
     if not files:
         print("Build the production frontend before checking its bundle.")

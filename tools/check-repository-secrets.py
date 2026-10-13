@@ -24,11 +24,16 @@ def git(*args):
 
 def main():
     local_values = []
-    for filename in (".env.local", ".env.live-tests.local"):
+    for filename in (".env.local", ".env.live-tests.local", ".env.smtp.local"):
         path = ROOT / filename
         if path.exists():
             local_values.extend(value.encode() for name, value in dotenv_values(path, interpolate=False).items()
-                                if value and len(value) >= 6 and any(word in name for word in ("KEY", "PASSWORD", "EMAIL")))
+                                if value and len(value) >= 6 and (any(word in name for word in ("KEY", "PASSWORD", "EMAIL"))
+                                or (filename == ".env.smtp.local" and name == "SMTP_USERNAME")))
+            if filename == ".env.smtp.local":
+                password = dotenv_values(path, interpolate=False).get("SMTP_PASSWORD")
+                if password and len(password.replace(" ", "")) >= 6:
+                    local_values.append(password.replace(" ", "").encode())
     def sensitive(data):
         return any(value in data for value in local_values) or any(re.search(pattern, data) for pattern in PATTERNS)
     candidates = set(path.decode("utf-8") for path in git("ls-files", "--cached", "--others", "--exclude-standard", "-z").split(b"\0") if path)

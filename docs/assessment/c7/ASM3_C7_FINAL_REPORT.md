@@ -38,7 +38,7 @@ Corrected two stale README status paragraphs: audited source is now published in
 
 | Category | Final status |
 |---|---|
-| LOCAL CODE | Previous verified gate: 152 frontend / 171 backend passed, two hosted skipped; unchanged production source in C7 |
+| LOCAL CODE | Previous frontend gate: 152 passed; subsequent C7 SMTP safety/backend regression: 180 passed, two hosted skipped; application runtime unchanged |
 | GITHUB REMOTE | Verified PRIVATE main equals local starting HEAD; latest runtime Auth repair present; private marker access pending |
 | PUBLIC PREVIEW | Current anonymous HTTPS and browser checks PASS |
 | SUPABASE LIVE | BLOCKED: existing accounts unconfirmed; authenticated persistence/transactions not claimed |
@@ -66,7 +66,7 @@ No final video, peer-review completion, hosted persistence or official rubric PA
 
 `npm run lint` passed for the new capture tool. `tools/validate-c7.py` verified all eleven Markdown deliverables, 18 local links with zero broken links, 13 actual-text appendices, explicit empty peer-review counts and the real raw clip metadata. Python compilation of the artifact checker passed. Repository secret scan checked 444 working candidates with zero flagged paths; selected genuine screenshots were visually inspected and contain empty credential fields. No new frontend/backend runtime change justified rerunning the earlier 152/171 local suites; those counts are clearly prior C6 results, not new C7 execution.
 
-See `evidence/changed-files.json` for all 34 C7 continuation paths, including README, two verification tools and every generated document/capture. Actual deployment inspection again confirms the existing Preview is READY; no release operation occurred. Official rubric, complete personal video and real peer-review evidence remain unavailable.
+See `evidence/changed-files.json` for all 39 C7 continuation paths, including README, two verification tools and every generated document/capture. Actual deployment inspection again confirms the existing Preview is READY; no release operation occurred. Official rubric, complete personal video and real peer-review evidence remain unavailable.
 
 ## Definitive email-delivery diagnosis during C7
 
@@ -75,3 +75,9 @@ The user requested authorized SMTP inspection while C7 continued. Reused only th
 The concrete smallest repair requires an authorized custom SMTP provider, verified sender and provider-issued credentials. Requested setup authorization/selection without asking for secrets in chat; proposed quota 30/hour is conditional on approval and provider allowance. No provider account, paid subscription, SMTP patch, account recreation or confirmation bypass was performed. Evidence: `evidence/email-delivery-diagnosis.json`; latest details are appended to the C6 Auth report. This new diagnosis replaces the earlier uncertainty about SMTP status; it does not establish delivered email or a successful session.
 
 The audited credential-free 12.64-second raw clip has a narrow `.gitignore` exception so its submission-manifest link remains resolvable in a clean clone. All other videos remain ignored; no populated credential file is force-added. Custom SMTP setup is now authorized by the user, with provider/sender verification and private credential entry still required. No paid subscription or SMTP patch has been created.
+
+## Authorized SMTP setup continuation
+
+Custom SMTP setup is explicitly authorized. Selected no-subscription Gmail SMTP for the low-volume demo, prepared ignored `.env.smtp.local` with blank credential fields and implemented `tools/configure_supabase_smtp.py`. Nine focused offline safety cases pass; full backend regression now **180 passed, two hosted skipped (4.09s)**, lint/compilation and secret scans pass. Both existing scanners include SMTP private values and normalized app-password forms. No real SMTP authentication/configuration has been attempted without the missing credentials. Google verification/private app-password entry is the necessary human checkpoint; no provider account or paid subscription was created. See `../../implementation/asm3-c6-smtp-repair.md`.
+
+The audited C7 source pack and raw clip were published to PRIVATE GitHub as **3bb535df294973470548e01b29368f0dfc1306b5**. The original credential-free clone fast-forwarded, its C7 artifact checker passed all eleven files/18 links and lint passed. Subsequent SMTP preparation is separately audited. The complete personal demo, peer URLs/reviews, official rubric and actual live persistence are still missing; no submission was performed.

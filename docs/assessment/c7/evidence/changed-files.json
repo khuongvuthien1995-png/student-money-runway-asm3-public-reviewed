@@ -1,6 +1,7 @@
 [
   ".gitignore",
   "README.md",
+  "backend/tests/test_smtp_setup.py",
   "docs/assessment/c7/ASM3_C7_FINAL_REPORT.md",
   "docs/assessment/c7/ASM3_DEMO_REHEARSAL_VI.md",
   "docs/assessment/c7/ASM3_DEMO_SCRIPT_EN.md",
@@ -31,6 +32,10 @@
   "docs/assessment/c7/evidence/raw-live-preview-anonymous.webm",
   "docs/assessment/c7/evidence/raw-video-metadata.json",
   "docs/implementation/asm3-c6-live-integration-and-deployment.md",
+  "docs/implementation/asm3-c6-smtp-repair.md",
+  "tools/check-client-bundle.py",
+  "tools/check-repository-secrets.py",
+  "tools/configure_supabase_smtp.py",
   "tools/demo-recorder/capture-c7-live.mjs",
   "tools/validate-c7.py"
 ]
