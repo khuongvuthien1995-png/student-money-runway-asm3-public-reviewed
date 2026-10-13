@@ -46,3 +46,11 @@ The local and deployed error-reporting defect is repaired. The real provider con
 The exact Supabase Site URL/redirect update remains pending the approval requested under Step 4. Current localhost Site URL and empty redirect allowlist must not be described as corrected. Email confirmation, backend JWT checks and database RLS remain enabled. C7 was not started.
 
 **C6 PREVIEW AUTH BLOCKED — VERIFIED ROOT CAUSE**: Supabase `over_email_send_rate_limit`; existing account login remains `email_not_confirmed`. This verdict does not negate the verified public Preview/routing gate or the repaired source error message.
+
+## Approved Auth URL correction — 2026-10-14
+
+The user approved the exact Site URL and redirect changes. An initial isolated CLI config diff included unrelated defaults; it was rejected before any push. Pulled the current hosted configuration into an ignored temporary directory under `.git`, changed only the two URL fields, and verified the diff contains exactly `auth.site_url` and `auth.additional_redirect_urls`. Official CLI config push exited 0. Independent readback against both the temporary configuration and original workspace confirms Site URL **https://student-money-runway-asm3-preview.vercel.app** and redirect allowlist **https://student-money-runway-asm3-preview.vercel.app/login**.
+
+Public Auth settings returned 200 with signup enabled and automatic confirmation disabled; required email confirmation remains enabled. No SMTP, mail quota, MFA, database, storage or other provider setting was changed. The repository's local Supabase configuration was not overwritten. Evidence: `evidence/c6/auth-url-settings-results.json`. Real public Preview checks still return login 200, health 200 and missing-bearer financial API 401. No redeployment or hosted financial write was needed.
+
+The URL approval checkpoint is now resolved. No new signup/email-send request was made merely to verify these settings. The previous actual rate-limit rejection and unconfirmed-account checkpoint remain pending; URL correctness does not prove email delivery or confirmed login. **C6 PREVIEW AUTH BLOCKED — VERIFIED ROOT CAUSE** remains the honest live Auth verdict until a successful provider signup/confirmation/login result is obtained.

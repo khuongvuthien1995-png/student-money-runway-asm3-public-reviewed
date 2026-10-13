@@ -1,0 +1,11 @@
+{
+  "projectRef": "mnjmugwkjtihqswssiwa",
+  "siteUrl": "https://student-money-runway-asm3-preview.vercel.app",
+  "redirectAllowlist": [
+    "https://student-money-runway-asm3-preview.vercel.app/login"
+  ],
+  "emailConfirmationRequired": true,
+  "signupEnabled": true,
+  "authSettingsStatus": 200,
+  "unrelatedChangesApplied": false
+}
