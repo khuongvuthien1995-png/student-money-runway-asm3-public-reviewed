@@ -1,0 +1,122 @@
+{
+  "mode": "ACTUAL LOOPBACK HTTP; NO PROVIDER CONFIGURATION OR AUTHENTICATED DATABASE SUCCESS",
+  "passed": 19,
+  "failed": 0,
+  "skipped": 0,
+  "checks": [
+    {
+      "check": "real entrypoint health envelope",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "check": "OpenAPI path and response contracts",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "check": "GET /api/plans/current: missing bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "GET /api/plans/current: wrong scheme bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "GET /api/plans/current: malformed JWT bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "PUT /api/plans/current: missing bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "PUT /api/plans/current: wrong scheme bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "PUT /api/plans/current: malformed JWT bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "GET /api/plans/current/purchases: missing bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "GET /api/plans/current/purchases: wrong scheme bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "GET /api/plans/current/purchases: malformed JWT bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "POST /api/plans/current/purchases: missing bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "POST /api/plans/current/purchases: wrong scheme bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "POST /api/plans/current/purchases: malformed JWT bearer",
+      "status": 401,
+      "result": "PASS"
+    },
+    {
+      "check": "CORS permitted origin preflight",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "check": "CORS unapproved origin preflight",
+      "status": 400,
+      "result": "PASS"
+    },
+    {
+      "check": "CORS unapproved method preflight",
+      "status": 400,
+      "result": "PASS"
+    },
+    {
+      "check": "actual Vite /api proxy forwards to local FastAPI",
+      "status": 200,
+      "result": "PASS"
+    },
+    {
+      "check": "proxy preserves unauthenticated API rejection",
+      "status": 401,
+      "result": "PASS"
+    }
+  ],
+  "processes": [
+    {
+      "process": "vite",
+      "stopped": true,
+      "exitCode": 3221225786,
+      "safeLogs": true,
+      "shutdown": "SIGBREAK (Windows) or SIGTERM; socket closed",
+      "applicationShutdownComplete": false
+    },
+    {
+      "process": "uvicorn",
+      "stopped": true,
+      "exitCode": 3,
+      "safeLogs": true,
+      "shutdown": "SIGBREAK (Windows) or SIGTERM; socket closed",
+      "applicationShutdownComplete": true
+    }
+  ],
+  "error": null
+}

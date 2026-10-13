@@ -7,6 +7,7 @@
  * @updatedAt 2026-09-16T02:20:10+10:00
  * @summary Provides the controlled Runway Setup form and baseline field validation.
  * @responsibility Owns setup interaction validation while forwarding source-state changes to App.
+ * @integration ASM3 C2 (2026-10-13): real Auth/API state and strict cents boundaries.
  */
 
 import { useState, type ChangeEvent, type FormEvent } from 'react'
@@ -15,10 +16,12 @@ import FormSection from '../components/ui/FormSection'
 import MoneyInput from '../components/ui/MoneyInput'
 import type { RunwayState } from '../types/runway'
 import { validateMoney } from '../utils/moneyValidation'
+import SessionControls from '../components/layout/SessionControls'
 
 interface RunwaySetupPageProps {
   runwayState: RunwayState
   onRunwayStateChange: (patch: Partial<RunwayState>) => void
+  hasSavedPlan: boolean
 }
 
 interface SetupErrors {
@@ -27,7 +30,7 @@ interface SetupErrors {
   safetyBuffer?: string
 }
 
-function RunwaySetupPage({ runwayState, onRunwayStateChange }: RunwaySetupPageProps) {
+function RunwaySetupPage({ runwayState, onRunwayStateChange, hasSavedPlan }: RunwaySetupPageProps) {
   const navigate = useNavigate()
   const [touched, setTouched] = useState({ availableFunds: false, planningDate: false, safetyBuffer: false })
   const [submitted, setSubmitted] = useState(false)
@@ -66,12 +69,13 @@ function RunwaySetupPage({ runwayState, onRunwayStateChange }: RunwaySetupPagePr
     <main className="min-h-screen bg-background text-on-surface">
       <header className="border-b border-border bg-surface">
         <div className="mx-auto flex min-h-control max-w-content items-center justify-between px-space-md">
-          <button className="text-body-lg font-semibold text-primary" onClick={() => navigate('/login')} type="button">
+          {hasSavedPlan ? <button className="text-body-lg font-semibold text-primary" onClick={() => navigate('/runway')} type="button">
             Back
-          </button>
+          </button> : <p className="text-body-lg text-primary">New plan</p>}
           <p className="text-label-caps uppercase text-muted">Step 1 of 3</p>
         </div>
       </header>
+      <SessionControls />
       <section className="mx-auto w-full max-w-content space-y-space-lg px-space-md py-space-lg">
         <div className="space-y-space-xs">
           <p className="text-label-caps uppercase text-primary">Runway setup</p>
@@ -138,18 +142,18 @@ function RunwaySetupPage({ runwayState, onRunwayStateChange }: RunwaySetupPagePr
               >
                 Continue to essentials
               </button>
-              <button
+              {hasSavedPlan ? <button
                 className="inline-flex min-h-control items-center justify-center rounded-button border border-border bg-surface px-space-md py-space-xs text-body-lg font-semibold text-on-surface hover:bg-background"
-                onClick={() => navigate('/login')}
+                onClick={() => navigate('/runway')}
                 type="button"
               >
-                Back to login
-              </button>
+                Back to runway
+              </button> : null}
             </div>
           </form>
           <aside className="space-y-space-sm rounded-card border border-border bg-surface p-space-md shadow-sm">
             <p className="text-label-caps uppercase text-muted">Your setup</p>
-            <p className="text-body-lg text-muted">Your entries stay in the current React session while you move through the planning flow.</p>
+            <p className="text-body-lg text-muted">These are unsaved edits. Save them on the essentials step. Leaving or reloading the application discards unsaved changes.</p>
           </aside>
         </div>
       </section>

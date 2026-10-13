@@ -1,0 +1,109 @@
+{
+  "mode": "LOCAL ROUTING MODEL; REAL BUILT ASSETS AND LOOPBACK FASTAPI; NOT HOSTED VERCEL",
+  "passed": 24,
+  "failed": 0,
+  "skipped": 0,
+  "checks": [
+    {
+      "name": "direct SPA /",
+      "result": "PASS"
+    },
+    {
+      "name": "direct SPA /login",
+      "result": "PASS"
+    },
+    {
+      "name": "direct SPA /setup",
+      "result": "PASS"
+    },
+    {
+      "name": "direct SPA /essentials",
+      "result": "PASS"
+    },
+    {
+      "name": "direct SPA /runway",
+      "result": "PASS"
+    },
+    {
+      "name": "direct SPA /purchase",
+      "result": "PASS"
+    },
+    {
+      "name": "direct SPA /result",
+      "result": "PASS"
+    },
+    {
+      "name": "static asset /assets/index-v38vQ9lU.js",
+      "result": "PASS"
+    },
+    {
+      "name": "static asset /assets/index-OnpO4RXq.css",
+      "result": "PASS"
+    },
+    {
+      "name": "static asset /favicon.svg",
+      "result": "PASS"
+    },
+    {
+      "name": "static asset /icons.svg",
+      "result": "PASS"
+    },
+    {
+      "name": "actual JSON health through API rule",
+      "result": "PASS"
+    },
+    {
+      "name": "API 404 stays JSON: /api",
+      "result": "PASS"
+    },
+    {
+      "name": "API 404 stays JSON: /api/unknown",
+      "result": "PASS"
+    },
+    {
+      "name": "API 404 stays JSON: /api/api/health",
+      "result": "PASS"
+    },
+    {
+      "name": "real unauthorized GET /api/plans/current: missing",
+      "result": "PASS"
+    },
+    {
+      "name": "real unauthorized GET /api/plans/current: malformed",
+      "result": "PASS"
+    },
+    {
+      "name": "real unauthorized PUT /api/plans/current: missing",
+      "result": "PASS"
+    },
+    {
+      "name": "real unauthorized PUT /api/plans/current: malformed",
+      "result": "PASS"
+    },
+    {
+      "name": "real unauthorized GET /api/plans/current/purchases: missing",
+      "result": "PASS"
+    },
+    {
+      "name": "real unauthorized GET /api/plans/current/purchases: malformed",
+      "result": "PASS"
+    },
+    {
+      "name": "real unauthorized POST /api/plans/current/purchases: missing",
+      "result": "PASS"
+    },
+    {
+      "name": "real unauthorized POST /api/plans/current/purchases: malformed",
+      "result": "PASS"
+    },
+    {
+      "name": "actual production App loads safely without test Auth or cloud credentials",
+      "result": "PASS"
+    }
+  ],
+  "pageErrors": [],
+  "blockedExternalOrigins": [
+    "https://fonts.googleapis.com"
+  ],
+  "error": null
+}

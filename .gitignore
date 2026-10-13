@@ -25,6 +25,7 @@ test-results/
 *.webm
 *.mp4
 .git-credentials
+.vercel/
 dist/
 dist-ssr
 *.local

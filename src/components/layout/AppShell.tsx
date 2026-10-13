@@ -7,10 +7,12 @@
  * @updatedAt 2026-09-16T02:02:58+10:00
  * @summary Provides the repeated responsive application navigation structure.
  * @responsibility Owns shared application-shell navigation and content boundaries.
+ * @integration ASM3 C2 (2026-10-13): real Auth/API state and strict cents boundaries.
  */
 
 import type { ReactNode } from 'react'
 import { NavLink } from 'react-router-dom'
+import SessionControls from './SessionControls'
 
 interface AppShellProps {
   children: ReactNode
@@ -19,7 +21,7 @@ interface AppShellProps {
 const navigationItems = [
   { label: 'Runway', to: '/runway', icon: 'runway' },
   { label: 'Check', to: '/purchase', icon: 'check' },
-  { label: 'Manage', to: '/essentials', icon: 'manage' },
+  { label: 'Edit plan', to: '/setup', icon: 'manage' },
 ]
 
 function navigationClassName(isActive: boolean) {
@@ -84,6 +86,7 @@ function AppShell({ children }: AppShellProps) {
         </div>
       </header>
 
+      <SessionControls />
       <main className="mx-auto min-h-screen w-full max-w-content min-w-0 px-space-md py-space-lg pb-24 lg:min-h-0 lg:pb-space-xl">
         {children}
       </main>

@@ -1,0 +1,95 @@
+{
+  "mode": "OFFLINE E2E ONLY; FALLBACK FONT; NO LIVE SUPABASE CLAIM",
+  "passed": 121,
+  "failed": 3,
+  "skipped": 0,
+  "results": [
+    {
+      "name": "shortfall and maximum financial display fit",
+      "width": 768,
+      "result": "FAIL",
+      "durationMs": 798,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/api/plans/current",
+          "user": "A",
+          "body": null,
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/plans/current",
+          "user": "A",
+          "body": null,
+          "status": 200
+        }
+      ],
+      "error": "AssertionError [ERR_ASSERTION]: maximum purchase display: horizontal overflow {\"viewport\":768,\"scroll\":1679}",
+      "warnings": [
+        "\u26a0\ufe0f React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+        "\u26a0\ufe0f React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.",
+        "You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled"
+      ],
+      "mode": "OFFLINE AUTH / INTERCEPTED HTTP; NO HOSTED DATA"
+    },
+    {
+      "name": "shortfall and maximum financial display fit",
+      "width": 1024,
+      "result": "FAIL",
+      "durationMs": 1010,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/api/plans/current",
+          "user": "A",
+          "body": null,
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/plans/current",
+          "user": "A",
+          "body": null,
+          "status": 200
+        }
+      ],
+      "error": "AssertionError [ERR_ASSERTION]: maximum purchase display: horizontal overflow {\"viewport\":1024,\"scroll\":1679}",
+      "warnings": [
+        "\u26a0\ufe0f React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+        "\u26a0\ufe0f React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.",
+        "You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled"
+      ],
+      "mode": "OFFLINE AUTH / INTERCEPTED HTTP; NO HOSTED DATA"
+    },
+    {
+      "name": "shortfall and maximum financial display fit",
+      "width": 1280,
+      "result": "FAIL",
+      "durationMs": 954,
+      "requests": [
+        {
+          "method": "GET",
+          "path": "/api/plans/current",
+          "user": "A",
+          "body": null,
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/api/plans/current",
+          "user": "A",
+          "body": null,
+          "status": 200
+        }
+      ],
+      "error": "AssertionError [ERR_ASSERTION]: maximum purchase display: horizontal overflow {\"viewport\":1280,\"scroll\":1679}",
+      "warnings": [
+        "\u26a0\ufe0f React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+        "\u26a0\ufe0f React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.",
+        "You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled"
+      ],
+      "mode": "OFFLINE AUTH / INTERCEPTED HTTP; NO HOSTED DATA"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+# Deployment upload excludes; independent of Git's source/evidence inventory.
+.git/
+.vercel/
+.env
+.env.*
+.venv/
+venv/
+node_modules/
+dist/
+dist-ssr/
+__pycache__/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+logs/
+*.log
+*.tmp
+*.bak
+playwright-report/
+test-results/
+docs/
+tests/
+tools/
+supabase/
+backend/tests/
+backend/dev.py
+backend/inspect_auth.py
+backend/register_test_users.py
+backend/setup_test_credentials.py
+src/tests/
+**/*.test.ts
+**/*.test.tsx
+BUS4012 AS01*/

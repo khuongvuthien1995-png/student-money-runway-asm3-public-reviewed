@@ -1,35 +1,39 @@
 /**
  * @file src/pages/RunwayResultPage.tsx
- * @project Student Money Runway â€” BUS4012 Assignment 02
+ * @project Student Money Runway — BUS4012 Assignment 02
  * @student Thien Khuong Vu
- * @phase P7 â€” Protect Essentials + Runway Result
+ * @phase P7 — Protect Essentials + Runway Result
  * @createdAt 2026-09-15T23:23:08+10:00
  * @updatedAt 2026-09-16T01:41:11+10:00
  * @summary Derives and presents the validated shared-state runway and protected-shortfall result.
  * @responsibility Owns result presentation and navigation while keeping arithmetic in P5 pure utilities.
+ * @integration ASM3 C2 (2026-10-13): real Auth/API state and strict cents boundaries.
  */
 
 import { Navigate, useNavigate } from 'react-router-dom'
 import AppShell from '../components/layout/AppShell'
 import SummaryRow from '../components/ui/SummaryRow'
 import type { RunwayState } from '../types/runway'
-import {
-  calculateProtectedShortfall,
-  calculateProtectedTotal,
-  calculateRunway,
-} from '../utils/runwayCalculations'
+import type { PlanResponse, PurchaseResponse } from '../types/api'
+import { planTotals } from '../state/financialState'
 import { parseValidMoney } from '../utils/moneyValidation'
 
 interface RunwayResultPageProps {
   runwayState: RunwayState
   onStartNewPurchase: () => void
+  plan: PlanResponse
+  pendingProposal: boolean
+  history: PurchaseResponse[]
+  historyStatus: 'idle' | 'loading' | 'ready' | 'error'
+  historyError: string | null
+  onLoadHistory: () => Promise<void>
 }
 
 function formatAud(value: number) {
   return `AUD ${value.toLocaleString('en-AU', { maximumFractionDigits: 2 })}`
 }
 
-function RunwayResultPage({ runwayState, onStartNewPurchase }: RunwayResultPageProps) {
+function RunwayResultPage({ runwayState, onStartNewPurchase, plan, pendingProposal, history, historyStatus, historyError, onLoadHistory }: RunwayResultPageProps) {
   const navigate = useNavigate()
   const availableFunds = parseValidMoney(runwayState.availableFunds)
   const safetyBuffer = parseValidMoney(runwayState.safetyBuffer)
@@ -43,14 +47,10 @@ function RunwayResultPage({ runwayState, onStartNewPurchase }: RunwayResultPageP
     return <Navigate replace to="/essentials" />
   }
 
-  const protectedTotal = calculateProtectedTotal(fixedEssentials, flexibleEssentials, safetyBuffer)
-  const runway = calculateRunway(availableFunds, fixedEssentials, flexibleEssentials, safetyBuffer)
-  const protectedShortfall = calculateProtectedShortfall(
-    availableFunds,
-    fixedEssentials,
-    flexibleEssentials,
-    safetyBuffer,
-  )
+  const totals = planTotals(plan)
+  const protectedTotal = totals.protectedCents / 100
+  const runway = totals.runwayCents / 100
+  const protectedShortfall = totals.shortfallCents / 100
   const hasShortfall = protectedShortfall > 0
 
   return (
@@ -59,7 +59,7 @@ function RunwayResultPage({ runwayState, onStartNewPurchase }: RunwayResultPageP
         <div className="space-y-space-xs">
           <p className="text-label-caps uppercase text-primary">Current runway</p>
           <h1 className="text-h1">Your discretionary runway</h1>
-          <p className="text-body-lg text-muted">Based on the amounts entered for {runwayState.planningDate}.</p>
+          <p className="text-body-lg text-muted">Based on your saved plan for {runwayState.planningDate}.</p>
         </div>
 
         {hasShortfall ? (
@@ -94,12 +94,12 @@ function RunwayResultPage({ runwayState, onStartNewPurchase }: RunwayResultPageP
             <button
               className="inline-flex min-h-control w-full items-center justify-center rounded-button bg-primary px-space-md py-space-xs text-body-lg font-semibold text-surface transition-colors hover:bg-primary-pressed focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={() => {
-                onStartNewPurchase()
-                navigate('/purchase')
+                if (!pendingProposal) onStartNewPurchase()
+                navigate(pendingProposal ? '/result' : '/purchase')
               }}
               type="button"
             >
-              Check a purchase
+              {pendingProposal ? 'Resolve pending purchase' : 'Check a purchase'}
             </button>
           </section>
 
@@ -133,6 +133,17 @@ function RunwayResultPage({ runwayState, onStartNewPurchase }: RunwayResultPageP
             </button>
           </section>
         </div>
+        <section className="space-y-space-sm rounded-card border border-border bg-surface p-space-md">
+          <h2 className="text-2xl font-semibold">Purchase history</h2>
+          <button className="min-h-control text-primary underline disabled:opacity-60" disabled={historyStatus === 'loading'} onClick={() => { void onLoadHistory() }} type="button">
+            {historyStatus === 'loading' ? 'Loading history…' : 'Load purchase history'}
+          </button>
+          {historyError ? <p role="alert" className="text-danger">{historyError}</p> : null}
+          {historyStatus === 'ready' && !history.length ? <p>No confirmed purchases yet.</p> : null}
+          <ul className="divide-y divide-border">{history.map((purchase) => <li className="break-words py-space-xs" key={purchase.id}>
+            <SummaryRow label={purchase.name} value={formatAud(purchase.amountCents / 100)} />
+          </li>)}</ul>
+        </section>
       </section>
     </AppShell>
   )

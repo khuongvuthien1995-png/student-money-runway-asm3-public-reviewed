@@ -7,6 +7,8 @@
 @updatedAt 2026-10-12T02:30:00+11:00
 @summary Configures the authenticated FastAPI API and its typed plan/purchase routes.
 @responsibility Owns HTTP routing, dependency wiring and safe error serialization.
+@hardening C3 (2026-10-13): documents actual purchase creation and validation envelopes.
+@hardening C5 (2026-10-13): safe provider initialization and private API cache controls.
 """
 
 from dataclasses import dataclass
@@ -78,11 +80,14 @@ def create_app(
     resolved_settings = settings or Settings.from_environment()
     resolved_repository = repository
     if resolved_repository is None:
-        resolved_repository = (
-            SupabaseRepository(resolved_settings)
-            if resolved_settings.database_configured
-            else UnavailableRepository()
-        )
+        resolved_repository = UnavailableRepository()
+        if resolved_settings.database_configured:
+            try:
+                resolved_repository = SupabaseRepository(resolved_settings)
+            except Exception:
+                # An unusable provider configuration must never invent financial success
+                # or expose credentials in a cold-start traceback. Health remains liveness only.
+                resolved_repository = UnavailableRepository()
     app = FastAPI(title="Student Money Runway API", version="0.1.0")
     app.state.container = ApplicationContainer(
         repository=resolved_repository,
@@ -95,6 +100,15 @@ def create_app(
         allow_methods=["GET", "PUT", "POST"],
         allow_headers=["Authorization", "Content-Type"],
     )
+
+    @app.middleware("http")
+    async def private_api_responses(request: Request, call_next):
+        response = await call_next(request)
+        if request.url.path == "/api" or request.url.path.startswith("/api/"):
+            response.headers["Cache-Control"] = "private, no-store"
+            response.headers["CDN-Cache-Control"] = "no-store"
+            response.headers["Vercel-CDN-Cache-Control"] = "no-store"
+        return response
 
     @app.exception_handler(ApplicationError)
     def application_error_handler(_: Request, error: ApplicationError) -> JSONResponse:
@@ -156,7 +170,12 @@ def create_app(
     @app.post(
         "/api/plans/current/purchases",
         response_model=PurchaseConfirmationEnvelope,
-        responses={401: {"model": ErrorResponse}, 404: {"model": ErrorResponse}, 409: {"model": ErrorResponse}, 503: {"model": ErrorResponse}},
+        responses={
+            201: {"model": PurchaseConfirmationEnvelope, "description": "Purchase recorded."},
+            401: {"model": ErrorResponse}, 404: {"model": ErrorResponse},
+            409: {"model": ErrorResponse}, 422: {"model": ErrorResponse},
+            503: {"model": ErrorResponse},
+        },
         tags=["purchases"],
     )
     def confirm_purchase(

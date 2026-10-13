@@ -7,6 +7,7 @@
 @updatedAt 2026-10-12T02:22:38+11:00
 @summary Defines stable application errors for HTTP transport and services.
 @responsibility Owns error codes and safe client-facing messages.
+@hardening C3 (2026-10-13): carries exact RPC business codes independently of provider text.
 """
 
 
@@ -40,3 +41,7 @@ class ServiceUnavailableError(ApplicationError):
 
 class RepositoryError(Exception):
     """Represents a database transport or RPC error before service-level mapping."""
+
+    def __init__(self, message: str, *, business_code: str | None = None) -> None:
+        super().__init__(message)
+        self.business_code = business_code

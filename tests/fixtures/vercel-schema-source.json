@@ -1,0 +1,6 @@
+{
+  "source": "https://openapi.vercel.sh/vercel.json",
+  "checkedDate": "2026-10-13 Australia/Sydney",
+  "snapshotSha256": "444c7c54db7c8a65ed50032298b25b46e69f9b3a7625d9171179e8ecf630f7b8",
+  "normalization": "Three numeric exclusiveMinimum fields are normalized to equivalent Draft-04 bounds only in test memory; snapshot remains unchanged."
+}

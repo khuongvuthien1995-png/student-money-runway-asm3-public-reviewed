@@ -1,0 +1,1750 @@
+{
+  "mode": "FRESH COPY OF CURRENT LOCAL SOURCE; NOT A REMOTE CLONE OR CLOUD DEPLOYMENT",
+  "copyDirectory": "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev",
+  "copiedFiles": 387,
+  "sourceInventory": [
+    {
+      "path": ".env.example",
+      "sha256": "02969ca616ffea69e6b7cc9c74f909b93fe84a7d1924044559cac431dcb50e21"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "130b26cbea8925af4775f9dd4e17be4e31813010143a144e9e938ccc6e73252b"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "72dff3ec56d37f0363b02adea80a3b8a2c54818728f8f69a341de887fe818b90"
+    },
+    {
+      "path": ".prettierrc",
+      "sha256": "92bc76807b2f2c249f23a3d3c9a9a78e130df5cf713a876c082077da43ed10e4"
+    },
+    {
+      "path": ".python-version",
+      "sha256": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d"
+    },
+    {
+      "path": ".vercelignore",
+      "sha256": "bd86d240da941e2d176c5daef76ca26039ae5a32c0324b584f5dac1a1ac6d7bc"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/Bottom Navigation Bar-1.png",
+      "sha256": "ab9781b7a81f933b834d225ebaad098736a4c4fa40a79697546cdf1e8aa054dd"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/Bottom Navigation Bar.png",
+      "sha256": "ab9781b7a81f933b834d225ebaad098736a4c4fa40a79697546cdf1e8aa054dd"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/DS-01 \u2014 Foundations.png",
+      "sha256": "7ddf58a9e4997b7952400f2e213ca2033b6774248def23ffe9b266fc5ca72b5d"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/DS-02 \u2014 Responsive Navigation.png",
+      "sha256": "b30296a86d0ea3bc9438cf232ca4b8b27cef0f4952de20a9cbb2b71b30012a39"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/DS-03 \u2014 Forms & Core Controls.png",
+      "sha256": "d6b2df6c4c2b9966accbf78b4a21b305630d4fdd534235b1e3b787dddb05599c"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/DS-04 \u2014 Financial Product Components.png",
+      "sha256": "e5406a31fd3488f6dc48e17e3ffcc1a26e7cdb7e740a7c0dec2093cd495e07cb"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/DS-05 \u2014 Management & Data Components.png",
+      "sha256": "9081e2218b32e1b6030d889888cb007a8766333a904b12060a6198d1481d24d6"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/DS-06 \u2014 Feedback, States & Accessibility.png",
+      "sha256": "d4ec3cbaa0be5dfd6a5953b1426e1956b278af6da8774ba9f24848bb44816328"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/DS-07 \u2014 Landing Website Components.png",
+      "sha256": "79aa5246dd1e48e7174dfb8c7be4024537ec480c32ebaa3ded7d93832522091b"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/DS-08 \u2014 Responsive Behavior & Figma Architecture.png",
+      "sha256": "f6e257512e2dc7751aa9ec29d4bf247d692b90d8eacb238e07074ac73de746c2"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/E1 \u2014 Protected Shortfall (Hi-Fi).png",
+      "sha256": "40ceea692d9545b62d3adcf4ea2965c61426d3a72d9689c7b8e5e9eb7e6e4df6"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/E1 \u2014 Protected Shortfall.png",
+      "sha256": "32a4eef8b4bd3a4b8c85c286ebf2d9c1ff1af97b24a72ced1f7eb232a9af5ebb"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/E2 \u2014 Manual Planning Horizon (Hi-Fi).png",
+      "sha256": "37479a81e86700802ed6f81901498b3b2654c2160a08c1eecb4f95b24b7e5e08"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/E2 \u2014 Manual Planning Horizon.png",
+      "sha256": "1d4f2dbb0258561a5e011bc84057e61891f24ad46ff4be9f7cbd26c5d616fb50"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/E3 \u2014 Stale Data (Hi-Fi).png",
+      "sha256": "402f0754771820e255b658611757b78190b7dabbff62179aa802b4e113dfc9d5"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/E3 \u2014 Stale Data.png",
+      "sha256": "33a78690b917dbb3c9747755a935815ee107a165d20ed62cce64edb395fdf974"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-E1 \u2014 Mobile Protected Shortfall (Hi-Fi).png",
+      "sha256": "d771420552dc9b002b16fe3b8b2133ba8d954b18db6c878e831d8cbbaab0ec17"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-E1 \u2014 Mobile Protected Shortfall.png",
+      "sha256": "6db652801c1eed567600fe6735ef741c93ad0496c0a4bbf0244e6c65b063208e"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-E2 \u2014 Mobile Manual Planning Horizon (Hi-Fi).png",
+      "sha256": "f9def8136439f72d486e29b4a3dccc236dbac69bf5392e153ea9a71eb21dca15"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-E2 \u2014 Mobile Manual Planning Horizon.png",
+      "sha256": "1fdfc6b31b7ac60a181fb567343710f80e542f24fac764a130bdbd868825b536"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-E3 \u2014 Mobile Stale Data (Hi-Fi).png",
+      "sha256": "d6eb739a8a2cde2429d9d4ae873442f9f9b57db6724bd8f9f7e69159b79cdf66"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-E3 \u2014 Mobile Stale Data.png",
+      "sha256": "77e63db913c36a5d80756a3a773e7aa9f14b95559422a41a0993ff2d309422f1"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P1 \u2014 Mobile Landing (Hi-Fi).png",
+      "sha256": "6b8eedb3322eba1fac12ec588ef34f6cc0f91d740d8a68e57d15f1901512adca"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P1 \u2014 Mobile Landing.png",
+      "sha256": "3390a5ff4451fba47cb5f706666f812fefcdeb8b1a46abb0e0877b6b60c84fd4"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P10 \u2014 Mobile Adjust Flexible Allowance (Hi-Fi).png",
+      "sha256": "98ebfae6d5a5f7105526b879ec03c183315e5355e482cfd620cacda169a97663"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P10 \u2014 Mobile Adjust Flexible Allowance.png",
+      "sha256": "4d0cc51b881a554fe4551a20e9378665b9e8bb4ab80fdb3f3acb9f79565eabae"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P11 \u2014 Mobile Income Received/New Cycle (Hi-Fi).png",
+      "sha256": "35b94ffa254e5a939e77939745efc1b321cba41339ebe356f72487256afb5b44"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P11 \u2014 Mobile Income Received/New Cycle.png",
+      "sha256": "cfc857b29a3c64b5df1ac496a7a49748583a93c551437284b12b9c8b589d1959"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P2 \u2014 Mobile Runway Setup (Hi-Fi).png",
+      "sha256": "4b2f6444b2328a41e0d9e03ad20b03ada0f4c85028a4bb46810fe64c960319fa"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P2 \u2014 Mobile Runway Setup.png",
+      "sha256": "96fc74be2d7df00c1b4e0487a5d4c2891bfe021380838f9817ca1ff42e203976"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P3 \u2014 Mobile Protect Essentials (Hi-Fi).png",
+      "sha256": "fbf214156074de193ab5b299283374b0e4658b3f79844da21788ec7fe7eaffdb"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P3 \u2014 Mobile Protect Essentials.png",
+      "sha256": "9e911df05bc04a27090e4699c698bcdc47126f1aa762e7d5c28a902b46fa1b50"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P4 \u2014 Mobile Runway Dashboard (Hi-Fi).png",
+      "sha256": "9ce6e259040b5b110bce8b7ad7ba53acd7218e461a63a1866436ca8f639b3692"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P4 \u2014 Mobile Runway Dashboard.png",
+      "sha256": "e2683c129268abfe112dcd29b8801125c6ce393f8e9d42b6cce04d34d73c434c"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P4-B \u2014 Updated Mobile Dashboard (Hi-Fi).png",
+      "sha256": "731e59d72444dce1753d19936838c83f71a758b6513684df6bd293faeeba81ea"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P5 \u2014 Mobile Purchase Check (Hi-Fi).png",
+      "sha256": "cb6ce568aa672ecb7142c4386c051c70aad2222de3ff8cd3b4f6baf8b9d5aadf"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P5 \u2014 Mobile Purchase Check.png",
+      "sha256": "8dbc03b6acdbdcbfd91cd86e57f9ee92ab80f8d8d61c58dd3a2768b6677e334e"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P6 \u2014 Mobile Purchase Impact Preview (Hi-Fi).png",
+      "sha256": "2e363fa0b4b21de60ff0876bd9a5d2fb85848ff40bc812f13d5a64a896130023"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P6 \u2014 Mobile Purchase Impact Preview.png",
+      "sha256": "88da7e12c7c482420c34e33459535690010a25ceaf54a6111bb2ab523746406e"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P7 \u2014 Mobile Manage Current Cycle (Hi-Fi).png",
+      "sha256": "7d4936172904d4b48c75618e66801e039119c4e34a7f56be6ee34063e63f7c48"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P7 \u2014 Mobile Manage Current Cycle.png",
+      "sha256": "ba4942b40ad1a870ab2c79cf622e5a58ee5fbb7ee2d3cddaf6887b5f3cdd87c5"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P8 \u2014 Mobile Update Available Funds (Hi-Fi)-1.png",
+      "sha256": "c73a90d3f29000c0d7a0c21cbe49555879731730377971c83f9d38239ea0f18a"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P8 \u2014 Mobile Update Available Funds (Hi-Fi).png",
+      "sha256": "192aebb637c904a8255823bbf452d4886cf6611632222118f3724a9042b0b31b"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P8 \u2014 Mobile Update Available Funds.png",
+      "sha256": "8c54e30643db546f6778d4596d71f835e3f1c8e480b792f1c443eec0a2a1a8b4"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P9 \u2014 Mobile Manage Essentials (Hi-Fi).png",
+      "sha256": "7dac521a30fb239449b1d82ffe23b99cd12abf3a81a2cd0c3fad56178cfb359a"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/M-P9 \u2014 Mobile Manage Essentials.png",
+      "sha256": "54211766fc0c820e6a800f7d39267f3eedfa4df6f79505b06d879cfd040c2e67"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/MOB-1 \u2014 Landing.png",
+      "sha256": "2a8497ae98188441f4dd2a65aa508273e8d058362d2374bcb35827cee4c047d3"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/MOB-2 \u2014 Runway Setup.png",
+      "sha256": "b334edf5d2ee2f172a2a3d547de2916bacd5fdb2757f232a782fd467d4e3ef47"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/MOB-3 \u2014 Runway Dashboard.png",
+      "sha256": "86d4ee8a1edb1f4e4fa8436edf219f7319ef01dd8469632be6f04c8bf2dc3009"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/MOB-4 \u2014 Manage Current Cycle.png",
+      "sha256": "5c95e076a5187553d9510370c2055a1282b8efaee0f8daff92dd926a1e904310"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P1 \u2014 Home/Landing (Hi-Fi).png",
+      "sha256": "05c5548c843b2f1376d3806324dc89b4df62f7089a1beb0945da96082de89bae"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P1 \u2014 Home/Landing.png",
+      "sha256": "bb0bf0746c5d4626ba32a07bd3cccb72f6cf474a4995853e1b03416502b9c6c5"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P10 \u2014 Adjust Flexible Allowance (Hi-Fi).png",
+      "sha256": "934466649c7ca0287b9abc1c50bdbf15f4fb151c83685284f8f3444b081c1551"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P10 \u2014 Adjust Flexible Allowance.png",
+      "sha256": "bc5e8c7dd949d43688d05e8dd6c65ed46c69b4e74e40f76d3d55fc5fce923a21"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P11 \u2014 Income Received/New Cycle (Hi-Fi).png",
+      "sha256": "422b0ed3e9ce88d38d41b5381f95101e7853dded4f16c8c2008034be5430b7d7"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P11 \u2014 Income Received/New Cycle.png",
+      "sha256": "84a481ffad7913ddefcd7318dc2d60fcc1417951719d3c87955613d31e198c93"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P2 \u2014 Runway Setup (Hi-Fi).png",
+      "sha256": "1d947891f17374b3293bceafc58832e5c716d559dee0fbb9fc6d149281c9830b"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P2 \u2014 Runway Setup.png",
+      "sha256": "6dd05d0da550430e5773b1688513f514f5ffef5e4b4aa324e962fb9ba20805dd"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P3 \u2014 Protect Essentials (Hi-Fi).png",
+      "sha256": "50fda4154bd12faff93f59cd997981c4a0230b4aa01f4bb7a626d7a3ede5d260"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P3 \u2014 Protect Essentials.png",
+      "sha256": "15d04ccb10b2829385179a3761557b4c872f9b39acc5c0e6d0c73dacefe36268"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P4 \u2014 Runway Dashboard (Hi-Fi).png",
+      "sha256": "652f0faadde396755c893af81b7d2d4788ebb002fc87b7874f5d19f282359892"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P4 \u2014 Runway Dashboard.png",
+      "sha256": "8fff55617ea67c186a44e3e57ab71905b36df7826848f0e677b5d17422a609cb"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P4-B \u2014 Updated Dashboard (Hi-Fi).png",
+      "sha256": "44d4edc2db1bd6365f748254bead15af219e3333ca936d43546e9bd661aae9c5"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P5 \u2014 Purchase Check (Hi-Fi).png",
+      "sha256": "963e3a50192da0485978361e107e6aec0b02ac4ad32dfd7a98f0cf621c64840f"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P5 \u2014 Purchase Check.png",
+      "sha256": "d7ad185af67aa746c7faca38c05e255927495b6e5b1056b747d0b2cf5dd59e4d"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P6 \u2014 Purchase Impact Preview (Hi-Fi).png",
+      "sha256": "670cb8a84e654ec376796c5e9e03a2d6cd4ccdf89610cba99e3907b32204c140"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P6 \u2014 Purchase Impact Preview.png",
+      "sha256": "2f0f074dca87c081d689540a9ab8be443c6fba6a9704159bd7c64bb1f9b2c94c"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P7 \u2014 Manage Current Cycle (Hi-Fi).png",
+      "sha256": "682ca5fc5229477c1a6a2d2a8bbefa0656b37374036edc3971eb1fdf9b48c6ad"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P7 \u2014 Manage Current Cycle.png",
+      "sha256": "28d367c25d54740fc592d89d0287184b8be5c38e5fe48dfb1efb27f8fa1d60d6"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P8 \u2014 Update Available Funds (Hi-Fi).png",
+      "sha256": "811a12c2cc3bda5263b06fbbbe64059d9ab2dc4f80650f5d1fe8bccc653f2b5e"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P8 \u2014 Update Available Funds.png",
+      "sha256": "4bf10359fa7b9bf7943fce24cf3e12430c785f737eec96d7a43e4ae74c9594c3"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P9 \u2014 Manage Essentials (Hi-Fi).png",
+      "sha256": "306de32c33a6843067bdd3d713ed71b20baa07bdbe08f7e2323f6801361ea62d"
+    },
+    {
+      "path": "BUS4012 AS01 \u2014 Student Money Runway \u2014 Mobile-First Responsive Web Application/P9 \u2014 Manage Essentials.png",
+      "sha256": "87469453ea87f00bf33a03f16973287a201dc855a3ec65ddebe7fc7171287b55"
+    },
+    {
+      "path": "README.md",
+      "sha256": "b68c914b3be513cbeaab633a04885bfc7c80e5014fd80873eca142550583f2fd"
+    },
+    {
+      "path": "api/index.py",
+      "sha256": "043ac654b7c7e20f3316ee2495808b4712e7fd08c76c6ce9384c053f103f0b85"
+    },
+    {
+      "path": "backend/__init__.py",
+      "sha256": "b176ee7251401492cf2159f88fa543d1d16fe704604ad796feb0c6727bc70e01"
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "sha256": "226e3b7eb5a8157aa9ffc87ba4fb15680803494dca9d638868d1c7c9371127a8"
+    },
+    {
+      "path": "backend/app/config.py",
+      "sha256": "13b856e8954fe73b469b6f94d917b42c7ac9d5ef0cf396757585d3b90b86d521"
+    },
+    {
+      "path": "backend/app/errors.py",
+      "sha256": "39a3ec39b10b82fc3e20cbd0cc4e3122d30e17707ec32adad60c846346c3c41e"
+    },
+    {
+      "path": "backend/app/main.py",
+      "sha256": "a3cbaec20e9d8fa687f5d31f62bb8cfd06c24d298846e0d8eb13860460f40980"
+    },
+    {
+      "path": "backend/app/models.py",
+      "sha256": "54b05b901687fa8d22162e70cc2232b460476dee0da08a543b3b3783ed071db3"
+    },
+    {
+      "path": "backend/app/repository.py",
+      "sha256": "2085b5db1c63bc2c4023e80ecff031bb520ad17695366c3f5592d2f0b6edea93"
+    },
+    {
+      "path": "backend/app/security.py",
+      "sha256": "0def0d4eee3be570b0aac6fd5e660c711bd6d58fe41cd530d4a1ace61c0628a5"
+    },
+    {
+      "path": "backend/app/services.py",
+      "sha256": "387e24ab873782c1250ab5db40b682af397fea118bd8730255cbb5afb543db90"
+    },
+    {
+      "path": "backend/dev.py",
+      "sha256": "396a33a9c4215f5bfacbb22436e1a1637dd0f5b4fd0ddb234918f73a3a72b1dd"
+    },
+    {
+      "path": "backend/inspect_auth.py",
+      "sha256": "7f5f79ab36fea9c46f8eb69a76e67e2a10bdf6f93c75f8f7748b9fc3ecb207aa"
+    },
+    {
+      "path": "backend/register_test_users.py",
+      "sha256": "3e1524279a44a1ca0749dc2d3df3688bfd9ec718b73e60dfeedafd89762266e7"
+    },
+    {
+      "path": "backend/setup_test_credentials.py",
+      "sha256": "9510a49a14ede386bdee11ca61a1f3a788ff074904de884ae64cb28c2f5caecf"
+    },
+    {
+      "path": "backend/tests/__init__.py",
+      "sha256": "98ac779ee447640914baa754565e62e2bab82a71ec806d665edfa1fc7afabac6"
+    },
+    {
+      "path": "backend/tests/conftest.py",
+      "sha256": "4703f870a2e1e7c3dcf5dc25a5fa23760adfb9f919c4151e652a206f123d6f97"
+    },
+    {
+      "path": "backend/tests/integration/README.md",
+      "sha256": "09784ba56f19ab54d795fcd5bbb9a7bae5e0ea6b101290b02e41cfe36dc62208"
+    },
+    {
+      "path": "backend/tests/integration/__init__.py",
+      "sha256": "b1260af4468a1cae5dc95eef89370de319820c9baf527f813fc38890b6acaa3f"
+    },
+    {
+      "path": "backend/tests/integration/conftest.py",
+      "sha256": "f1e6842c25045c1e7b9655a30c81109b7e98918df0fbe800b5dd3783b470385d"
+    },
+    {
+      "path": "backend/tests/integration/test_live_supabase.py",
+      "sha256": "598efa9b037bac8f3033a0b05b40f02cefecc730e9cc40059943ec41f7f18312"
+    },
+    {
+      "path": "backend/tests/test_api.py",
+      "sha256": "d97ee0e8d98311de2072e508083425673d4120469e3e33c338491b46a9359142"
+    },
+    {
+      "path": "backend/tests/test_api_hardening.py",
+      "sha256": "34a1b4243a8a725788c63dd6fb37410cebae048b1cb23560ed76e106c6caceb6"
+    },
+    {
+      "path": "backend/tests/test_deployment.py",
+      "sha256": "bbcc74d6e1757087c12229e9b73f1b602e9f8c2bafc28bcf412cfc4def8231a2"
+    },
+    {
+      "path": "backend/tests/test_frontend_contract.py",
+      "sha256": "2c6f4e25deea563a923616816b6cd268b2a2396e2881e2ff3916d74ee4db9976"
+    },
+    {
+      "path": "backend/tests/test_repository.py",
+      "sha256": "a61ca7a1b2195fe35e4d1a078852e69d34f148a6be0091ca730af7179bc89efc"
+    },
+    {
+      "path": "backend/tests/test_security.py",
+      "sha256": "628b0c3e94f260cf8bc8522803be44036fa188cf53477b5602432c68965affac"
+    },
+    {
+      "path": "backend/tests/test_security_hardening.py",
+      "sha256": "0a96bb66ffecb5742c64c4bbb02921ac33fbdce7137ae07f60d233e92916abaa"
+    },
+    {
+      "path": "backend/tests/test_setup_test_credentials.py",
+      "sha256": "45eb9589bdbb21a74324df22e7ecd04cd03ab49b0af790fd1ec282f48d637b3c"
+    },
+    {
+      "path": "docs/assessment/00-asm2-requirements-traceability.md",
+      "sha256": "671ec8b91c3dfef92dd8001759a337e54bfc630dae79b7a06a96ea9cbe1054ff"
+    },
+    {
+      "path": "docs/assessment/01-development-tool-declaration.md",
+      "sha256": "24f8687fe630103e0d481fc88fa4a29cebf926c24836361a9275af2b55d5f942"
+    },
+    {
+      "path": "docs/assessment/02-starting-prompt-evidence.md",
+      "sha256": "a127092f4db354962be62fa3911c3894b197d2f2120c41a35c2d929d2478a38d"
+    },
+    {
+      "path": "docs/assessment/03-key-follow-up-prompts.md",
+      "sha256": "0f5acbf4385ca26523a59e2e997aa92111bdde9af56f80539ab54f0dcced0d81"
+    },
+    {
+      "path": "docs/assessment/04-custom-component-evidence.md",
+      "sha256": "726ccaef38727b7b359177199f4d27e398ef96f06fad648a295743e6680dd10c"
+    },
+    {
+      "path": "docs/assessment/05-21st-dev-evidence.md",
+      "sha256": "9682754a05331e61ade53d814d9fdb7e1444e535a480ce8de846d55c9aa78d7f"
+    },
+    {
+      "path": "docs/assessment/06-props-callback-data-flow.md",
+      "sha256": "933addf5a6ac9adc6f9b46900d0b244effd59cf70af3937090a32058a2241252"
+    },
+    {
+      "path": "docs/assessment/07-ethics-and-data-handling-evidence.md",
+      "sha256": "3a7998cf0bf9f7a68f8473cf51e592cdde70e72b18e47ec11a49ecbd1f4df1c2"
+    },
+    {
+      "path": "docs/assessment/08-prompt-document-source.md",
+      "sha256": "3c1d7c2e2e21f3286837cd7685a0a1a7510baefe9c7c85c5fa85f0cf4bae3321"
+    },
+    {
+      "path": "docs/assessment/09-screenshot-capture-plan.md",
+      "sha256": "f21332fb8a146e6051a112353387a4e1c0e19e1afc4297eed4058b3fdb8c9b0b"
+    },
+    {
+      "path": "docs/assessment/10-video-recording-source.md",
+      "sha256": "380705eb176e663b18a20c8d6a576af09b44b345403f1eac9b3b24db6b03a673"
+    },
+    {
+      "path": "docs/assessment/11-final-submission-readiness.md",
+      "sha256": "7dd0c1fc46d959db4dd46bdf866b6fb5cb62a37413b96771049a2c0ac29f46db"
+    },
+    {
+      "path": "docs/assessment/12-final-hd-evidence-reconciliation.md",
+      "sha256": "196bdcce1ff2951bf65ed20cba7c1b7dd48a33221e56bdff8d88aaedd038e43a"
+    },
+    {
+      "path": "docs/assessment/ASM3_FE_UIUX_FUNCTIONAL_FREEZE_AUDIT.md",
+      "sha256": "2650e180c82b229abeabb0df7de103d08afcd2f051d27d107f8f6e75c6e9c405"
+    },
+    {
+      "path": "docs/assessment/ASM3_P05B_CLOUD_ONBOARDING_VERIFICATION.md",
+      "sha256": "d4f12efb67b09d8fe253eae5cc11b5845296662c1f288d835bf13374f9813f6b"
+    },
+    {
+      "path": "docs/assessment/ASM3_P05_AUTONOMOUS_ENVIRONMENT_SETUP.md",
+      "sha256": "f220565028706e0068b91259fbde5a50331c8d3a8ee30ea8e3d028d6f6454c8b"
+    },
+    {
+      "path": "docs/assessment/ASM3_P0_SCOPE_FREEZE_ARCHITECTURE_BLUEPRINT.md",
+      "sha256": "ad47f1d51f3fb2b1984986753bd390e05b15b2a391c64db1dd22e3db6196877d"
+    },
+    {
+      "path": "docs/assessment/ASM3_PREDEVELOPMENT_SOURCE_AND_FUNCTIONAL_AUDIT.md",
+      "sha256": "edb96a37bdb8171a00f80d8ccaa7f3a78e03a2a485d44443a0ce2e26ce274ed7"
+    },
+    {
+      "path": "docs/assessment/README.md",
+      "sha256": "4d971dc8ca6bcbe88abb301ce54d64ec7806a9355171bba2200260d58970bf33"
+    },
+    {
+      "path": "docs/assessment/p11-evidence-matrix.md",
+      "sha256": "71e55c171f5c40b89120e20f311a07b06773b3add06c10b35a021c5da030ce93"
+    },
+    {
+      "path": "docs/assessment/p11-prompt-document-outline.md",
+      "sha256": "13e50d06a7d0233c0f41d3a9598035e98cd0d0a94aba5640a3e977f5017986fa"
+    },
+    {
+      "path": "docs/assessment/p11-rubric-traceability.md",
+      "sha256": "85ae1026617148b95477330a22b8c2e9c5d08a1ee4885e23fdb0ccf2464c82dd"
+    },
+    {
+      "path": "docs/assessment/p11-video-recording-plan.md",
+      "sha256": "0de2dc5f69d13890c0e1ad1a56486e5d4a03160a3bed4ae461a3c5df9cb0660f"
+    },
+    {
+      "path": "docs/evidence/runtime/final-runtime-test-report.md",
+      "sha256": "66dabfc7ef5c648be0a6b5e7e92b5a8b6da7724f5866137b1a9a6a788b1a090c"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D01-login.png",
+      "sha256": "c2eb029a7e2e6eb3b1f39a33308074a35c53c65862f6ef381d981a490732c7fc"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D02-runway-setup.png",
+      "sha256": "6d2c9694d36bf3ae36405558beec8bed71d92dca4299dd1639ad41e5c9512f50"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D03-protect-essentials.png",
+      "sha256": "c6351387722e08a254288ce86f2d67ce078fa42d94a256ddb5b6186b4da11822"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D04-runway-215.png",
+      "sha256": "fb945c737cc4f147be55cd9550ca3bc2443b3867850706ff12d12356b9607542"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D05-shortfall-84.png",
+      "sha256": "7aea4b5ea03513fc7e0f8681ad0e2a30ce797435d9a48261bc18eb4270fe90b7"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D06-purchase-check.png",
+      "sha256": "b7442638cd2cb6aaa4c0f67e121390f96b7ea90fafb9f501792cd233271de06d"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D07-preview-remaining-55.png",
+      "sha256": "19d1b9a26e1594774c78871c1ff2e90d60071238f119c14cf52672f76b750737"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D08-preview-exact-0.png",
+      "sha256": "47fd7bd8f663c4b9cb3808ffcbaf925b2dd2ed389a63a7cc893b5af7cb88bbbd"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D09-preview-excess-85.png",
+      "sha256": "d0ba8a3d5fcd894ec60c7aff48087575ac57b79e6bbf02a7342ad011751e4934"
+    },
+    {
+      "path": "docs/evidence/screenshots/desktop/D10-confirmed-runway-55.png",
+      "sha256": "f8beb454ef569b84ba3d3334848322a92cbf9e04c2fa633b58cd96c33a7ead6f"
+    },
+    {
+      "path": "docs/evidence/screenshots/manifest.md",
+      "sha256": "34df5d17a1a7b4e84e027eeaa9675955c4b8f896017e5c4d54997e70a9f85226"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M01-login-390.png",
+      "sha256": "015dfe965ec79f92fd8d3c657d0b0e00e189653840df1defff250b82f54845bf"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M02-setup-390.png",
+      "sha256": "0c29bcc91f78a5698f31507e5c678add795a6dfdf4f103cf17aef63fe67e67b5"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M03-essentials-390.png",
+      "sha256": "6058b5dca355b154b3991129c940b3d0ca03a09905b7e5ea7bb9d10be687931b"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M04-runway-215-390.png",
+      "sha256": "e8d185e02f728d326cb6d1421dea6534c8bcdc592280c10f6d3a12dc4a322a7b"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M05-shortfall-84-390.png",
+      "sha256": "0d071881e2134e72bcf587a391a416bac861f61e061ea66ea7552e59e8972c76"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M06-purchase-check-390.png",
+      "sha256": "bf7efe54f8f2c1bd8a521b7792ce7da157f11950bb6d4b8173a625828d6ecc00"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M07-preview-remaining-55-390.png",
+      "sha256": "1509e47a90eb285d4a7fe6cc6dcc56f151bbd96b3075ede3a18bad0dfca73445"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M08-preview-exact-0-390.png",
+      "sha256": "58bb4eed97a97da9620618f800ebe96b733ae33543ca93f1ff57ef1068946d01"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M09-preview-excess-85-390.png",
+      "sha256": "73a1466ee2bbbc9eb170b90c9533cd3f4f07d193c7503b6f9f9b59b29ffc7785"
+    },
+    {
+      "path": "docs/evidence/screenshots/mobile/M10-confirmed-runway-55-390.png",
+      "sha256": "d529f96499595fbd7bc9c5025f89ee68a2cbff774f09fdb834e8a212e5bc04a5"
+    },
+    {
+      "path": "docs/evidence/screenshots/validation/V01-login-required.png",
+      "sha256": "02cd071760a73f375681f1671dd6e5e12d3a49d658af21eda4569f787d1b1bed"
+    },
+    {
+      "path": "docs/evidence/screenshots/validation/V02-login-invalid-email.png",
+      "sha256": "349461011b59a2a06fbd581dfe4a6a4391d78cd7b976933bdf490c4d8028ca8d"
+    },
+    {
+      "path": "docs/evidence/screenshots/validation/V03-setup-negative-money.png",
+      "sha256": "1bd012d722496a319fd1a5a10d83f46a4f968717ac62cbfbe9c6ec9f49b1914d"
+    },
+    {
+      "path": "docs/evidence/screenshots/validation/V04-purchase-invalid.png",
+      "sha256": "a3de78c89c78b22e2238d636175288392618ff8d74f202a25c07ea0c3a392e41"
+    },
+    {
+      "path": "docs/evidence/video/automated-demo-recording-report.md",
+      "sha256": "d09eafe9e5f084c821f549025a89c01f939ae7a4e3a5977406c66820d22d3195"
+    },
+    {
+      "path": "docs/evidence/video/manual-ide-segment-runbook.md",
+      "sha256": "07424bf5be2ac131b04555f258e155b70317dec6d1e1471f88d758daa3b8bbd1"
+    },
+    {
+      "path": "docs/evidence/video/product-demo-cues.md",
+      "sha256": "4e0ef2bb118856a949aa31515fd774bff31c23d35fb86695522f266a6e6bc8cd"
+    },
+    {
+      "path": "docs/evidence/video/product-demo-narration.md",
+      "sha256": "402833b8a448fc38613086d9df356b548eb225a60a230b4f1fa89bcd900f0ba9"
+    },
+    {
+      "path": "docs/figma-reference/README.md",
+      "sha256": "e8d256c77e66a8149e7a27989d1f2d7accba6cc724111b4b76e75965d79479ab"
+    },
+    {
+      "path": "docs/figma-reference/components/bottom-navigation.png",
+      "sha256": "ab9781b7a81f933b834d225ebaad098736a4c4fa40a79697546cdf1e8aa054dd"
+    },
+    {
+      "path": "docs/figma-reference/design-system/ds-01-foundations.png",
+      "sha256": "7ddf58a9e4997b7952400f2e213ca2033b6774248def23ffe9b266fc5ca72b5d"
+    },
+    {
+      "path": "docs/figma-reference/design-system/ds-02-responsive-navigation.png",
+      "sha256": "b30296a86d0ea3bc9438cf232ca4b8b27cef0f4952de20a9cbb2b71b30012a39"
+    },
+    {
+      "path": "docs/figma-reference/design-system/ds-03-forms-core-controls.png",
+      "sha256": "d6b2df6c4c2b9966accbf78b4a21b305630d4fdd534235b1e3b787dddb05599c"
+    },
+    {
+      "path": "docs/figma-reference/design-system/ds-04-financial-components.png",
+      "sha256": "e5406a31fd3488f6dc48e17e3ffcc1a26e7cdb7e740a7c0dec2093cd495e07cb"
+    },
+    {
+      "path": "docs/figma-reference/design-system/ds-06-feedback-accessibility.png",
+      "sha256": "d4ec3cbaa0be5dfd6a5953b1426e1956b278af6da8774ba9f24848bb44816328"
+    },
+    {
+      "path": "docs/figma-reference/design-system/ds-07-landing-components.png",
+      "sha256": "79aa5246dd1e48e7174dfb8c7be4024537ec480c32ebaa3ded7d93832522091b"
+    },
+    {
+      "path": "docs/figma-reference/design-system/ds-08-responsive-architecture.png",
+      "sha256": "f6e257512e2dc7751aa9ec29d4bf247d692b90d8eacb238e07074ac73de746c2"
+    },
+    {
+      "path": "docs/figma-reference/prompts/p01-design-system.md",
+      "sha256": "fab0a28c58557362fca40b9fb4524b0eb49555f3e7cbfa262f56060d3f8b1d8d"
+    },
+    {
+      "path": "docs/figma-reference/screens/desktop/p01-home-landing-hifi.png",
+      "sha256": "05c5548c843b2f1376d3806324dc89b4df62f7089a1beb0945da96082de89bae"
+    },
+    {
+      "path": "docs/figma-reference/screens/desktop/p02-runway-setup-hifi.png",
+      "sha256": "1d947891f17374b3293bceafc58832e5c716d559dee0fbb9fc6d149281c9830b"
+    },
+    {
+      "path": "docs/figma-reference/screens/desktop/p03-protect-essentials-hifi.png",
+      "sha256": "50fda4154bd12faff93f59cd997981c4a0230b4aa01f4bb7a626d7a3ede5d260"
+    },
+    {
+      "path": "docs/figma-reference/screens/desktop/p04-runway-dashboard-hifi.png",
+      "sha256": "652f0faadde396755c893af81b7d2d4788ebb002fc87b7874f5d19f282359892"
+    },
+    {
+      "path": "docs/figma-reference/screens/desktop/p05-purchase-check-hifi.png",
+      "sha256": "963e3a50192da0485978361e107e6aec0b02ac4ad32dfd7a98f0cf621c64840f"
+    },
+    {
+      "path": "docs/figma-reference/screens/desktop/p06-purchase-impact-preview-hifi.png",
+      "sha256": "670cb8a84e654ec376796c5e9e03a2d6cd4ccdf89610cba99e3907b32204c140"
+    },
+    {
+      "path": "docs/figma-reference/screens/mobile/mp01-mobile-landing-hifi.png",
+      "sha256": "6b8eedb3322eba1fac12ec588ef34f6cc0f91d740d8a68e57d15f1901512adca"
+    },
+    {
+      "path": "docs/figma-reference/screens/mobile/mp02-mobile-runway-setup-hifi.png",
+      "sha256": "4b2f6444b2328a41e0d9e03ad20b03ada0f4c85028a4bb46810fe64c960319fa"
+    },
+    {
+      "path": "docs/figma-reference/screens/mobile/mp03-mobile-protect-essentials-hifi.png",
+      "sha256": "fbf214156074de193ab5b299283374b0e4658b3f79844da21788ec7fe7eaffdb"
+    },
+    {
+      "path": "docs/figma-reference/screens/mobile/mp04-mobile-runway-dashboard-hifi.png",
+      "sha256": "9ce6e259040b5b110bce8b7ad7ba53acd7218e461a63a1866436ca8f639b3692"
+    },
+    {
+      "path": "docs/figma-reference/screens/mobile/mp05-mobile-purchase-check-hifi.png",
+      "sha256": "cb6ce568aa672ecb7142c4386c051c70aad2222de3ff8cd3b4f6baf8b9d5aadf"
+    },
+    {
+      "path": "docs/figma-reference/screens/mobile/mp06-mobile-purchase-impact-preview-hifi.png",
+      "sha256": "2e363fa0b4b21de60ff0876bd9a5d2fb85848ff40bc812f13d5a64a896130023"
+    },
+    {
+      "path": "docs/figma-reference/states/failure-protected-shortfall-desktop.png",
+      "sha256": "40ceea692d9545b62d3adcf4ea2965c61426d3a72d9689c7b8e5e9eb7e6e4df6"
+    },
+    {
+      "path": "docs/figma-reference/states/failure-protected-shortfall-mobile.png",
+      "sha256": "d771420552dc9b002b16fe3b8b2133ba8d954b18db6c878e831d8cbbaab0ec17"
+    },
+    {
+      "path": "docs/figma-reference/states/success-updated-dashboard-desktop.png",
+      "sha256": "44d4edc2db1bd6365f748254bead15af219e3333ca936d43546e9bd661aae9c5"
+    },
+    {
+      "path": "docs/figma-reference/states/success-updated-dashboard-mobile.png",
+      "sha256": "731e59d72444dce1753d19936838c83f71a758b6513684df6bd293faeeba81ea"
+    },
+    {
+      "path": "docs/implementation/Student_Money_Runway_ASM3_CODE_FIRST_MASTER_PLAN.md",
+      "sha256": "4130689a14b44f9faccd9d254326a0ee29f5d5a82621f90a803c7fc84020acd3"
+    },
+    {
+      "path": "docs/implementation/asm3-c0-code-freeze.md",
+      "sha256": "11c4be883bc71b8834b495a81a021fe63e62025859f366b73801959e58b281d7"
+    },
+    {
+      "path": "docs/implementation/asm3-c1-auth-api-foundation.md",
+      "sha256": "c377af0b76dba92ffe3ed72d387af7207f0dbc038af2554316b60dee307f270a"
+    },
+    {
+      "path": "docs/implementation/asm3-c2-six-screen-integration.md",
+      "sha256": "e18190995ac82dde166d59c0f7bd9e5250da51857bd2da79e5afa276357277bc"
+    },
+    {
+      "path": "docs/implementation/asm3-c3-backend-hardening.md",
+      "sha256": "613f8e46ffcae189374c0130cee232b777c739abb5d9565219cb230878b2931f"
+    },
+    {
+      "path": "docs/implementation/asm3-c4-local-e2e-qa.md",
+      "sha256": "afeb672c2e0e0539313fcd04827281b54d1a5c71745e07d9fb457ebc7e805ced"
+    },
+    {
+      "path": "docs/implementation/asm3-github-source-control.md",
+      "sha256": "a2f7104fbc3e064352713fed371c271fd2ca1730d36a32fb08f2fd5ac868a5ff"
+    },
+    {
+      "path": "docs/implementation/asm3-p1-database.md",
+      "sha256": "d54e7ac6a73a5655e72a9e65e24d2d2b25cff9d2eb68d42d4aa534f6e16fadc9"
+    },
+    {
+      "path": "docs/implementation/asm3-p2-fastapi.md",
+      "sha256": "3e3e01846367a9e5e3bfdeaf0736364a3d521334e9980bdcffe8250f3c4cb2a6"
+    },
+    {
+      "path": "docs/implementation/asm3-p2b-live-integration.md",
+      "sha256": "b65a702323a8d6812f896b221c02e35f7f6075c5ef66cb511ce020dec37aeb89"
+    },
+    {
+      "path": "docs/implementation/asm3-source-inventory.txt",
+      "sha256": "0bdf0b44d182487b75bbe64a06fbd5bec9436abed79335c82110b738a6538ca0"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/1024-confirmed.png",
+      "sha256": "749e3b689fad4edfd4cda30ae72f09dad0f99502dbea902c4b2bcb5572685da3"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/1024-load-error.png",
+      "sha256": "17b9c8486ade4ddd902a1862bef15ca8f9233b2f6d526a3b998881f1212a095d"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/1024-preview.png",
+      "sha256": "eb8840fa8620e20d0a1dc8e6c43b9d641670a969de8edbf0489098bd5a21cb0b"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/1024-runway.png",
+      "sha256": "91e960e5627d14296c7d80ae614444367ece03b8b775c92482358cc5f12961a8"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/1280-confirmed.png",
+      "sha256": "40d13e22b340a18bffb7117bf7cbf33839b5f3deba64083adce5a50ef1da3ff0"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/1280-load-error.png",
+      "sha256": "cb737674cabcace66a86eab6866eb0875fa7041881e1224c22cbf8f9574988b9"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/1280-preview.png",
+      "sha256": "2467df2817e06197db40a7206f664434d23ff745c8a1305366bb059ef59c22c3"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/1280-runway.png",
+      "sha256": "2d79fdfb10e1bca156d0652267cd76380a3513fba30f05b8d390d4a175a00dfc"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/390-confirmed.png",
+      "sha256": "8e252b0c8d584c710c7ceda7ffd583b1faf8d889677e116059c5eca6befb942a"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/390-load-error.png",
+      "sha256": "a35fb99c7962de8c29f26acf8efc6e875ed7c1a805536d2407eb7c58bfbbaf77"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/390-preview.png",
+      "sha256": "9b0d66ef2345a0ed780c6aa5c82061f36e863fd1fbbe0dc7275200ea986bd896"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/390-runway.png",
+      "sha256": "32bc10cacda2ccd0f0f6f326bb331cb3081418dfd6ee4fc3196595f181719c5f"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/768-confirmed.png",
+      "sha256": "edbad0f85364b38090845544dc9883d9c998d349b7b2f548e2c8194d46b7dfbc"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/768-load-error.png",
+      "sha256": "c4eb81f37a68b36ea345bafff510916e58a7fa79b6b8317d0b0ff234ec9ab580"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/768-preview.png",
+      "sha256": "986824d65343890e44de6fa8307af0efc34e0d71258711c90146112cf08b13e1"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/768-runway.png",
+      "sha256": "00f38f69c9b1c5f983c80a7054662901672c165baee6367788a729da8ee5cd5e"
+    },
+    {
+      "path": "docs/implementation/evidence/c2/browser-results.json",
+      "sha256": "dc6bc2c6c474a9809cc7bcaee2f92c8f605b87746987bd95f5224781be271220"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-confirmed.png",
+      "sha256": "fee07e44feccde446f2df9e09f2f54bb0ec6a2599a6c3eb71ccfe21d3616bbf4"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-error-auth_verification_unavailable.png",
+      "sha256": "fc995495aec7489536cb80e2755dcc9984d63ba8ce63b793e17840b71398f08d"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-error-service_unavailable.png",
+      "sha256": "fc995495aec7489536cb80e2755dcc9984d63ba8ce63b793e17840b71398f08d"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-login.png",
+      "sha256": "31b957aea58758e4c396a6789f7506ee286ba3e1897debeec13cc1033b434510"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-maximum-history.png",
+      "sha256": "f7b8e137e68b14349c4cd4ad540ab3a54fe9861d7fa38adf45765a6ec10dcdd8"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-maximum-preview.png",
+      "sha256": "58d27bb3c2eef330f8e33527df3502125e4c9930f07dbeb7cd874e627298a556"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-preview.png",
+      "sha256": "c248c0c335dda57a6c5c02f0dc28fdc5a02402cb10337db4f1c433d46546a467"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-processing.png",
+      "sha256": "2751a957da247cb064e47625e354540ba2046188fd30ff57f8586c0e79c4f439"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-restored-essentials.png",
+      "sha256": "ea64ea82a176a98891dfbe0abef2e043b4dbf1514cf0557b99674b656afd923a"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-runway.png",
+      "sha256": "91e960e5627d14296c7d80ae614444367ece03b8b775c92482358cc5f12961a8"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-save-error.png",
+      "sha256": "0725c1ef3340413b7dc052ce5236d55bbd6180580780351bb18c6e179b995988"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-setup.png",
+      "sha256": "e3cf1dd095b434199762fc7e7d82ad9eef11da328005a91b276e20bf7fc57f76"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1024-uncertain.png",
+      "sha256": "914ee23a03582c7676c4eb4b439deee35aa5747047d388dcb1fab1991e23063f"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-confirmed.png",
+      "sha256": "ac217318b63860a6c9c6fcb4129f9d6accc64ddba5b4204adbbad70edbc2b770"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-error-auth_verification_unavailable.png",
+      "sha256": "39a60b0122777ffc5fa87655dec82220b7919561027466ab71974f252b8e3fc8"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-error-service_unavailable.png",
+      "sha256": "39a60b0122777ffc5fa87655dec82220b7919561027466ab71974f252b8e3fc8"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-login.png",
+      "sha256": "abc6f3e371f33c9e87434b9f0214eb33aa1bfe7407a9a9aaf8272950ab69d78c"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-maximum-history.png",
+      "sha256": "626d647570b55a0d684a09a1af89bac6d8ef8fb76d4f8e8349525b689de8c493"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-maximum-preview.png",
+      "sha256": "43ba121eca47d28aa4b902db773f927e6066abfeccd364e55103add1700c4d4b"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-preview.png",
+      "sha256": "7a8a6756e5a0bc44ccd63ff86e71672ffe02971de8a103940f7825b3801271db"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-processing.png",
+      "sha256": "e4a6d03bc5980f505eef21a48a919330c106bcddea4cb795d1cfb22a6e13a7b6"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-restored-essentials.png",
+      "sha256": "162fbc630948ad0e37e52d0956fc52b13a64717ceed5d2aaa7a7868cf144f1d6"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-runway.png",
+      "sha256": "2d79fdfb10e1bca156d0652267cd76380a3513fba30f05b8d390d4a175a00dfc"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-save-error.png",
+      "sha256": "b97590d833c50627bd3794102d793f203ed92d08d643ae089b7f4ebeb800c5de"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-setup.png",
+      "sha256": "208062a4e71298bcc8ba381f8b02a19736bef3f9ae1e7d0b19442d14256910ae"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/1280-uncertain.png",
+      "sha256": "be263b7181ad5ba1604086eedf0ac437e07d31c537d9fece4b807cfeca44fe9c"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-confirmed.png",
+      "sha256": "5f8b76e6205310ad498125a2ba411f82bc4afdbda26c024c8e430527a92f8dd9"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-error-auth_verification_unavailable.png",
+      "sha256": "2741b1271fc1f02516606916b522f6a2a9d2ae17a6d789345f19f41762b9eb8d"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-error-service_unavailable.png",
+      "sha256": "2741b1271fc1f02516606916b522f6a2a9d2ae17a6d789345f19f41762b9eb8d"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-login.png",
+      "sha256": "d4238ee70cd51658f3513d3f2ed84f6a6e3c79938b746b5008ebc5e9150edd61"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-maximum-history.png",
+      "sha256": "cdf502bb4b0ba1ca5c656c286714c06f8a9d78f249297a36454946e8e6a586ce"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-maximum-preview.png",
+      "sha256": "8bd0d7103056f1fcd8a582d1d4c9f2f736db68cfb3c7620823c9e58d22495817"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-preview.png",
+      "sha256": "fa27c7219743a14aeaf221f4e780e4b6f0d221b5fdae5ed56d26cf323b9305c4"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-processing.png",
+      "sha256": "421cb6e7db5c1ee30ee0da82fb7d8d3f40e18524692fb8c591ade73d4e9a09db"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-restored-essentials.png",
+      "sha256": "0f2a3e47a86594d6f3c847a4608150799193a6c9d06a9ad76ff81c210c424d55"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-runway.png",
+      "sha256": "bfb3f09863126e28b527394792c3fa9deb6de2926d3b3a7ed720628127074fbb"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-save-error.png",
+      "sha256": "11906e9cf5b0214ee3d28806a6462c1995efb5acb16508e812646e6d87bcac2e"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-setup.png",
+      "sha256": "3cbf114b752ac7b89b3601af04e83adac0ef9402a58e83e70999c5205ea288dc"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/390-uncertain.png",
+      "sha256": "700148a598cb4a4741bf3d1fa1bdcd77a2cab981086cd57bcdcddb5326867168"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-confirmed.png",
+      "sha256": "fef0f725dd4134587340f70a53e0ddf9cda43fb5cbcc4bc9961ba5c47958ad42"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-error-auth_verification_unavailable.png",
+      "sha256": "e79ec7cd88655acb593044e7e48699ea587105ba8dab7184bf38988d914d7f63"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-error-service_unavailable.png",
+      "sha256": "e79ec7cd88655acb593044e7e48699ea587105ba8dab7184bf38988d914d7f63"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-login.png",
+      "sha256": "fc9507f971edbaf83d77d799d3527e3d382d636fdf1a73798fe25067a7f36aa5"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-maximum-history.png",
+      "sha256": "eeaa8b073b2bfa439492a9a5b0a9025d57a836fa5bae4afcbb2b43bb745f8758"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-maximum-preview.png",
+      "sha256": "96bb0e50e955a8f22917b63658822f456b56e0c74624522cc3a0d153460e75e1"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-preview.png",
+      "sha256": "838daec5fe38cff185a7f6e6acc355bc1bff0ef37a401b4698e7bfbbea1d7b69"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-processing.png",
+      "sha256": "85b4b6a53369af52e2f729b83ddb6ec8216ee025441b482d979c978a2f1a6ab8"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-restored-essentials.png",
+      "sha256": "4533727d89f84cdfb09091cfc93d18a6004cf4d9224e047a98170bc4a3830928"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-runway.png",
+      "sha256": "f76f91a986ddbb9961d1a5d06d5f61e48b743705fbdb803dfc528952cb349f03"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-save-error.png",
+      "sha256": "b058a7e8e4a4c558fd4c8a52893e0681b7f6490eecd169e192ba213cc7605c07"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-setup.png",
+      "sha256": "f35b75eb5b89717b2129229cd803424e09a98aec8f00c7ea9f1a0c7007813f3c"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/768-uncertain.png",
+      "sha256": "51997a209f3e9fd7a137c9c9d30df6ad91b509278b7b0c0e60fdc05e4268ba7b"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/browser-results.json",
+      "sha256": "54728ec5dffc128bc3939c2ac6473ffbeea6d16d68517fde3c2c27cedeb6a05e"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/changed-files.json",
+      "sha256": "3866d41870e2315a6070f5d3c10b3b21a93fd67734486585b3f0cd83c6224eec"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/defect-confirmed-before-390.png",
+      "sha256": "eed45e1b804a57ba9d3406879889e1ad0f33be7accdb7959946f4937eec1c734"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/defect-preview-before-768.png",
+      "sha256": "35a1dff3b6086263f0af1c8d0518b29fbb39a27eb0b42674bd3236baddb6201e"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/defect-reproduction.json",
+      "sha256": "3a43e37e0a8edeedfef503ab8bb4a7efdcc1843c725a789ba43d2a4aa2052256"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/local-http-results.json",
+      "sha256": "df9cc8e4f3844c6e8d85e8072af9e2a1bb6d0bd682e2ee47a155b308c44272d6"
+    },
+    {
+      "path": "docs/implementation/evidence/c4/quality-gates.json",
+      "sha256": "9870e33dfe3a67db897912f1a6d8f5fc572e2a8bcc441cc3a5b2e3d138e51960"
+    },
+    {
+      "path": "docs/implementation/evidence/c5/clean-first-attempt.json",
+      "sha256": "e7c91039bdc915043bfce9b70c6a54df44a48edc1c70b4d99f91c5e85d9b138b"
+    },
+    {
+      "path": "docs/implementation/evidence/c5/clean-setup-results.json",
+      "sha256": "e7c91039bdc915043bfce9b70c6a54df44a48edc1c70b4d99f91c5e85d9b138b"
+    },
+    {
+      "path": "docs/implementation/evidence/c5/routing-results.json",
+      "sha256": "7402262c6c46f87a5de0d7f902586714de6579bc7f0ee39c0666451da38562fe"
+    },
+    {
+      "path": "docs/implementation/p1-design-system-mapping.md",
+      "sha256": "954a13824efadde43ae6d284c300a563385190732a1d0ea52fea80a9c593f590"
+    },
+    {
+      "path": "docs/implementation/p10-validation-accessibility-ethics-source-hygiene.md",
+      "sha256": "5c567bff6dce1185db2ecb514bed197ebffe3e057618393077e702839449ce9d"
+    },
+    {
+      "path": "docs/implementation/p11-final-qa-assessment-evidence.md",
+      "sha256": "f3746441cdc33705de314eaa6a12aaf5cbdd11b28c842f2e40c806f25af5680b"
+    },
+    {
+      "path": "docs/implementation/p2-component-matrix.md",
+      "sha256": "9c7284dc981a12a86811722158ffc5d42d545f8e8481ab8c250b4e9f06649c3e"
+    },
+    {
+      "path": "docs/implementation/p3-21st-dev-integration.md",
+      "sha256": "d0db01ad064264ea1b40b8ab147523f6630482c7fc948bdd1706e1c493658fea"
+    },
+    {
+      "path": "docs/implementation/p4-route-map.md",
+      "sha256": "919c8fcbf3713b58a6a07971742f167632d5fd3040ea9265e63049671c992cb3"
+    },
+    {
+      "path": "docs/implementation/p5-state-and-calculation-model.md",
+      "sha256": "83197931c7a2a2a7d279b2b49dea1db8dc4220cef2723d81954196d8d0e5e0ac"
+    },
+    {
+      "path": "docs/implementation/p6-login-and-runway-setup.md",
+      "sha256": "81e40418993d1c1cabb6199f7cb55cc6cb87be46f2fdbadc95e94305073ccdf1"
+    },
+    {
+      "path": "docs/implementation/p7-protect-essentials-runway-result.md",
+      "sha256": "92142d5b3b80b5c3084fd18aed5d644a33fe20683d603e48079186b54988cd50"
+    },
+    {
+      "path": "docs/implementation/p8-purchase-check-result-confirmation.md",
+      "sha256": "ecfffdea22a707b98f52f9530849ecde44e45bf9287ff85fa7e03082ef626938"
+    },
+    {
+      "path": "docs/implementation/p9-responsive-figma-qa.md",
+      "sha256": "c3d729440ffb90025e29a411f6f08d6949bd308bf1e2bd4ad665a0286378d148"
+    },
+    {
+      "path": "docs/prompts/00-master-project-context.md",
+      "sha256": "aa706a9bebe033273866b46090f173c2244ec9b5f35fac09c54240fef8d3a5ce"
+    },
+    {
+      "path": "docs/prompts/p03-21st-dev-integration.md",
+      "sha256": "ac9bbc9f277cf7f4035a572c21b2adb50f71b625b231b53355400850d5465e1b"
+    },
+    {
+      "path": "docs/prompts/p03-21st-dev-original-prompt.md",
+      "sha256": "b46523d28bc2f446c91b63f51426bfd69e3d1e94ab800bd38e05efc98cd17cbc"
+    },
+    {
+      "path": "docs/prompts/p06-login-runway-setup.md",
+      "sha256": "acf23413d858b5dd1b482e808a26b5cdd7426ccc67ab679ccbe60edcde860050"
+    },
+    {
+      "path": "docs/prompts/p07-protect-essentials-runway-result.md",
+      "sha256": "d1e294cccfe0d00457ee7d44d4cad69555f055159c8c9e59c5ec454b5f0e7e44"
+    },
+    {
+      "path": "docs/prompts/p08-purchase-check-result-confirmation.md",
+      "sha256": "124e923fdacc078ff42f54cfed1161e4c69978abca9f2ceac7342d2bdc2f9a1a"
+    },
+    {
+      "path": "docs/prompts/p09-responsive-figma-matching.md",
+      "sha256": "06dff3f7cc2b52515a58dc430d62e5aaa7608304146daa0411d39808a98e70c3"
+    },
+    {
+      "path": "docs/prompts/p10-validation-accessibility-ethics-source-hygiene.md",
+      "sha256": "057d77d9f3b8bec8fb38480b88b604b37ecb3b12003e44c6f9fb4dd9b4d2cc7b"
+    },
+    {
+      "path": "docs/prompts/p11-final-qa-assessment-evidence.md",
+      "sha256": "98a2aa33e55f045fa3c35aa525aba0005841ef66d8ba9515c8bae498d5429e1a"
+    },
+    {
+      "path": "eslint.config.js",
+      "sha256": "d71c6df2d6211de34f48e511a6dffe8c7d6abd8a412b6eb0acbaee617d087e3c"
+    },
+    {
+      "path": "index.html",
+      "sha256": "f8b87d2771dd68a20af838aec88824e9f1e61271cab87bbf4a1933ec3b9e7e68"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "af575bd3ee293e57f1f14fabfab2c7244531d2208ff933ce4a9b278cb191a737"
+    },
+    {
+      "path": "package.json",
+      "sha256": "bb604ac749502d051994ee8169d6d79d8b30768794a2bb0ddfcc996b392201f4"
+    },
+    {
+      "path": "postcss.config.js",
+      "sha256": "190c877db466995bf1482f4a16abd06e04a89ede3119341e2a86ff96e1737b27"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha256": "61bc9a161de58248288e6905425d7180f0624c2865007b97d763fdac12043a66"
+    },
+    {
+      "path": "public/icons.svg",
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "853e25759f4d6a63ea9888e0d27a13981e8ae17932b3e083227682fde0464475"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "sha256": "3b023b80feb1e6b43fad96f8b932ffdb606d742bdf50872cf004581b389d9bad"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "266954812525b28098681128e79dbdf42cdf56b5d6e2129f188be00359e8f6d4"
+    },
+    {
+      "path": "src/App.integration.test.tsx",
+      "sha256": "22f2cbee8964b5d21917ceed8779aaf21ec3608990959c66e1f104cfe7eb6ea7"
+    },
+    {
+      "path": "src/App.tsx",
+      "sha256": "aeaa1091f6e84ea0cba822f09bdb289315781387fdb019ccee99d625d9aea746"
+    },
+    {
+      "path": "src/auth/AuthProvider.test.tsx",
+      "sha256": "0d313dacce856f4191151cf56a6e8da8d0f1ae8d27b30a6b5976b356748a7c74"
+    },
+    {
+      "path": "src/auth/AuthProvider.tsx",
+      "sha256": "372b86bb99dbade469f34469b9c737e2cf4efe3cd247f3bff1a96f6cd6f27581"
+    },
+    {
+      "path": "src/auth/RequireAuth.tsx",
+      "sha256": "a8a6ac105696c29c88b11442bb8afe78318c54055b24574e44a7045c4df54010"
+    },
+    {
+      "path": "src/auth/authAdapter.test.ts",
+      "sha256": "e6373aaacda582ec6e696dd41b9b439a29e5b5182d1c96c974baf6e9d0c20743"
+    },
+    {
+      "path": "src/auth/authAdapter.ts",
+      "sha256": "d3fe861d73ad7611752c1619eabe72fb706652ff6db7e34e86aaeea47a920a86"
+    },
+    {
+      "path": "src/auth/authContext.ts",
+      "sha256": "983b91d8b8da5408fc7992c98450c4ad1c45c4a0707e353ea440dbb78dd273dd"
+    },
+    {
+      "path": "src/auth/useAuth.ts",
+      "sha256": "0c2cdb8e153fe14f27e5f82686600a09b2f4a6ee61bc710c23fc19f115977f39"
+    },
+    {
+      "path": "src/components/layout/AppShell.tsx",
+      "sha256": "ec9bba6f44826e38e19567f042817110eb03dc66486795981fcf43b8fa94ba44"
+    },
+    {
+      "path": "src/components/layout/SessionControls.tsx",
+      "sha256": "b3c97bd369528afc41b8223c876d8c97edc61717360df295da0bd39821a51c32"
+    },
+    {
+      "path": "src/components/ui/FormSection.tsx",
+      "sha256": "bbc710fb5cb394c686bc9948bb653a1ab9c8618b27eb5309f23ea7f340ea5911"
+    },
+    {
+      "path": "src/components/ui/MoneyInput.tsx",
+      "sha256": "8f9114c0c8983700b8b79548279fa4362e1e8cf1046e44121cc8bdb380eaf624"
+    },
+    {
+      "path": "src/components/ui/StatusActionButton.tsx",
+      "sha256": "cda11ac8f94bccb594ed467568244be32a1395af7aeae6a226f1f28d4a516f43"
+    },
+    {
+      "path": "src/components/ui/SummaryRow.tsx",
+      "sha256": "47356118e10ab98b2ee3f7ca7ef1308a0252c6a35c15911eb35929cfb63797b4"
+    },
+    {
+      "path": "src/index.css",
+      "sha256": "a689b0abee02a06212a5db42f6922f2ebefb84382ea0c762c3995ca6f80eb7c0"
+    },
+    {
+      "path": "src/lib/supabase.test.ts",
+      "sha256": "9facf9831d2b73b448e36d4ca49154aae81745444db6240bb8509368be8dba91"
+    },
+    {
+      "path": "src/lib/supabase.ts",
+      "sha256": "b5a47e23e4ceac24e1785ef62c4bf1087a19e76612dd8f06fa2bc10ded34e9e0"
+    },
+    {
+      "path": "src/main.tsx",
+      "sha256": "b5da882ece2c9e4df72292c9b19c926e5532e02eef24aef23397999800a9680b"
+    },
+    {
+      "path": "src/pages/LoginPage.tsx",
+      "sha256": "e6af0ed7f1eb11222dc8037634a9238cb172b1ba6d6cfbae8936c6c9b4efa2f9"
+    },
+    {
+      "path": "src/pages/ProtectEssentialsPage.tsx",
+      "sha256": "3221a0684ba2c5f77ccc2b46672531cf3e6d14338281edb5eaa0057a41f3b7c3"
+    },
+    {
+      "path": "src/pages/PurchaseCheckPage.tsx",
+      "sha256": "ae1258f0040c4f88ec7ad8e6b2ea39aa5a8628227640b1735ba6cc9f31254ee4"
+    },
+    {
+      "path": "src/pages/ResultPage.tsx",
+      "sha256": "9a2bbd6be02f76b826065d2a9bb567eae596383995b410560814bec751e840c5"
+    },
+    {
+      "path": "src/pages/RunwayResultPage.tsx",
+      "sha256": "067cce540521e0bbcfa6f183467793f8c884907e8ce9980167bcc95738719ea1"
+    },
+    {
+      "path": "src/pages/RunwaySetupPage.tsx",
+      "sha256": "ec7f4befc2fcb21ee5a536f6f1b1c24c1b8d13dddf1a2b6442bd0b5853714ddc"
+    },
+    {
+      "path": "src/services/apiClient.test.ts",
+      "sha256": "999a984355d2583d6a1c2c22ca247034761fb2e19bb18dab01583a8222b67ab7"
+    },
+    {
+      "path": "src/services/apiClient.ts",
+      "sha256": "74169a6e4403134767dc520d8e1fdab2f10a99079fe2b3d55237b741468742e5"
+    },
+    {
+      "path": "src/services/apiSchemas.ts",
+      "sha256": "3e191bad78568341c5b598409d6b1d66c66958d33428b6970b51c51c1186cebf"
+    },
+    {
+      "path": "src/services/financialApi.test.ts",
+      "sha256": "1252f3402d2657debe0f2e5d67d19a033418c60d8ca18af0169ce373111f18f7"
+    },
+    {
+      "path": "src/services/planApi.ts",
+      "sha256": "3f649a460cd775b74497e5956dcd90a8b89c2e79e3ce627dd29a064f44553dd1"
+    },
+    {
+      "path": "src/services/purchaseApi.ts",
+      "sha256": "534f49601ca87427a0d2074ffb7fdba1a55fa872b1f6c544ff2dbb1b935bcefb"
+    },
+    {
+      "path": "src/state/financialState.ts",
+      "sha256": "6845adf10b7dcbd5a89fffc178e9bb5c6048abc07d69b2e3c0af3d8b2d3e5bf5"
+    },
+    {
+      "path": "src/state/useFinancialWorkspace.ts",
+      "sha256": "5ecd32b5b5c682b43097ed28e2fa3cddfe708e026e3575d36f40b032ca2c22e3"
+    },
+    {
+      "path": "src/tests/appTestHarness.tsx",
+      "sha256": "3a248d1134df799763eb818acb2f4325e8cf16c77d1f9d4eace32d94a1e8f76d"
+    },
+    {
+      "path": "src/tests/fixtures/api.json",
+      "sha256": "3681e16235ae7266d10e36124dbc2c0262e36740f42e059ca08355cc24a13176"
+    },
+    {
+      "path": "src/tests/setup.ts",
+      "sha256": "db37716199067ed0b40dac6aaa9a6c604bb4b1c942cd75a703d1e6a44451e12b"
+    },
+    {
+      "path": "src/types/api.ts",
+      "sha256": "1686a3d147b5f27ad357b9a169be508dffd1d1b3b0be101854e0184909c56ab5"
+    },
+    {
+      "path": "src/types/runway.ts",
+      "sha256": "2faecfbe36b2815b753208f89e3acd1282034b23cd66906bdd387743c5a673e6"
+    },
+    {
+      "path": "src/utils/moneyCents.test.ts",
+      "sha256": "f0740ed1f08142721b78e80e3fdcef98530da371c317116f8f9a6279f3d19afe"
+    },
+    {
+      "path": "src/utils/moneyCents.ts",
+      "sha256": "ab2a97ad346bfff509d4f03a34dc4aa109f3f3a5df68d67d4d5487efb2e7ef7d"
+    },
+    {
+      "path": "src/utils/moneyValidation.ts",
+      "sha256": "41e2d5357042aa4b539984e4b8c28b4aba62e43f543ecf1a7dc9afcc8ff45b34"
+    },
+    {
+      "path": "src/utils/runwayCalculations.ts",
+      "sha256": "9a06584cb553e10640e66c9e802b06ae17c49c227a2dada03472069daf9467e1"
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "sha256": "11f2fa20fa9cbf4fdbf4484a04f1ed6666e49c744af1a90a9da37d9c8497750d"
+    },
+    {
+      "path": "supabase/.gitignore",
+      "sha256": "507699eb91144818edf61d3a079212cacf31d8db520eae428e3b48fcf0d6919c"
+    },
+    {
+      "path": "supabase/config.toml",
+      "sha256": "8714d8c0fbff4c8bccc8b03d465ffa7f53800c2372093c74ffabcf915bf18b7b"
+    },
+    {
+      "path": "supabase/migrations/20261012020847_initial_schema.sql",
+      "sha256": "0303356445efd8ee72666569902e3d483fe6a48cfbdd3e390ce86fe50f38d7ee"
+    },
+    {
+      "path": "supabase/tests/001_schema_assertions.sql",
+      "sha256": "de44ab61557980192f7f4791ac1ccb203b3e1a6d001f676efff2bf528c33e82a"
+    },
+    {
+      "path": "supabase/tests/README.md",
+      "sha256": "fd1c71d12dc3cb68fce94b245b49e64d4c64311b8ab66c3be262e15e728a0d6e"
+    },
+    {
+      "path": "tailwind.config.js",
+      "sha256": "f95487bcd201959d5667f7f4caf86a608de725a1af74e0ab3f8211ff54ec4a97"
+    },
+    {
+      "path": "tests/browser/c4-main.tsx",
+      "sha256": "f7751f853131778451c2f30c3c949e3156ee249a90a978151c66f00dafe1798f"
+    },
+    {
+      "path": "tests/browser/c4.html",
+      "sha256": "ba411b3d12625bf0f9a48f53fa083b9e5eb9b0e64c52900d410b106e645608d3"
+    },
+    {
+      "path": "tests/browser/index.html",
+      "sha256": "25200b4c1c17584028214e2f79eabd59a4bad5c667d91f6e05c35566a7d9405e"
+    },
+    {
+      "path": "tests/browser/main.tsx",
+      "sha256": "249e0231acfe72ccb6fe09f26b25de4c112ac1ebf5eae537c513246b773b2e46"
+    },
+    {
+      "path": "tests/deployment.test.ts",
+      "sha256": "9394a4f8f05cc8e75309f2c6c7996dfaa0ad90309ba76810426093e5b9d163c1"
+    },
+    {
+      "path": "tests/fixtures/vercel-schema-source.json",
+      "sha256": "8224d61595e0943f35db1bd4577f703325f6f9e12b6f9d34a51ebb2b0623d710"
+    },
+    {
+      "path": "tests/fixtures/vercel-schema.json",
+      "sha256": "444c7c54db7c8a65ed50032298b25b46e69f9b3a7625d9171179e8ecf630f7b8"
+    },
+    {
+      "path": "tests/viteProxy.test.ts",
+      "sha256": "4660e6323a66232ccc6730310d27329b7d85476dbee9ba4ac80a6c9a8438d9d6"
+    },
+    {
+      "path": "tools/check-client-bundle.py",
+      "sha256": "f1e77f691c907cf5fd4a0f6d6aa495952bbbca629a9f374bdf881855c4b828a0"
+    },
+    {
+      "path": "tools/check-repository-secrets.py",
+      "sha256": "d8d4dff8fff0a6b51b5d9ebd42b33bfd0b67b22de3e1e93527cee48645c77997"
+    },
+    {
+      "path": "tools/demo-recorder/.gitignore",
+      "sha256": "b86058be65ec8b30f620fbcead27bb9b17ad3d99a1563f70143dd2659601f22a"
+    },
+    {
+      "path": "tools/demo-recorder/README.md",
+      "sha256": "5e46c95847b5610f8cd05d2dbfa4883a252d28dde2ca24d78be153817fd35a09"
+    },
+    {
+      "path": "tools/demo-recorder/c4-fixtures.mjs",
+      "sha256": "96f371d1882a73265ec9eb2a17bd53293d7b4338fc5e89f692f1bfb848554405"
+    },
+    {
+      "path": "tools/demo-recorder/package-lock.json",
+      "sha256": "afc8d01bb42d1d538dcfe0ff0389d1349d501ef2467f722c105ede14c5611b2a"
+    },
+    {
+      "path": "tools/demo-recorder/package.json",
+      "sha256": "5822a2c4f6f7f94f03161b7cd32a7e2aff26475c6bb8f714de901acf9ee6896b"
+    },
+    {
+      "path": "tools/demo-recorder/record-mobile-demo.mjs",
+      "sha256": "4f14ea3ffaeb64a02cc70456da786aef6970d50a644dc014ebd566cafdd5a62b"
+    },
+    {
+      "path": "tools/demo-recorder/record-product-demo.mjs",
+      "sha256": "ab22831ef27c0cac2e01eb90f874ed47a4d7a74df25d399f4e882a7d23c293e9"
+    },
+    {
+      "path": "tools/demo-recorder/recorder-utils.mjs",
+      "sha256": "7bb9cd3c9d2626462cdfbb5b75a77cd1cbbfe9e7d818594f7a8afb5ed7098c25"
+    },
+    {
+      "path": "tools/demo-recorder/verify-c2-integration.mjs",
+      "sha256": "f2145d5dd6235c5ac9298f1fda2a410302ac4d3f8a08a3f32a92c5831b5c2ca8"
+    },
+    {
+      "path": "tools/demo-recorder/verify-c4-integration.mjs",
+      "sha256": "440342fa1069eb438083d46a4fa4f642ef751fd6c2d344efdd94918f0b5d4d1b"
+    },
+    {
+      "path": "tools/demo-recorder/verify-c5-deployment.mjs",
+      "sha256": "2aa511ea8b85f4b41e8c0864a545d8a51f575ca110320a6ca18a81756738caed"
+    },
+    {
+      "path": "tools/demo-recorder/verify-product-flow.mjs",
+      "sha256": "bf050279ac17b8808ec8b26604da0ce4f15fe7e0606df051df6efbb6a24bdff7"
+    },
+    {
+      "path": "tools/verify-clean-setup.py",
+      "sha256": "7faf0f22a5155bd46233197793f3d46b2b20205fe1fa92aed01e02f93ae318dc"
+    },
+    {
+      "path": "tools/verify-deployment.py",
+      "sha256": "8575b9f0ef13defa9141bacf4485001700de8aa36c5fad5cb3280c92e6ac73e5"
+    },
+    {
+      "path": "tools/verify-local-http.py",
+      "sha256": "4a8b5fb8ca0de6e1b421c0b6ea6311ee8a223660947d7c4974a6bd86489f7b4e"
+    },
+    {
+      "path": "tsconfig.app.json",
+      "sha256": "8e5d12ba330e7d86409edec74b95451e0db22ee09b9426c94b5bf817571eddb0"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "e8d6f7b50828db3953e21c7e92584f9206b3cd2551b4012507372afbb7fe9ce3"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "sha256": "875397722924735adca41359192002b3ae70d58d850d09782cb485b2cabb5cab"
+    },
+    {
+      "path": "vercel.json",
+      "sha256": "f06adf0a8d146b3bb667286d97166d0bef1b5d5273d43fc1e12c77af1c5ce109"
+    },
+    {
+      "path": "vite.config.ts",
+      "sha256": "c011dac7d42f514659b2a4bcf14f5a73b6a3b68e99abea9a8b753ddbfc4965e1"
+    },
+    {
+      "path": "vitest.config.ts",
+      "sha256": "0cf4de9b2a6508a9a26da290fbacf5653ba1422b66d218db6f8499a9f72d1db7"
+    }
+  ],
+  "passedSteps": 16,
+  "failedSteps": 0,
+  "sourceCredentialsCopied": false,
+  "privateValueScan": "PASS",
+  "liveOptIn": false,
+  "checks": [
+    {
+      "check": "frontend install",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "ci"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 7.22,
+      "summary": null
+    },
+    {
+      "check": "new Python environment",
+      "command": [
+        "C:\\WINDOWS\\py.EXE",
+        "-3.12",
+        "-m",
+        "venv",
+        ".venv"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 10.84,
+      "summary": null
+    },
+    {
+      "check": "production Python install",
+      "command": [
+        "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements.txt"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 26.69,
+      "summary": null
+    },
+    {
+      "check": "development Python install",
+      "command": [
+        "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "requirements-dev.txt",
+        "-c",
+        "requirements-lock.txt"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 12.83,
+      "summary": null
+    },
+    {
+      "check": "Python consistency",
+      "command": [
+        "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.81,
+      "summary": "No broken requirements found."
+    },
+    {
+      "check": "frontend lint",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 48.67,
+      "summary": null
+    },
+    {
+      "check": "frontend build",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 19.86,
+      "summary": null
+    },
+    {
+      "check": "frontend tests",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "test"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 36.81,
+      "summary": "Test Files  9 passed (9)\nTests  149 passed (149)"
+    },
+    {
+      "check": "backend tests",
+      "command": [
+        "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "backend/tests",
+        "-q"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 5.17,
+      "summary": "171 passed, 2 skipped, 1 warning in 4.36s"
+    },
+    {
+      "check": "Python compilation",
+      "command": [
+        "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "backend",
+        "api"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.16,
+      "summary": null
+    },
+    {
+      "check": "Playwright dependency install",
+      "command": [
+        "C:\\Program Files\\nodejs\\npm.cmd",
+        "ci",
+        "--prefix",
+        "tools/demo-recorder"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 1.14,
+      "summary": null
+    },
+    {
+      "check": "Chromium install",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "tools/demo-recorder/node_modules/playwright/cli.js",
+        "install",
+        "chromium"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 2.86,
+      "summary": null
+    },
+    {
+      "check": "local HTTP",
+      "command": [
+        "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev\\.venv\\Scripts\\python.exe",
+        "tools/verify-local-http.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 3.42,
+      "summary": "Local HTTP: 19 checks passed; 0 failures; 0 skipped."
+    },
+    {
+      "check": "deployment routing",
+      "command": [
+        "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev\\.venv\\Scripts\\python.exe",
+        "tools/verify-deployment.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 2.45,
+      "summary": "C5 local deployment routing: 24 checks passed; 0 failed; 0 skipped."
+    },
+    {
+      "check": "C4 browser",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.EXE",
+        "tools/demo-recorder/verify-c4-integration.mjs"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 101.55,
+      "summary": "C4 offline browser results: 124 passed, 0 failed, 0 skipped."
+    },
+    {
+      "check": "bundle secrets",
+      "command": [
+        "C:\\Users\\Vu Thien Khuong\\AppData\\Local\\Temp\\student-money-runway-c5-jkmgkvev\\.venv\\Scripts\\python.exe",
+        "tools/check-client-bundle.py"
+      ],
+      "exitCode": 0,
+      "durationSeconds": 0.2,
+      "summary": "Checked 5 production files; 0 unsafe paths. Public Auth configuration is permitted."
+    }
+  ]
+}

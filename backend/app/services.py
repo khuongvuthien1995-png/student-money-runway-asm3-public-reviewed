@@ -7,6 +7,7 @@
 @updatedAt 2026-10-12T02:30:00+11:00
 @summary Converts the P1 database contract into typed plan and purchase application operations.
 @responsibility Owns derived financial responses and maps RPC outcomes without owning HTTP transport.
+@hardening C3 (2026-10-13): fails closed on invalid/foreign rows and exact RPC outcomes.
 """
 
 from typing import Any
@@ -24,13 +25,20 @@ from .repository import FinancialRepository
 
 
 def plan_response(row: dict[str, Any]) -> PlanResponse:
-    protected_total = (
-        row["fixed_essentials_cents"]
-        + row["flexible_essentials_cents"]
-        + row["safety_buffer_cents"]
+    sources = PlanUpsertRequest(
+        planningDate=row["planning_date"],
+        availableFundsCents=row["available_funds_cents"],
+        safetyBufferCents=row["safety_buffer_cents"],
+        fixedEssentialsCents=row["fixed_essentials_cents"],
+        flexibleEssentialsCents=row["flexible_essentials_cents"],
     )
-    runway = max(0, row["available_funds_cents"] - protected_total)
-    shortfall = max(0, protected_total - row["available_funds_cents"])
+    protected_total = (
+        sources.fixedEssentialsCents
+        + sources.flexibleEssentialsCents
+        + sources.safetyBufferCents
+    )
+    runway = max(0, sources.availableFundsCents - protected_total)
+    shortfall = max(0, protected_total - sources.availableFundsCents)
     return PlanResponse(
         id=row["id"],
         userId=row["user_id"],
@@ -58,6 +66,19 @@ def purchase_response(row: dict[str, Any]) -> PurchaseResponse:
     )
 
 
+def owned_plan_response(row: dict[str, Any], user_id: UUID) -> PlanResponse:
+    plan = plan_response(row)
+    if plan.userId != user_id:
+        raise ValueError("Repository returned a plan for another owner.")
+    return plan
+
+
+def invalid_database_response() -> ServiceUnavailableError:
+    return ServiceUnavailableError(
+        "DATABASE_RESPONSE_INVALID", "The financial service returned invalid data. Please retry safely."
+    )
+
+
 class PlanService:
     def __init__(self, repository: FinancialRepository) -> None:
         self._repository = repository
@@ -71,7 +92,10 @@ class PlanService:
             ) from error
         if row is None:
             raise NotFoundError("PLAN_NOT_FOUND", "No saved financial plan exists for this user.")
-        return plan_response(row)
+        try:
+            return owned_plan_response(row, user_id)
+        except (ValueError, TypeError, KeyError) as error:
+            raise invalid_database_response() from error
 
     def save_current(self, user_id: UUID, request: PlanUpsertRequest) -> PlanResponse:
         try:
@@ -89,7 +113,10 @@ class PlanService:
             raise ServiceUnavailableError(
                 "DATABASE_OPERATION_FAILED", "The financial plan could not be saved. Please retry."
             ) from error
-        return plan_response(row)
+        try:
+            return owned_plan_response(row, user_id)
+        except (ValueError, TypeError, KeyError) as error:
+            raise invalid_database_response() from error
 
     def list_purchases(self, user_id: UUID) -> list[PurchaseResponse]:
         plan = self.get_current(user_id)
@@ -99,7 +126,13 @@ class PlanService:
             raise ServiceUnavailableError(
                 "DATABASE_OPERATION_FAILED", "Purchase history could not be retrieved. Please retry."
             ) from error
-        return [purchase_response(row) for row in rows]
+        try:
+            purchases = [purchase_response(row) for row in rows]
+            if any(purchase.userId != user_id or purchase.planId != plan.id for purchase in purchases):
+                raise ValueError("Repository returned purchase history for another owner or plan.")
+            return purchases
+        except (ValueError, TypeError, KeyError) as error:
+            raise invalid_database_response() from error
 
 
 class PurchaseService:
@@ -119,6 +152,16 @@ class PurchaseService:
         except RepositoryError as error:
             raise self._map_rpc_error(error) from error
 
+        try:
+            return self._confirmation_response(row, user_id, name, request.amountCents)
+        except (ValueError, TypeError, KeyError) as error:
+            # The RPC may already have committed: return 503 and preserve the caller's replay key.
+            raise invalid_database_response() from error
+
+    @staticmethod
+    def _confirmation_response(
+        row: dict[str, Any], user_id: UUID, name: str, amount_cents: int
+    ) -> PurchaseConfirmationEnvelope:
         purchase = PurchaseResponse(
             id=row["purchase_id"],
             planId=row["plan_id"],
@@ -127,7 +170,7 @@ class PurchaseService:
             amountCents=row["purchase_amount_cents"],
             createdAt=row["purchase_created_at"],
         )
-        plan = plan_response(
+        plan = owned_plan_response(
             {
                 "id": row["plan_id"],
                 "user_id": row["plan_user_id"],
@@ -138,26 +181,30 @@ class PurchaseService:
                 "flexible_essentials_cents": row["flexible_essentials_cents"],
                 "created_at": row["plan_created_at"],
                 "updated_at": row["plan_updated_at"],
-            }
+            },
+            user_id,
         )
+        if (purchase.userId != user_id or purchase.planId != plan.id
+                or purchase.name != name or purchase.amountCents != amount_cents):
+            raise ValueError("RPC returned an unrelated purchase.")
         return PurchaseConfirmationEnvelope(purchase=purchase, plan=plan, replayed=row["replayed"])
 
     @staticmethod
     def _map_rpc_error(error: RepositoryError) -> ServiceUnavailableError | ConflictError | NotFoundError:
-        message = str(error)
-        if "PLAN_NOT_FOUND" in message:
+        message = error.business_code or str(error)
+        if message == "PLAN_NOT_FOUND":
             return NotFoundError("PLAN_NOT_FOUND", "No saved financial plan exists for this user.")
-        if "PURCHASE_EXCEEDS_RUNWAY" in message:
+        if message == "PURCHASE_EXCEEDS_RUNWAY":
             return ConflictError(
                 "PURCHASE_EXCEEDS_RUNWAY", "This purchase exceeds the current discretionary runway."
             )
-        if "IDEMPOTENCY_KEY_REUSED" in message:
+        if message == "IDEMPOTENCY_KEY_REUSED":
             return ConflictError(
                 "IDEMPOTENCY_KEY_REUSED", "This confirmation key belongs to a different request."
             )
-        if "PURCHASE_NAME_INVALID" in message or "PURCHASE_AMOUNT_INVALID" in message:
+        if message in {"PURCHASE_NAME_INVALID", "PURCHASE_AMOUNT_INVALID"}:
             return ConflictError("PURCHASE_INVALID", "The purchase request is invalid.")
-        if "PLAN_OWNERSHIP_MISMATCH" in message or "AUTHENTICATED_USER_REQUIRED" in message:
+        if message in {"PLAN_OWNERSHIP_MISMATCH", "AUTHENTICATED_USER_REQUIRED"}:
             return ConflictError("PURCHASE_NOT_AUTHORIZED", "The purchase cannot be confirmed for this plan.")
         return ServiceUnavailableError(
             "DATABASE_OPERATION_FAILED", "The purchase could not be confirmed. Please retry safely."

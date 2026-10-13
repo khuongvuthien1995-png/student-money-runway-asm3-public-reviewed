@@ -7,18 +7,22 @@
 @updatedAt 2026-10-12T02:31:42+11:00
 @summary Defines typed HTTP models that match the P1 cents-based database contract.
 @responsibility Owns request validation and response serialization contracts.
+@hardening C3 (2026-10-13): strict financial responses, ISO dates and nonblank purchase names.
 """
 
+import re
 from datetime import date, datetime
 from typing import Annotated
 from uuid import UUID
 
-from pydantic import BaseModel, Field, StrictInt
+from pydantic import BaseModel, Field, StrictBool, StrictInt, field_validator
 
 
 MAX_MONEY_CENTS = 100_000_000
 PlanMoneyCents = Annotated[StrictInt, Field(ge=0, le=MAX_MONEY_CENTS)]
 PurchaseMoneyCents = Annotated[StrictInt, Field(ge=1, le=MAX_MONEY_CENTS)]
+# Three independently bounded protected amounts can legitimately total three times the source cap.
+DerivedMoneyCents = Annotated[StrictInt, Field(ge=0, le=3 * MAX_MONEY_CENTS)]
 
 
 class ErrorBody(BaseModel):
@@ -41,18 +45,27 @@ class PlanUpsertRequest(BaseModel):
     fixedEssentialsCents: PlanMoneyCents
     flexibleEssentialsCents: PlanMoneyCents
 
+    @field_validator("planningDate", mode="before")
+    @classmethod
+    def validate_planning_date(cls, value: object) -> date:
+        if type(value) is date:
+            return value
+        if isinstance(value, str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+            return date.fromisoformat(value)
+        raise ValueError("Use a YYYY-MM-DD planning date.")
+
 
 class PlanResponse(BaseModel):
     id: UUID
     userId: UUID
     planningDate: date
-    availableFundsCents: int
-    safetyBufferCents: int
-    fixedEssentialsCents: int
-    flexibleEssentialsCents: int
-    protectedTotalCents: int
-    runwayCents: int
-    shortfallCents: int
+    availableFundsCents: PlanMoneyCents
+    safetyBufferCents: PlanMoneyCents
+    fixedEssentialsCents: PlanMoneyCents
+    flexibleEssentialsCents: PlanMoneyCents
+    protectedTotalCents: DerivedMoneyCents
+    runwayCents: PlanMoneyCents
+    shortfallCents: DerivedMoneyCents
     createdAt: datetime
     updatedAt: datetime
 
@@ -65,8 +78,8 @@ class PurchaseResponse(BaseModel):
     id: UUID
     planId: UUID
     userId: UUID
-    name: str
-    amountCents: int
+    name: Annotated[str, Field(min_length=1, max_length=120)]
+    amountCents: PurchaseMoneyCents
     createdAt: datetime
 
 
@@ -79,11 +92,19 @@ class PurchaseConfirmationRequest(BaseModel):
     amountCents: PurchaseMoneyCents
     idempotencyKey: UUID
 
+    @field_validator("name")
+    @classmethod
+    def validate_name(cls, name: str) -> str:
+        trimmed = name.strip()
+        if not trimmed:
+            raise ValueError("Purchase name must not be blank.")
+        return trimmed
+
 
 class PurchaseConfirmationEnvelope(BaseModel):
     purchase: PurchaseResponse
     plan: PlanResponse
-    replayed: bool
+    replayed: StrictBool
 
 
 class AuthenticatedUser(BaseModel):

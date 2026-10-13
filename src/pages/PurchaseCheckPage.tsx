@@ -7,6 +7,7 @@
  * @updatedAt 2026-09-16T02:20:23+10:00
  * @summary Provides the controlled purchase draft form and current-runway context.
  * @responsibility Validates purchase input, forwards draft changes to App, and navigates to a non-mutating preview.
+ * @integration ASM3 C2 (2026-10-13): real Auth/API state and strict cents boundaries.
  */
 
 import { useState, type ChangeEvent, type FormEvent } from 'react'
@@ -17,12 +18,15 @@ import MoneyInput from '../components/ui/MoneyInput'
 import SummaryRow from '../components/ui/SummaryRow'
 import type { RunwayState, RunwayStatePatch } from '../types/runway'
 import { parseValidMoney, validateMoney } from '../utils/moneyValidation'
-import { calculateRunway } from '../utils/runwayCalculations'
+import { planTotals } from '../state/financialState'
+import type { PlanResponse } from '../types/api'
 
 interface PurchaseCheckPageProps {
   runwayState: RunwayState
   onRunwayStateChange: (patch: RunwayStatePatch) => void
   onStartNewPurchase: () => void
+  onPreview: () => boolean
+  plan: PlanResponse
 }
 
 interface PurchaseErrors {
@@ -30,7 +34,7 @@ interface PurchaseErrors {
   purchaseAmount?: string
 }
 
-function PurchaseCheckPage({ runwayState, onRunwayStateChange, onStartNewPurchase }: PurchaseCheckPageProps) {
+function PurchaseCheckPage({ runwayState, onRunwayStateChange, onStartNewPurchase, onPreview, plan }: PurchaseCheckPageProps) {
   const navigate = useNavigate()
   const [touched, setTouched] = useState({ purchaseName: false, purchaseAmount: false })
   const [submitted, setSubmitted] = useState(false)
@@ -46,16 +50,11 @@ function PurchaseCheckPage({ runwayState, onRunwayStateChange, onStartNewPurchas
     return <Navigate replace to="/essentials" />
   }
 
-  const currentRunway = calculateRunway(
-    availableFunds,
-    fixedEssentials,
-    flexibleEssentials,
-    safetyBuffer,
-  )
+  const currentRunway = planTotals(plan).runwayCents / 100
   const amountContractError = validateMoney(runwayState.purchaseAmount, 'Enter a purchase amount.')
   const purchaseAmount = parseValidMoney(runwayState.purchaseAmount)
   const errors: PurchaseErrors = {
-    purchaseName: runwayState.purchaseName.trim() ? undefined : 'Enter a purchase name.',
+    purchaseName: !runwayState.purchaseName.trim() ? 'Enter a purchase name.' : runwayState.purchaseName.trim().length > 120 ? 'Use at most 120 characters.' : undefined,
     purchaseAmount:
       amountContractError ??
       (purchaseAmount === 0 ? 'Enter an amount greater than 0.' : undefined),
@@ -79,7 +78,7 @@ function PurchaseCheckPage({ runwayState, onRunwayStateChange, onStartNewPurchas
     if (errors.purchaseName || errors.purchaseAmount || purchaseAmount === undefined || purchaseAmount <= 0) {
       return
     }
-    navigate('/result')
+    if (onPreview()) navigate('/result')
   }
 
   if (runwayState.purchaseConfirmed) {

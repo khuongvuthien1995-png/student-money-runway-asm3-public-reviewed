@@ -1,0 +1,110 @@
+{
+  "verificationDate": "2026-10-13 Australia/Sydney",
+  "scope": "Local C4; terminal summaries from executed commands, not live cloud acceptance",
+  "commands": [
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "passed": 122,
+      "failed": 0,
+      "skipped": 0,
+      "files": 8,
+      "durationSeconds": 6.54,
+      "terminalSummary": "Tests 122 passed (122); Test Files 8 passed (8)"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "result": "PASS",
+      "terminalSummary": "eslint .; no diagnostics"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "result": "PASS",
+      "modules": 494,
+      "mainJsKilobytes": 642.53,
+      "mainJsGzipKilobytes": 187.81,
+      "terminalSummary": "tsc -b && vite build; 494 modules transformed; built in 1.20s",
+      "warnings": [
+        "Existing main chunk exceeds 500 kB"
+      ]
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests -q",
+      "environment": {
+        "RUN_SUPABASE_LIVE_TESTS": "0"
+      },
+      "exitCode": 0,
+      "passed": 157,
+      "failed": 0,
+      "skipped": 2,
+      "durationSeconds": 2.25,
+      "terminalSummary": "157 passed, 2 skipped, 1 warning in 2.25s",
+      "warnings": [
+        "Existing Starlette/httpx deprecation"
+      ]
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m compileall -q backend api tools/verify-local-http.py",
+      "exitCode": 0,
+      "result": "PASS",
+      "terminalSummary": "No diagnostics"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pip check",
+      "exitCode": 0,
+      "result": "PASS",
+      "terminalSummary": "No broken requirements found."
+    },
+    {
+      "command": "node tools/demo-recorder/verify-c2-integration.mjs",
+      "exitCode": 0,
+      "passedViewportJourneys": 4,
+      "failed": 0,
+      "skipped": 0,
+      "mode": "OFFLINE",
+      "terminalSummary": "390/768/1024/1280px offline six-screen flow, layout, navigation, keyboard, failures and retry PASS"
+    },
+    {
+      "command": "node tools/demo-recorder/verify-c4-integration.mjs",
+      "exitCode": 0,
+      "passed": 124,
+      "failed": 0,
+      "skipped": 0,
+      "mode": "OFFLINE",
+      "terminalSummary": "C4 offline browser results: 124 passed, 0 failed, 0 skipped."
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/verify-local-http.py",
+      "exitCode": 0,
+      "passedChecks": 19,
+      "failed": 0,
+      "skipped": 0,
+      "mode": "REAL LOCAL HTTP",
+      "terminalSummary": "Local HTTP: 19 checks passed; 0 failures; 0 skipped."
+    },
+    {
+      "command": "node_modules/.bin/tsc.cmd -p .git/c4-browser-tsconfig.json",
+      "exitCode": 0,
+      "result": "PASS",
+      "notes": "Ignored temporary config extends tsconfig.app.json and includes tests/browser/c4-main.tsx"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/check-client-bundle.py",
+      "exitCode": 0,
+      "checkedFiles": 5,
+      "unsafePaths": 0,
+      "terminalSummary": "Checked 5 production files; 0 unsafe paths."
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/check-repository-secrets.py",
+      "exitCode": 0,
+      "workingCandidates": 374,
+      "stagedBlobs": 0,
+      "flaggedPaths": 0,
+      "terminalSummary": "Scanned 374 working candidates and 0 staged blobs; flagged 0 paths."
+    }
+  ],
+  "liveStatus": "P2B LIVE PENDING - EMAIL CONFIRMATION"
+}

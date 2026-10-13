@@ -7,11 +7,13 @@
 @updatedAt 2026-10-12T02:22:38+11:00
 @summary Provides the server-only Supabase persistence boundary matching the P1 migration.
 @responsibility Owns service-role database transport while callers enforce verified-user ownership.
+@hardening C3 (2026-10-13): handles empty SDK results, trusted ownership and typed RPC errors.
 """
 
 from typing import Any, Protocol
 from uuid import UUID
 
+from postgrest.exceptions import APIError
 from supabase import Client, create_client
 
 from .config import Settings
@@ -62,12 +64,13 @@ class SupabaseRepository:
     def get_current_plan(self, user_id: UUID) -> dict[str, Any] | None:
         try:
             result = self._client.table("plans").select("*").eq("user_id", str(user_id)).maybe_single().execute()
-            return result.data
+            # Current PostgREST SDK returns None when maybe_single has zero rows.
+            return result.data if result is not None else None
         except Exception as error:
             raise RepositoryError(str(error)) from error
 
     def upsert_current_plan(self, user_id: UUID, values: dict[str, Any]) -> dict[str, Any]:
-        payload = {"user_id": str(user_id), **values}
+        payload = {**values, "user_id": str(user_id)}
         try:
             result = self._client.table("plans").upsert(payload, on_conflict="user_id").execute()
             if not result.data:
@@ -110,5 +113,10 @@ class SupabaseRepository:
             return result.data[0]
         except RepositoryError:
             raise
+        except APIError as error:
+            # Only explicit PostgreSQL business exceptions carry an RPC rejection code.
+            raise RepositoryError(
+                "Purchase RPC failed.", business_code=error.message if error.code == "P0001" else None
+            ) from error
         except Exception as error:
             raise RepositoryError(str(error)) from error

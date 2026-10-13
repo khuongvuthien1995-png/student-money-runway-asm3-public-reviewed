@@ -1,3 +1,5 @@
+# Use the verified constraints for reproducible production and local installs.
+-c requirements-lock.txt
 fastapi>=0.115,<1.0
 PyJWT[crypto]>=2.10,<3.0
 supabase>=2.10,<3.0

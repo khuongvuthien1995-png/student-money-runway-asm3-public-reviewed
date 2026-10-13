@@ -7,8 +7,11 @@
 @updatedAt 2026-10-12T02:30:00+11:00
 @summary Verifies Supabase bearer tokens before user-scoped API work.
 @responsibility Owns authenticated identity derivation and never trusts client user identifiers.
+@hardening C3 (2026-10-13): separates provider outages from invalid bearer sessions.
+@hardening C4 (2026-10-13): rejects malformed JWT syntax locally before provider setup.
 """
 
+import re
 from typing import Protocol
 from uuid import UUID
 
@@ -25,20 +28,43 @@ class TokenVerifier(Protocol):
     def verify(self, access_token: str) -> AuthenticatedUser: ...
 
 
+class ProviderJWKClient(PyJWKClient):
+    def get_signing_keys(self, refresh: bool = False) -> list[jwt.PyJWK]:
+        # Failure to obtain a valid signing-key set says nothing about a user's session.
+        try:
+            return super().get_signing_keys(refresh)
+        except (jwt.PyJWTError, ValueError, TypeError) as error:
+            raise ServiceUnavailableError(
+                "AUTH_VERIFICATION_UNAVAILABLE", "Authentication verification is temporarily unavailable."
+            ) from error
+
+
 class SupabaseTokenVerifier:
     def __init__(self, settings: Settings, http_client: httpx.Client | None = None) -> None:
         self._settings = settings
         self._http_client = http_client
         self._jwks_client = (
-            PyJWKClient(settings.supabase_jwks_url) if settings.jwks_configured else None
+            ProviderJWKClient(settings.supabase_jwks_url, timeout=10)
+            if settings.jwks_configured else None
         )
 
     def verify(self, access_token: str) -> AuthenticatedUser:
         if self._settings.supabase_auth_verification_mode == "legacy_user_endpoint":
             return self._verify_with_user_endpoint(access_token)
+        if self._settings.supabase_auth_verification_mode != "jwks":
+            raise ServiceUnavailableError(
+                "AUTH_CONFIGURATION_INVALID", "Authentication verification mode is not configured correctly."
+            )
         return self._verify_with_jwks(access_token)
 
     def _verify_with_jwks(self, access_token: str) -> AuthenticatedUser:
+        # This parse rejects malformed input only. Unverified claims never authorize a user.
+        try:
+            if not re.fullmatch(r"[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]*", access_token):
+                raise jwt.DecodeError("Malformed JWT")
+            jwt.decode(access_token, options={"verify_signature": False})
+        except jwt.PyJWTError as error:
+            raise AuthenticationError("INVALID_ACCESS_TOKEN", "Your session is invalid or has expired.") from error
         if not self._jwks_client or not self._settings.supabase_jwt_issuer:
             raise ServiceUnavailableError(
                 "AUTH_CONFIGURATION_MISSING", "Authentication verification is not configured."
@@ -72,16 +98,22 @@ class SupabaseTokenVerifier:
                     "Authorization": f"Bearer {access_token}",
                 },
             )
-            if response.status_code != 200:
+            if response.status_code in {401, 403}:
                 raise AuthenticationError("INVALID_ACCESS_TOKEN", "Your session is invalid or has expired.")
+            if response.status_code != 200:
+                raise ServiceUnavailableError(
+                    "AUTH_VERIFICATION_UNAVAILABLE", "Authentication verification is temporarily unavailable."
+                )
             return AuthenticatedUser(id=UUID(str(response.json()["id"])))
         except httpx.HTTPError as error:
             raise ServiceUnavailableError(
                 "AUTH_VERIFICATION_UNAVAILABLE",
                 "Authentication verification is temporarily unavailable.",
             ) from error
-        except (ValueError, KeyError) as error:
-            raise AuthenticationError("INVALID_ACCESS_TOKEN", "Your session is invalid or has expired.") from error
+        except (ValueError, KeyError, TypeError) as error:
+            raise ServiceUnavailableError(
+                "AUTH_VERIFICATION_UNAVAILABLE", "Authentication verification is temporarily unavailable."
+            ) from error
         finally:
             if close_client:
                 client.close()

@@ -7,6 +7,7 @@
  * @updatedAt 2026-09-16T01:19:05+10:00
  * @summary Provides the controlled protected-essentials form and live protected-total context.
  * @responsibility Validates essential amounts, forwards source-state changes to App, and derives protected summary values.
+ * @integration ASM3 C2 (2026-10-13): real Auth/API state and strict cents boundaries.
  */
 
 import { useState, type FormEvent } from 'react'
@@ -15,12 +16,16 @@ import FormSection from '../components/ui/FormSection'
 import MoneyInput from '../components/ui/MoneyInput'
 import SummaryRow from '../components/ui/SummaryRow'
 import type { RunwayState, RunwayStatePatch } from '../types/runway'
-import { calculateProtectedTotal } from '../utils/runwayCalculations'
+import { audToCents } from '../utils/moneyCents'
 import { parseValidMoney, validateMoney } from '../utils/moneyValidation'
+import SessionControls from '../components/layout/SessionControls'
 
 interface ProtectEssentialsPageProps {
   runwayState: RunwayState
   onRunwayStateChange: (patch: RunwayStatePatch) => void
+  onSavePlan: () => Promise<boolean>
+  saving: boolean
+  saveError: string | null
 }
 
 interface EssentialsErrors {
@@ -28,7 +33,7 @@ interface EssentialsErrors {
   flexibleEssentials?: string
 }
 
-function ProtectEssentialsPage({ runwayState, onRunwayStateChange }: ProtectEssentialsPageProps) {
+function ProtectEssentialsPage({ runwayState, onRunwayStateChange, onSavePlan, saving, saveError }: ProtectEssentialsPageProps) {
   const navigate = useNavigate()
   const [touched, setTouched] = useState({ fixedEssentials: false, flexibleEssentials: false })
   const [submitted, setSubmitted] = useState(false)
@@ -51,7 +56,7 @@ function ProtectEssentialsPage({ runwayState, onRunwayStateChange }: ProtectEsse
   const flexibleEssentials = parseValidMoney(runwayState.flexibleEssentials)
   const protectedTotal =
     fixedEssentials !== undefined && flexibleEssentials !== undefined && safetyBuffer !== undefined
-      ? calculateProtectedTotal(fixedEssentials, flexibleEssentials, safetyBuffer)
+      ? (audToCents(runwayState.fixedEssentials) + audToCents(runwayState.flexibleEssentials) + audToCents(runwayState.safetyBuffer)) / 100
       : undefined
 
   function showError(field: keyof EssentialsErrors) {
@@ -62,25 +67,26 @@ function ProtectEssentialsPage({ runwayState, onRunwayStateChange }: ProtectEsse
     setTouched((current) => ({ ...current, [field]: true }))
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setSubmitted(true)
-    if (availableFunds === undefined || safetyBuffer === undefined || errors.fixedEssentials || errors.flexibleEssentials) {
+    if (saving || availableFunds === undefined || safetyBuffer === undefined || errors.fixedEssentials || errors.flexibleEssentials) {
       return
     }
-    navigate('/runway')
+    if (await onSavePlan()) navigate('/runway')
   }
 
   return (
     <main className="min-h-screen bg-background text-on-surface">
       <header className="border-b border-border bg-surface">
         <div className="mx-auto flex min-h-control max-w-content items-center justify-between px-space-md">
-          <button className="text-body-lg font-semibold text-primary" onClick={() => navigate('/setup')} type="button">
+          <button disabled={saving} className="text-body-lg font-semibold text-primary" onClick={() => navigate('/setup')} type="button">
             Back
           </button>
           <p className="text-label-caps uppercase text-muted">Step 2 of 3</p>
         </div>
       </header>
+      <SessionControls />
       <section className="mx-auto w-full max-w-content space-y-space-lg px-space-md py-space-lg">
         <div className="max-w-3xl space-y-space-xs">
           <p className="text-label-caps uppercase text-primary">Protect essentials</p>
@@ -90,7 +96,10 @@ function ProtectEssentialsPage({ runwayState, onRunwayStateChange }: ProtectEsse
           </p>
         </div>
         <div className="grid gap-space-lg lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
-          <form className="grid gap-space-md" noValidate onSubmit={handleSubmit}>
+          <form aria-busy={saving} className="grid gap-space-md" noValidate onSubmit={handleSubmit}>
+            {saveError ? <p className="text-danger" role="alert">{saveError}</p> : null}
+            {saving ? <p role="status">Saving your financial plan…</p> : null}
+            <fieldset className="grid min-w-0 gap-space-md" disabled={saving}>
             <FormSection
               description="Include recurring costs such as rent, utilities or phone bills."
               title="Fixed essentials"
@@ -126,7 +135,7 @@ function ProtectEssentialsPage({ runwayState, onRunwayStateChange }: ProtectEsse
                 className="inline-flex min-h-control items-center justify-center rounded-button bg-primary px-space-md py-space-xs text-body-lg font-semibold text-surface transition-colors hover:bg-primary-pressed focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 type="submit"
               >
-                Calculate my runway
+                {saving ? 'Saving plan…' : 'Calculate my runway'}
               </button>
               <button
                 className="inline-flex min-h-control items-center justify-center rounded-button border border-border bg-surface px-space-md py-space-xs text-body-lg font-semibold text-on-surface hover:bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
@@ -136,6 +145,7 @@ function ProtectEssentialsPage({ runwayState, onRunwayStateChange }: ProtectEsse
                 Back to setup
               </button>
             </div>
+            </fieldset>
           </form>
           <aside className="space-y-space-md rounded-card border border-border bg-surface p-space-md shadow-sm">
             <div className="space-y-space-xs">

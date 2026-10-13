@@ -4,9 +4,9 @@ A student budgeting application for planning a short financial horizon, protecti
 
 ## Current status and architecture
 
-The frontend is frozen and still uses its current React session. Its login screen is a demonstration; it is not connected to real Supabase sign-in. The backend and hosted schema exist separately. P2B live integration is pending test-account email confirmation; P3 frontend/backend integration and Vercel deployment are not complete. Local mocked/cryptographic tests do not prove live purchase behavior.
+The six screens now use real Supabase Auth and the typed FastAPI services. Authenticated startup loads the saved plan, setup edits a separate draft, essentials saves through PUT, and purchase confirmation uses POST with a stable retry key. Server responses supply the saved balances; previews never write. C1–C4 local implementation, backend hardening and offline browser/loopback HTTP checks are complete. P2B live integration is pending test-account email confirmation; real cloud purchase acceptance and Vercel deployment remain pending. Local mocked/cryptographic tests do not prove live persistence.
 
-Intended integration:
+Implemented source architecture:
 
 ```text
 React / Vite → FastAPI → Supabase PostgreSQL
@@ -55,7 +55,9 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-dev.txt -c requirements-lock.txt
 ```
 
-`package-lock.json` pins the frontend install. `requirements-lock.txt` records the verified Windows environment's Python packages as constraints; use it with either requirements manifest for matching versions. Platform-specific dependencies can differ on other operating systems. Do not copy another machine's virtual environment or node_modules.
+`package-lock.json` pins the frontend install. `requirements.txt` automatically loads `requirements-lock.txt` constraints for both production and local installs. `.python-version` selects Python 3.12; `package.json` selects Node 24. Platform-specific dependencies can differ on other operating systems and must be verified in C6's Linux build. Do not copy another machine's virtual environment or node_modules.
+
+The clone commands describe the intended source repository. C1–C5 work is currently uncommitted locally; an older remote branch is not proof that it contains this application. C6 must publish and verify the audited latest source before another machine relies on that clone.
 
 ## Safe environment configuration
 
@@ -69,7 +71,20 @@ Edit `.env.local` in your editor. Set `SUPABASE_URL` to the approved development
 
 The local launcher intentionally restricts this checkpoint to `student-money-runway-asm3-dev`, reference `mnjmugwkjtihqswssiwa`, in Sydney. This public project reference is not a credential. Other projects require a reviewed configuration change. CLI login credentials are not application service credentials.
 
-Optional `VITE_SUPABASE_URL`/`VITE_SUPABASE_PUBLISHABLE_KEY` fields are reserved for future frontend integration; the frozen React UI does not currently consume them. Never use a `VITE_` prefix for a server key, password or token. Vite exposes prefixed values to the browser.
+The Auth provider uses `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY` (a public `sb_publishable_` key); with absent configuration it reports an Auth configuration error through context and never creates a fake session. Configure these public values privately in `.env.local` before using real sign-in. Builds and offline tests need no cloud credentials. `VITE_API_BASE_URL` should be blank for same-origin `/api`; an explicitly configured external API must be HTTPS. The Vite development server alone proxies `/api` to `http://127.0.0.1:8000`; production and preview have no loopback proxy. Never use a `VITE_` prefix for a server key, password or token. Vite exposes prefixed values to the browser.
+
+| Variable names | Purpose and scope |
+|---|---|
+| `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY` | Public Auth values embedded by Vite **at build time**. Changing them requires a rebuild. |
+| `VITE_API_BASE_URL` | Blank for the preferred same-origin deployment; no production localhost fallback. |
+| `SUPABASE_URL`, `SUPABASE_SECRET_KEY` | Backend runtime database configuration; server key stays private. |
+| `SUPABASE_JWKS_URL`, `SUPABASE_JWT_ISSUER` | Optional overrides; normally derived from `SUPABASE_URL`. |
+| `SUPABASE_JWT_AUDIENCE`, `SUPABASE_AUTH_VERIFICATION_MODE` | Use `authenticated` and `jwks` with verified project settings. |
+| `ALLOWED_ORIGIN` | One explicit allowed origin; local development default is in the example. Use the exact HTTPS app origin for a deployed environment. |
+| `SUPABASE_PUBLISHABLE_KEY` | Backend Auth-inspection/signup helpers or the explicitly selected legacy verifier; not required for JWKS financial API operation. |
+| `TEST_USER_A_EMAIL`, `TEST_USER_A_PASSWORD`, `TEST_USER_B_EMAIL`, `TEST_USER_B_PASSWORD` | Dedicated local live-test file only, with opt-in disabled during normal checks. Never put these in Vercel. |
+
+Development uses ignored local configuration and permitted development-project credentials. Later Vercel **Preview** and **Production** scopes must each receive their own reviewed public build variables and private backend runtime variables. Do not copy populated environment files into a source snapshot or deployment. The production ASGI entrypoint reads process environment and never calls `backend.dev` or loads `.env.local`.
 
 ## Start frontend and backend
 
@@ -90,7 +105,7 @@ The backend binds to `127.0.0.1:8000`, explicitly loads `.env.local` before cons
 Invoke-RestMethod http://127.0.0.1:8000/api/health
 ```
 
-Visit `http://127.0.0.1:8000/docs`. Five operations exist across three paths: health GET; current plan GET/PUT; current plan purchases GET/POST. Financial operations require real Supabase user bearer tokens. Starting the two services does not automatically connect the frozen frontend to the backend.
+Visit `http://127.0.0.1:8000/docs`. Five operations exist across three paths: health GET; current plan GET/PUT; current plan purchases GET/POST. Financial operations require real Supabase user bearer tokens. With public Auth and private backend configuration supplied, the six-screen frontend calls these APIs through the development proxy.
 
 Without cloud credentials, use the safe unit tests. For routing-only smoke inspection, `.\.venv\Scripts\python.exe -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000` starts an unconfigured app; health can work but financial operations are unavailable. That command does not automatically load `.env.local` and does not prove persistence.
 
@@ -121,12 +136,59 @@ This validates schema and privileges, not live financial behavior. Source contro
 ```powershell
 npm run lint
 npm run build
+npm test
 .\.venv\Scripts\python.exe -m pip check
 .\.venv\Scripts\python.exe -m pytest backend/tests -q
 .\.venv\Scripts\python.exe -m compileall -q backend api
 ```
 
 The normal pytest run skips the live integration tests. Local cryptographic tests use generated keys; API unit tests use an in-memory repository. Neither substitutes for live Auth, database transactions or concurrency.
+
+`npm test` runs the offline Vitest/React Testing Library suite, including rendered App routing and financial actions. Auth and HTTP doubles live only in tests; runtime uses the Supabase SDK and real fetch. Shared JSON fixtures are also validated by the actual Python Pydantic models. See [C0 contract map](docs/implementation/asm3-c0-code-freeze.md), [C1 foundation](docs/implementation/asm3-c1-auth-api-foundation.md) and [C2 integration evidence](docs/implementation/asm3-c2-six-screen-integration.md). Do not mark these tests as live cloud verification.
+
+After building, check browser artifacts without printing secrets:
+
+```powershell
+.\.venv\Scripts\python.exe tools/check-client-bundle.py
+```
+
+Optional C2 browser verification uses the existing isolated Playwright installation. Install it with `npm ci --prefix tools/demo-recorder` and, if needed, `npx --prefix tools/demo-recorder playwright install chromium`. Then run `node tools/demo-recorder/verify-c2-integration.mjs` from the root. It starts/stops its own loopback Vite server on port 5192, uses only the test entrypoint in `tests/browser`, blocks external requests, intercepts the API, and writes clearly labelled offline evidence under `docs/implementation/evidence/c2`.
+
+C4 adds browser-history, refresh, keyboard, account-switch and purchase-uncertainty checks at 390, 768, 1024 and 1280px. After installing the recorder's Playwright dependencies as above, run:
+
+```powershell
+node tools/demo-recorder/verify-c4-integration.mjs
+.\.venv\Scripts\python.exe tools/verify-local-http.py
+.\.venv\Scripts\python.exe tools/check-repository-secrets.py
+```
+
+The C4 browser runner uses its own loopback server on port 5193 and test-only Auth/API doubles; external font requests are blocked, so screenshots use fallback fonts. The HTTP checker needs free ports 8000 and 5194. It starts the actual `api.index:app` entrypoint through Uvicorn with inherited provider settings removed, verifies unauthenticated HTTP/CORS and the actual Vite development proxy, then stops both processes. It never loads backend credentials or opts into live financial tests. Results and selected screenshots are saved under `docs/implementation/evidence/c4`; [C4 evidence](docs/implementation/asm3-c4-local-e2e-qa.md) distinguishes offline E2E, local HTTP and pending live verification.
+
+## Deployment-ready source and C6 prerequisites
+
+`vercel.json` explicitly selects the Vite preset, root install `npm ci`, build `npm run build` and `dist` output. The existing file-based Python function is `api/index.py`, which exports the original FastAPI app. API rewrites precede six explicit SPA rewrites; `/assets/*` and public SVGs remain filesystem resources. Unknown API paths reach the intended Python function instead of `index.html`, and no extra `/api` prefix is added by the client.
+
+This combined layout follows Vercel's documented [file-based Python functions](https://vercel.com/docs/functions/runtimes/python/api-directory) and [rewrite configuration](https://vercel.com/docs/routing/rewrites). Local schema, Vercel route-compiler and loopback checks establish the intended configuration, **not live Vercel routing**. C6 Preview must prove Python function detection under the Vite preset and preservation of the original `/api/...` path through the rewrite. If the platform requires its Services topology, review that change after a reproduced Preview failure rather than silently replacing the current layout.
+
+`.vercelignore` excludes credentials, tests, development helpers and academic evidence from uploads. Function exclusions also keep frontend/build/resources outside the Python bundle while preserving `backend/app`, the ASGI entrypoint and requirements/constraints. API responses explicitly use `private, no-store` and CDN `no-store`; the browser also disables HTTP response caching. Health is a liveness endpoint: missing or unusable database configuration does not create successful financial responses.
+
+Before an authorized C6 Preview: verify the latest GitHub source/private visibility and author identity; choose the Vercel project root here and Node 24/Python 3.12; configure the reviewed environment scopes; and configure Supabase Auth Site URL/redirect allowlist for the actual HTTPS app domains. The existing SDK detects email-confirmation redirects at the current browser URL. Use exact Production URLs and only approved Preview URL patterns following [Supabase redirect guidance](https://supabase.com/docs/guides/auth/redirect-urls). Do not disable email confirmation, RLS or token verification.
+
+Current signup does not supply an `emailRedirectTo` override, so confirmation uses the project's configured Site URL. Adding a Preview URL to the allowlist alone does not select that destination; verify the intended confirmation destination during C6 before testing signup. No Next.js environment-variable names are used by this Vite app.
+
+First live Preview checks should be health JSON, all six direct React URLs, static assets, unknown API JSON 404, unauthenticated financial 401 and no cache hits for private responses. Only after routing/configuration pass and two controlled accounts are verified should separately authorized live Auth, plan save/reload, purchase replay, isolation and transaction checks run. Production deployment requires separate approval. No GitHub publication, provider configuration or Vercel deployment is performed by the C5 commands below.
+
+```powershell
+# After building and installing the recorder's Playwright dependencies:
+.\.venv\Scripts\python.exe tools/verify-deployment.py
+# Audit and copy the CURRENT Git worktree candidates, including uncommitted source,
+# then install new dependencies/venv and run offline checks in a temporary folder:
+.\.venv\Scripts\python.exe tools/verify-clean-setup.py
+```
+
+The fresh-copy checker retains its temporary directory for inspection. It copies no `node_modules`, virtual environment, Git metadata, populated env files or provider credentials. It installs from the current manifests/lockfiles and runs build/lint/unit tests, Chromium QA, actual local HTTP and the deployment routing model. It requires Node, Python 3.12, package-registry access and free QA ports; this is a local reproducibility check, not verification of the older GitHub branch. See [C5 evidence](docs/implementation/asm3-c5-deployment-ready.md).
+
+Unsaved plan drafts and purchase proposals are kept in memory and cleared on logout or reload. If confirmation is interrupted, stay in the app and retry the same proposal; its payload and key remain read-only. A full reload has no valid proposal and cannot confirm it. Reloading or refreshing financial amounts alone does not establish whether an uncertain purchase was recorded; inspect purchase history before proposing another expense.
 
 ## Opt-in live integration tests
 

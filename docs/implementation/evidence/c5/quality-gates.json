@@ -1,0 +1,111 @@
+{
+  "verificationDate": "2026-10-13 Australia/Sydney",
+  "scope": "C5 local only; no hosted deployment or database acceptance",
+  "commands": [
+    {
+      "command": "npm ci",
+      "exitCode": 0,
+      "result": "PASS",
+      "knownAdvisories": {
+        "high": 5,
+        "moderate": 4
+      }
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "passed": 149,
+      "failed": 0,
+      "skipped": 0,
+      "files": 9,
+      "durationSeconds": 36.16,
+      "terminalSummary": "Test Files 9 passed (9); Tests 149 passed (149)"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "result": "PASS",
+      "terminalSummary": "eslint .; no diagnostics after verification-tool global declarations were fixed"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "result": "PASS",
+      "modules": 494,
+      "mainJsKilobytes": 642.55,
+      "mainJsGzipKilobytes": 187.82,
+      "warnings": [
+        "Existing chunk-size warning",
+        "Concurrent-build plugin timing notice"
+      ]
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pytest backend/tests -q",
+      "environment": {
+        "RUN_SUPABASE_LIVE_TESTS": "0"
+      },
+      "exitCode": 0,
+      "passed": 171,
+      "failed": 0,
+      "skipped": 2,
+      "durationSeconds": 4.6,
+      "terminalSummary": "171 passed, 2 skipped, 1 warning in 4.60s"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m compileall -q backend api tools/verify-clean-setup.py tools/verify-deployment.py",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": ".venv/Scripts/python.exe -m pip check",
+      "exitCode": 0,
+      "result": "PASS",
+      "terminalSummary": "No broken requirements found."
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/verify-local-http.py",
+      "exitCode": 0,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "mode": "ACTUAL LOCAL HTTP"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/verify-deployment.py",
+      "exitCode": 0,
+      "passed": 24,
+      "failed": 0,
+      "skipped": 0,
+      "mode": "LOCAL ROUTING MODEL / REAL DIST AND LOOPBACK FASTAPI; NOT HOSTED VERCEL"
+    },
+    {
+      "command": "node tools/demo-recorder/verify-c4-integration.mjs",
+      "exitCode": 0,
+      "passed": 124,
+      "failed": 0,
+      "skipped": 0,
+      "mode": "OFFLINE AUTH / INTERCEPTED HTTP"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/check-client-bundle.py",
+      "exitCode": 0,
+      "checkedFiles": 5,
+      "unsafePaths": 0
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/verify-clean-setup.py",
+      "exitCode": 0,
+      "passedSteps": 16,
+      "failedSteps": 0,
+      "source": "Current local candidates including uncommitted code, not remote clone"
+    },
+    {
+      "command": ".venv/Scripts/python.exe tools/check-repository-secrets.py",
+      "exitCode": 0,
+      "workingCandidates": 391,
+      "stagedBlobs": 0,
+      "flaggedPaths": 0,
+      "terminalSummary": "Scanned 391 working candidates and 0 staged blobs; flagged 0 paths."
+    }
+  ]
+}

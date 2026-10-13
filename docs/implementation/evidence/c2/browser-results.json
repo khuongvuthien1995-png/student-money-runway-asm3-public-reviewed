@@ -1,0 +1,65 @@
+{
+  "mode": "TEST-ONLY AUTH / INTERCEPTED API; NO LIVE CLOUD CLAIM",
+  "results": [
+    {
+      "width": 390,
+      "result": "OFFLINE BROWSER PASS",
+      "sixScreens": true,
+      "horizontalOverflow": false,
+      "keyboardSubmit": true,
+      "initial503Retry": true,
+      "pendingButtonsDisabled": true,
+      "previewPosts": 0,
+      "puts": 1,
+      "confirmationAttempts": 2,
+      "identicalRetryPayload": true,
+      "logoutClearsData": true,
+      "pageErrors": 0
+    },
+    {
+      "width": 768,
+      "result": "OFFLINE BROWSER PASS",
+      "sixScreens": true,
+      "horizontalOverflow": false,
+      "keyboardSubmit": true,
+      "initial503Retry": true,
+      "pendingButtonsDisabled": true,
+      "previewPosts": 0,
+      "puts": 1,
+      "confirmationAttempts": 2,
+      "identicalRetryPayload": true,
+      "logoutClearsData": true,
+      "pageErrors": 0
+    },
+    {
+      "width": 1024,
+      "result": "OFFLINE BROWSER PASS",
+      "sixScreens": true,
+      "horizontalOverflow": false,
+      "keyboardSubmit": true,
+      "initial503Retry": true,
+      "pendingButtonsDisabled": true,
+      "previewPosts": 0,
+      "puts": 1,
+      "confirmationAttempts": 2,
+      "identicalRetryPayload": true,
+      "logoutClearsData": true,
+      "pageErrors": 0
+    },
+    {
+      "width": 1280,
+      "result": "OFFLINE BROWSER PASS",
+      "sixScreens": true,
+      "horizontalOverflow": false,
+      "keyboardSubmit": true,
+      "initial503Retry": true,
+      "pendingButtonsDisabled": true,
+      "previewPosts": 0,
+      "puts": 1,
+      "confirmationAttempts": 2,
+      "identicalRetryPayload": true,
+      "logoutClearsData": true,
+      "pageErrors": 0
+    }
+  ]
+}

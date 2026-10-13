@@ -1,0 +1,55 @@
+{
+  "saveRequest": {
+    "planningDate": "2026-10-12",
+    "availableFundsCents": 95000,
+    "safetyBufferCents": 10000,
+    "fixedEssentialsCents": 45500,
+    "flexibleEssentialsCents": 18000
+  },
+  "plan": {
+    "plan": {
+      "id": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "userId": "11111111-1111-4111-8111-111111111111",
+      "planningDate": "2026-10-12",
+      "availableFundsCents": 95000,
+      "safetyBufferCents": 10000,
+      "fixedEssentialsCents": 45500,
+      "flexibleEssentialsCents": 18000,
+      "protectedTotalCents": 73500,
+      "runwayCents": 21500,
+      "shortfallCents": 0,
+      "createdAt": "2026-10-12T00:00:00Z",
+      "updatedAt": "2026-10-12T00:00:00Z"
+    }
+  },
+  "confirmationRequest": {
+    "name": "Test Purchase",
+    "amountCents": 16000,
+    "idempotencyKey": "cccccccc-cccc-4ccc-8ccc-cccccccccccc"
+  },
+  "confirmation": {
+    "purchase": {
+      "id": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb",
+      "planId": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "userId": "11111111-1111-4111-8111-111111111111",
+      "name": "Test Purchase",
+      "amountCents": 16000,
+      "createdAt": "2026-10-12T00:00:00Z"
+    },
+    "plan": {
+      "id": "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+      "userId": "11111111-1111-4111-8111-111111111111",
+      "planningDate": "2026-10-12",
+      "availableFundsCents": 79000,
+      "safetyBufferCents": 10000,
+      "fixedEssentialsCents": 45500,
+      "flexibleEssentialsCents": 18000,
+      "protectedTotalCents": 73500,
+      "runwayCents": 5500,
+      "shortfallCents": 0,
+      "createdAt": "2026-10-12T00:00:00Z",
+      "updatedAt": "2026-10-12T00:00:00Z"
+    },
+    "replayed": false
+  }
+}

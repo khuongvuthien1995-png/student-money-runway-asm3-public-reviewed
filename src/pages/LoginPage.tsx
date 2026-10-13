@@ -5,16 +5,13 @@
  * @phase P10 — Validation + Accessibility + Ethics + Source Hygiene
  * @createdAt 2026-09-15T23:23:08+10:00
  * @updatedAt 2026-09-16T02:20:10+10:00
- * @summary Provides frontend-only login validation and session-start navigation.
- * @responsibility Owns local login form state, touched validation, and setup navigation.
+ * @summary Integrates real Auth sign-in/signup with accessible validation and confirmation feedback.
+ * @responsibility Owns credentials in memory and waits for Auth success; App decides the saved-plan route.
+ * @integration ASM3 C2 (2026-10-13): real Auth/API state and strict cents boundaries.
  */
 
-import { useState, type FormEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
-
-interface LoginPageProps {
-  onStartSession: () => void
-}
+import { useRef, useState, type FormEvent } from 'react'
+import { useAuth } from '../auth/useAuth'
 
 interface LoginErrors {
   email?: string
@@ -45,8 +42,11 @@ function validateLogin(email: string, password: string): LoginErrors {
   return errors
 }
 
-function LoginPage({ onStartSession }: LoginPageProps) {
-  const navigate = useNavigate()
+function LoginPage() {
+  const auth = useAuth()
+  const pending = useRef(false)
+  const [signup, setSignup] = useState(false)
+  const [confirmation, setConfirmation] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [touched, setTouched] = useState<LoginTouched>(initialTouched)
@@ -55,17 +55,24 @@ function LoginPage({ onStartSession }: LoginPageProps) {
   const emailError = touched.email || hasSubmitted ? errors.email : undefined
   const passwordError = touched.password || hasSubmitted ? errors.password : undefined
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     setHasSubmitted(true)
     setTouched({ email: true, password: true })
 
-    if (Object.keys(errors).length > 0) {
+    if (pending.current || auth.isPending || Object.keys(errors).length > 0) {
       return
     }
 
-    onStartSession()
-    navigate('/setup')
+    pending.current = true
+    setConfirmation(false)
+    try {
+      if (signup) {
+        const result = await auth.signUp(email.trim(), password)
+        setConfirmation(result.confirmationRequired)
+      } else await auth.signIn(email.trim(), password)
+    } catch { /* AuthProvider exposes a safe error; remain on this form. */ }
+    finally { pending.current = false }
   }
 
   function handleBlur(field: keyof LoginTouched) {
@@ -82,8 +89,10 @@ function LoginPage({ onStartSession }: LoginPageProps) {
         </div>
         <form className="space-y-space-md rounded-card border border-border bg-surface p-space-md shadow-sm" noValidate onSubmit={handleSubmit}>
           <div className="space-y-space-xs">
-            <h2 className="text-2xl font-semibold">Sign in</h2>
-            <p className="text-body-lg text-muted">This frontend-only step starts your planning session.</p>
+            <h2 className="text-2xl font-semibold">{signup ? 'Create account' : 'Sign in'}</h2>
+            <p className="text-body-lg text-muted">Sign in securely to save and retrieve your financial plan.</p>
+            {auth.error ? <p className="text-danger" role="alert">{auth.error}</p> : null}
+            {confirmation ? <p role="status">Check your email and confirm your account before signing in.</p> : null}
           </div>
           <div className="space-y-space-xs">
             <label className="text-label-caps uppercase text-muted" htmlFor="login-email">Email</label>
@@ -93,6 +102,7 @@ function LoginPage({ onStartSession }: LoginPageProps) {
               autoComplete="email"
               className={`min-h-control w-full rounded-control border bg-surface px-space-sm text-body-lg text-on-surface ${emailError ? 'border-danger' : 'border-border'}`}
               id="login-email"
+              disabled={auth.isPending}
               name="email"
               onBlur={() => handleBlur('email')}
               onChange={(event) => setEmail(event.target.value)}
@@ -106,9 +116,10 @@ function LoginPage({ onStartSession }: LoginPageProps) {
             <input
               aria-describedby={passwordError ? 'login-password-error' : undefined}
               aria-invalid={passwordError ? true : undefined}
-              autoComplete="current-password"
+              autoComplete={signup ? 'new-password' : 'current-password'}
               className={`min-h-control w-full rounded-control border bg-surface px-space-sm text-body-lg text-on-surface ${passwordError ? 'border-danger' : 'border-border'}`}
               id="login-password"
+              disabled={auth.isPending}
               name="password"
               onBlur={() => handleBlur('password')}
               onChange={(event) => setPassword(event.target.value)}
@@ -117,8 +128,11 @@ function LoginPage({ onStartSession }: LoginPageProps) {
             />
             {passwordError ? <p className="text-body-lg text-danger" id="login-password-error" role="alert">{passwordError}</p> : null}
           </div>
-          <button className="min-h-control w-full rounded-button bg-primary px-space-md py-space-xs text-body-lg font-semibold text-surface transition-colors hover:bg-primary-pressed" type="submit">
-            Continue
+          <button aria-busy={auth.isPending} disabled={auth.isPending || auth.status === 'error'} className="min-h-control w-full rounded-button bg-primary px-space-md py-space-xs text-body-lg font-semibold text-surface transition-colors hover:bg-primary-pressed disabled:opacity-60" type="submit">
+            {auth.isPending ? 'Please wait…' : signup ? 'Create account' : 'Continue'}
+          </button>
+          <button className="min-h-control w-full text-primary underline" disabled={auth.isPending} onClick={() => { setSignup(!signup); setConfirmation(false) }} type="button">
+            {signup ? 'Back to sign in' : 'Create an account'}
           </button>
         </form>
       </section>

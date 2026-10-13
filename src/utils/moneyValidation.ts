@@ -7,9 +7,10 @@
  * @updatedAt 2026-09-16T01:38:38+10:00
  * @summary Provides the shared raw-text validation and safe conversion contract for AUD inputs.
  * @responsibility Keeps P6 and P7 monetary input rules consistent without owning application state.
+ * @integration ASM3 C2 (2026-10-13): real Auth/API state and strict cents boundaries.
  */
 
-const MONEY_PATTERN = /^\d+(\.\d{1,2})?$/
+import { audToCents } from './moneyCents'
 
 export function validateMoney(value: string, emptyMessage: string): string | undefined {
   const trimmedValue = value.trim()
@@ -19,22 +20,15 @@ export function validateMoney(value: string, emptyMessage: string): string | und
   if (trimmedValue.startsWith('-')) {
     return 'Enter an amount of 0 or more.'
   }
-  if (!MONEY_PATTERN.test(trimmedValue) || !Number.isFinite(Number(trimmedValue))) {
-    return 'Enter a valid amount.'
-  }
+  try { audToCents(trimmedValue) } catch { return 'Enter a valid amount up to AUD 1,000,000 with at most two decimal places.' }
   return undefined
 }
 
 export function parseValidMoney(value: string): number | undefined {
-  const trimmedValue = value.trim()
-  if (!MONEY_PATTERN.test(trimmedValue)) {
-    return undefined
-  }
-  const parsedValue = Number(trimmedValue)
-  return Number.isFinite(parsedValue) ? parsedValue : undefined
+  try { return audToCents(value) / 100 } catch { return undefined }
 }
 
-// Confirmation writes a calculated amount back into raw string state, so round at cents precision first.
+// Retained for historical display callers; persisted mutations use integer cents and server responses.
 export function formatMoneyInputValue(value: number): string {
   const roundedValue = Math.round((value + Number.EPSILON) * 100) / 100
   return roundedValue.toFixed(2).replace(/\.?0+$/, '')
