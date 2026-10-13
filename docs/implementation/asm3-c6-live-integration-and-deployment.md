@@ -28,3 +28,21 @@ The earlier public-access hotfix also extends the existing Preview browser runne
 Frontend: **152 passed**, nine files, 5.35s. Backend: **171 passed, two hosted skipped**, 3.84s. Build, Python compilation and both secret scans passed. Initial new-tool lint failed because its URL global was undeclared; after the focused declaration fix, lint passed. Existing local deployment checker: **24 passed**. Main bundle warning, previously recorded dependency advisories and backend test-client warning remain.
 
 Signup and confirmed login remain unverified pending provider email delivery/confirmation. No financial records, migration execution, Production deployment or security bypass occurred. Final deployed repair and live retest results will be appended below.
+
+## Published fix and actual live retest
+
+Audited, committed and pushed source fix **`08c2f38d97b3c580fcf73f3b6e2808d609c79ae9`** (`fix: report live Auth email delivery errors accurately`) after independently verifying GitHub remains PRIVATE. Deployment API metadata records this exact Git commit. Independent inspection verifies **`dpl_2rZ463Uvk5Ad3kcaEvrXG11UKrAy`**, target **Preview**, state **READY**; immutable URL `https://student-money-runway-asm3-24pijimjx-khuong-projects.vercel.app`. Assigned the existing alias **https://student-money-runway-asm3-preview.vercel.app** only after READY verification. No Production deployment was created.
+
+One post-fix real signup attempt using the same authorized existing identity returned **429 `over_email_send_rate_limit`**, and the real UI now reports “Verification email sending is rate-limited. Please wait before retrying. Contact the project owner if this continues.” No confirmation-success state or session was fabricated. One real password-login check returned **400 `email_not_confirmed`**, displayed as “Confirm your email before signing in.” Both journeys have zero initial configuration alerts, zero JavaScript exceptions and zero failed transport requests. Each has one console error from its expected rejected HTTP response. Supabase requests were not intercepted. These are provider rejection results, not signup or confirmed-login PASS.
+
+Real unauthenticated HTTPS checks after alias update: login HTML 200, health exact JSON 200, missing-bearer plan 401. Two deployed browser assets load successfully; their bytes contain the intended project URL, expected public key and new rate-limit message. Equality scanning against actual local private values found **zero private matches**. No raw credentials were printed or saved in evidence. The clean GitHub clone was fast-forwarded to the source fix; its four Auth adapter tests and lint passed.
+
+Sanitized live evidence: `evidence/c6/auth-signup-before-hotfix.json`, `auth-signup-results.json`, `auth-login-results.json`, `auth-preview-https-results.json`. No screenshot, network trace, storage state, password or session token from a submitted account form is retained.
+
+## Remaining C6 checkpoints
+
+The local and deployed error-reporting defect is repaired. The real provider continues rejecting signup because its email-send limit is reached. No SMTP credential was retrieved, no SMTP cause was established, no quota setting was changed and no repeated automatic signup loop was introduced. Email-confirmed login stays pending; hosted financial verification remains unexecuted.
+
+The exact Supabase Site URL/redirect update remains pending the approval requested under Step 4. Current localhost Site URL and empty redirect allowlist must not be described as corrected. Email confirmation, backend JWT checks and database RLS remain enabled. C7 was not started.
+
+**C6 PREVIEW AUTH BLOCKED — VERIFIED ROOT CAUSE**: Supabase `over_email_send_rate_limit`; existing account login remains `email_not_confirmed`. This verdict does not negate the verified public Preview/routing gate or the repaired source error message.

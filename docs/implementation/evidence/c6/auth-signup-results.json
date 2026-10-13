@@ -13,7 +13,7 @@
   "consoleErrors": 1,
   "failedRequests": [],
   "finalAlerts": [
-    "Authentication is unavailable. Please retry."
+    "Verification email sending is rate-limited. Please wait before retrying. Contact the project owner if this continues."
   ],
   "confirmationRequired": false,
   "route": "/login"

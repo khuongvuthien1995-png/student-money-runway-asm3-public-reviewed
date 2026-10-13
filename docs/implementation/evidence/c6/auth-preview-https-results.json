@@ -1,0 +1,11 @@
+{
+  "origin": "https://student-money-runway-asm3-preview.vercel.app",
+  "loginStatus": 200,
+  "assetsChecked": 2,
+  "privateMatches": 0,
+  "newRateLimitMessage": true,
+  "expectedProjectInBuild": true,
+  "expectedPublicKeyInBuild": true,
+  "healthStatus": 200,
+  "anonymousPlanStatus": 401
+}
