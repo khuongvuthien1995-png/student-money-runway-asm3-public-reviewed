@@ -1,0 +1,22 @@
+{
+  "rowsInspected": 3,
+  "sanitizedEvents": [
+    {
+      "mainAccountMatched": true
+    },
+    {
+      "mainAccountMatched": true,
+      "grantType": "password",
+      "method": "POST",
+      "path": "/token",
+      "httpStatuses": [
+        200,
+        200
+      ]
+    }
+  ],
+  "atLeastOneFreshPasswordGrantVerifiedServerSide": true,
+  "twoObservedBrowserLogins": "PENDING",
+  "financialWrites": 0,
+  "limitations": "Server password-grant corroboration is separate from the incomplete browser observer, reload and history UI."
+}

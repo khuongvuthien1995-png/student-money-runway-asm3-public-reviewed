@@ -1,0 +1,11 @@
+{
+  "projectReference": "mnjmugwkjtihqswssiwa",
+  "name": "student-money-runway-asm3-dev",
+  "region": "ap-southeast-2",
+  "status": "ACTIVE_HEALTHY",
+  "emailConfirmationRequired": true,
+  "customSmtpConfigured": false,
+  "emailQuota": 2,
+  "settingsChanged": false,
+  "smtpWork": "PAUSED"
+}

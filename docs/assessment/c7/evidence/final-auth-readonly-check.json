@@ -1,0 +1,12 @@
+{
+  "confirmed": true,
+  "lastSignInAt": "2026-10-13T16:29:55.246491Z",
+  "newSignInSinceOriginalConfirmation": true,
+  "financialRowsUnchanged": true,
+  "counts": {
+    "plans": 1,
+    "purchases": 1
+  },
+  "financialWritesPerformed": 0,
+  "passwordLoginVerdict": "PASS: at least one structured main-account POST /token password grant HTTP200; browser sequence PENDING"
+}

@@ -17,3 +17,8 @@ Checked 14 October 2026. Official six-page BUS4012-AS03.pdf and rubric reviewed 
 | Submission upload and receipt | YES via LMS, p.1 | Not available | MISSING | Student review, finalize required files/video/links, upload and retain receipt |
 
 Technical gates do not replace academic deliverables. The existing personal plan/purchase must remain unchanged. The canonical script's save/confirm steps require separate permitted disposable data; they are not authorization to edit this account. SMTP remains PAUSED. **ASM3 SUBMISSION PARTIAL.**
+
+
+## Latest server-corroborated password login
+
+A later read-only account check shows last_sign_in_at advanced beyond the email-confirmation session. Three Auth log rows were inspected around that timestamp. A matching-main-account structured event explicitly records **POST /token, grant_type=password, HTTP200**. Therefore **at least one genuine fresh password login is PASS server-side**. This is not merely the earlier verification/session event. The user's two sign-ins remain user-reported; the separate observer has not completed the two-login/reload/history/logout milestones. No claim of browser FastAPI plan/history retrieval, two observed logins or real financial mutation follows from the server event. The one plan/one purchase remain unchanged. See evidence/final-auth-log-corroboration.json and evidence/final-auth-readonly-check.json. SMTP stays PAUSED.

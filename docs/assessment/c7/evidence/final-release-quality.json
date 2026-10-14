@@ -73,5 +73,12 @@
     }
   ],
   "hostedWrites": 0,
-  "migrationSha256": "0303356445efd8ee72666569902e3d483fe6a48cfbdd3e390ce86fe50f38d7ee"
+  "migrationSha256": "0303356445efd8ee72666569902e3d483fe6a48cfbdd3e390ce86fe50f38d7ee",
+  "privateFreshClone": {
+    "commit": "b481da0adcba08fee525e251212547ecf8aa2d7c",
+    "result": "PASS PRIVATE REPRODUCIBILITY",
+    "evidence": "private-fresh-clone.json"
+  },
+  "publicClone": "BLOCKED; user requires private visibility pending redaction approval",
+  "observedAnonymousBrowser": "PASS four widths, six routes each; zero loopback calls, errors, overflow or financial writes"
 }

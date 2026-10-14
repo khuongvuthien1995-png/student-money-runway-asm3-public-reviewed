@@ -10,7 +10,8 @@ Date: 14 October 2026. Actual local source preserved; no C0-C5 restart or produc
 | React tests | PASS | 152 passed, 9 files, 0 skipped/failed |
 | FastAPI baseline tests | PASS | 184 passed, 2 hosted skipped; includes four new publication-gate tests |
 | Supabase confirmation | PASS for main identity | Earlier server record/log confirmation; SMTP paused |
-| Fresh password/session restoration | PENDING independent observation | User-reported sign-ins; observer captured no requests; no invented PASS |
+| Fresh password login | PASS server-side | Matching main-account POST /token password grant HTTP200 in structured logs |
+| Two-login browser/session restoration | PENDING | User-reported sign-ins; observer has no completed milestone; no browser PASS invented |
 | Existing saved plan/history | PASS scoped DB existence; browser retrieval PENDING | One plan/one purchase unchanged; no financial mutation authorized |
 | Two-user live isolation | PENDING | Two dedicated nonmember accounts remain unconfirmed |
 | Live deployment | PASS anonymous HTTPS | Preview READY; routes/assets/health/401/JSON404/no-store; not a Production release |
@@ -18,7 +19,7 @@ Date: 14 October 2026. Actual local source preserved; no C0-C5 restart or produc
 | GitHub PUBLIC / anonymous clone | BLOCKED | Peer privacy in reachable history; user requested reviewed proposal before changes |
 | Repository completeness | PASS inventory | React, Python, SQL, tests, tools, manifests, safe environment template and deployment config present |
 | README | UPDATED | Own-project Uvicorn env-file path documented; original guarded launcher preserved |
-| Clean dependency installation | PENDING fresh private clone | Public clone cannot run while repository is private; later results must be labelled private |
+| Clean dependency installation | PASS private fresh clone | Actual new dependencies/venv; public clone remains BLOCKED by intentional private visibility |
 | Frontend build/lint | PASS | 494 modules; 642.96kB main JS, 187.95kB gzip; non-failing chunk warning |
 | Python compilation/pip check | PASS | No broken dependencies |
 | Local FastAPI HTTP | PASS | 19 real loopback checks, no provider credentials |
@@ -52,3 +53,18 @@ There is no zero-vulnerability claim. Existing Starlette/httpx deprecation and V
 `npm ci`; `npm test`; `npm run lint`; `npm run build`; Python pytest with RUN_SUPABASE_LIVE_TESTS=0; compileall; pip check; C4 Chromium runner; verify-local-http.py; verify-deployment.py; current/staged/bundle/history scans; authenticated read-only deployment/DB inspections; anonymous Git access attempt. Final source synchronization/fresh private clone results are appended only after execution.
 
 **ENGINEERING RELEASE PARTIAL**: local checks and public Preview routing pass, but public history/privacy and independent real Auth/full workflow remain incomplete. **ASM3 SUBMISSION PARTIAL**: required final video and peer reviews are absent. No universal security certification or full live persistence PASS is claimed.
+
+
+## Executed private-clone result
+
+Audited source commit `b481da0adcba08fee525e251212547ecf8aa2d7c` was committed and pushed normally to the verified PRIVATE exact repository; local and remote HEAD matched. Vercel project has no Git integration link, so this push did not trigger a deployment. A new authenticated clone outside the workspace installed fresh npm dependencies and Python3.12 virtual environment/runtime/development requirements. **PASS:** 152 frontend tests; 184 backend passed, two hosted skipped; lint/build/compile/pip check;19 local HTTP checks;24 routing checks; bundle/source scans; assessment artifact validation; exact README Uvicorn env-file startup using only the blank template, health200/financial401 and clean shutdown. No real credentials or existing dependencies were copied. The privacy gate correctly returned1 for historical peer identifiers. [Machine evidence](evidence/private-fresh-clone.json). This is PRIVATE reproducibility, not anonymous/public-clone PASS.
+
+The fresh clone tested all runtime/test/tool source in b481da0. Subsequent follow-up changes are evidence/docs and focused read-only observer diagnostics; any such later observer change is explicitly separate from the tested runtime snapshot. The public switch remains blocked and unexecuted.
+
+
+## Latest server-corroborated password login
+
+A later read-only account check shows last_sign_in_at advanced beyond the email-confirmation session. Three Auth log rows were inspected around that timestamp. A matching-main-account structured event explicitly records **POST /token, grant_type=password, HTTP200**. Therefore **at least one genuine fresh password login is PASS server-side**. This is not merely the earlier verification/session event. The user's two sign-ins remain user-reported; the separate observer has not completed the two-login/reload/history/logout milestones. No claim of browser FastAPI plan/history retrieval, two observed logins or real financial mutation follows from the server event. The one plan/one purchase remain unchanged. See evidence/final-auth-log-corroboration.json and evidence/final-auth-readonly-check.json. SMTP stays PAUSED.
+
+
+Actual changed paths are listed in `evidence/final-engineering-changed-files.json`; the candidate source inventory is separate. Existing C4 screenshot files were restored to their pre-run validated versions after this rerun; new machine results record the current124-case execution, and no newly captured financial screenshots are claimed. Actual anonymous Preview browser rerun passes all six routes at four widths with zero loopback requests.

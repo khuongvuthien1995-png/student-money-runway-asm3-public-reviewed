@@ -8,7 +8,7 @@ A React and Python budgeting application developed by Thien Khuong Vu for BUS401
 
 The official six-page `BUS4012-AS03.pdf` has now been inspected locally. It requires React, Python, Supabase persistence, a five-minute individual demonstration, prompt evidence, and three separate peer reviews. The brief permits either private or public GitHub visibility. Copyrighted course PDFs are not redistributed here.
 
-C1-C5 local code/QA checks are complete. The public Vercel **Preview** serves the React app and Python health endpoint; unauthenticated financial requests are rejected. A permitted organization-member account's email confirmation is corroborated. Fresh password-login/session/retrieval verification remains pending independent browser observation; user-reported sign-ins alone are not a verified full live workflow. No Production release is claimed.
+C1-C5 local code/QA checks are complete. The public Vercel **Preview** serves the React app and Python health endpoint; unauthenticated financial requests are rejected. A permitted organization-member account's email confirmation is corroborated. At least one fresh password grant is corroborated by structured server logs (HTTP 200). The complete two-login browser/reload/history workflow remains pending independent observation; user-reported sign-ins alone are not a verified full live workflow. No Production release is claimed.
 
 The repository currently remains **PRIVATE**: proposed working documentation is redacted, but earlier history contains peer identifiers and awaits a separately approved remediation. A public URL/anonymous clone is not yet available. No open-source license has been selected. See the [publication audit](docs/assessment/c7/ASM3_GITHUB_PUBLICATION_AND_CLONE_AUDIT.md).
 

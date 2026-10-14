@@ -34,3 +34,8 @@ Brief pp.2-3 requires **three separate documents, at least five annotated screen
 - Original peer identifiers are protected in private records/history; no public switch or history rewrite has been made. The copyright-bearing course PDFs are not in Git.
 
 **Official requirements reviewed: YES. Required submission items complete: NO. ASM3 SUBMISSION PARTIAL.**
+
+
+## Latest server-corroborated password login
+
+A later read-only account check shows last_sign_in_at advanced beyond the email-confirmation session. Three Auth log rows were inspected around that timestamp. A matching-main-account structured event explicitly records **POST /token, grant_type=password, HTTP200**. Therefore **at least one genuine fresh password login is PASS server-side**. This is not merely the earlier verification/session event. The user's two sign-ins remain user-reported; the separate observer has not completed the two-login/reload/history/logout milestones. No claim of browser FastAPI plan/history retrieval, two observed logins or real financial mutation follows from the server event. The one plan/one purchase remain unchanged. See evidence/final-auth-log-corroboration.json and evidence/final-auth-readonly-check.json. SMTP stays PAUSED.

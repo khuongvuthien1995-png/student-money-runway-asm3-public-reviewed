@@ -13,7 +13,8 @@ Fresh anonymous HTTPS: `/login` and direct `/runway` return HTML 200 without a V
 | Workflow | Status | Evidence and limitation |
 |---|---|---|
 | Signup and email confirmation | PASS for the main account | Earlier read-only account/log inspection corroborates normal confirmation. Unrestricted registration remains PENDING. |
-| Fresh password sign-in twice | PENDING independent verification; USER-REPORTED PASS | Student reports both sign-ins. The separate automated browser observer captured zero password grants and remains waiting for its first plan GET. Do not turn this discrepancy into an Auth failure or a verified PASS. |
+| Fresh password login | PASS server-side for at least one login | Later structured Auth event corroborates matching-main POST /token, grant_type=password, HTTP200. |
+| Two fresh observed browser sign-ins | PENDING independently; USER-REPORTED PASS | Observer has not completed its first plan/reload/history milestone. Its older checkpoint file is not a live event counter. No Auth failure inferred. |
 | Auth session/browser reload | PENDING | Observer has no authenticated reload milestone. |
 | Existing saved plan/history | PASS for read-only database existence | One real plan and one purchase, scoped to the confirmed main identity. Browser API/UI retrieval remains PENDING. |
 | Setup, Essentials, Save via FastAPI | PENDING; intentionally not executed | User explicitly chose preserve records and read-only checks. No PUT authorized. |
@@ -47,3 +48,11 @@ Preserve personal records for all recording. Canonical 950/455/180/100 and 160 p
 ## Observer-window clarification and resumption
 
 The student identified the labelled monitored window. The original observer had already reached its 15-minute participation timeout without capturing a password grant or financial request; its exit code 1 does not establish an Auth defect. Reopened a fresh monitored Chromium context, restored the explicit READ ONLY window title and brought it to the foreground. The observer is ready for human credential entry and allows 30 minutes per login. Source now distinguishes an unobserved-login participation timeout (PENDING) from a failed assertion after an observed password request (FAIL). No password was obtained and no automated login or financial write was submitted. Lint passed after this focused test-tool change. Current browser evidence remains PENDING until real observed milestones complete.
+
+
+## Latest server-corroborated password login
+
+A later read-only account check shows last_sign_in_at advanced beyond the email-confirmation session. Three Auth log rows were inspected around that timestamp. A matching-main-account structured event explicitly records **POST /token, grant_type=password, HTTP200**. Therefore **at least one genuine fresh password login is PASS server-side**. This is not merely the earlier verification/session event. The user's two sign-ins remain user-reported; the separate observer has not completed the two-login/reload/history/logout milestones. No claim of browser FastAPI plan/history retrieval, two observed logins or real financial mutation follows from the server event. The one plan/one purchase remain unchanged. See ../assessment/c7/evidence/final-auth-log-corroboration.json and ../assessment/c7/evidence/final-auth-readonly-check.json. SMTP stays PAUSED.
+
+
+Observer tooling now checkpoints sanitized password/API response statuses on each event with serialized JSON writes. Earlier output was checkpointed at phase boundaries; an initial PENDING file alone was insufficient to prove zero internal events. No production Auth fix or new live attempt is claimed for that diagnostic repair.

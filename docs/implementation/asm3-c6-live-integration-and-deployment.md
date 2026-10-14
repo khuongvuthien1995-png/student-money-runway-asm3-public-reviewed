@@ -71,3 +71,6 @@ The user subsequently authorized free custom SMTP setup. Selected low-volume Gma
 
 
 Latest read-only final acceptance: [current per-workflow matrix](asm3-c6-final-live-acceptance.md). Personal records remain unchanged; writes are not authorized. Password sign-ins are user-reported and still require observer corroboration. SMTP remains paused.
+
+
+Final engineering read-only update: the main account now has a structured server-confirmed password grant (POST /token, grant_type=password, HTTP200), distinct from its original email-confirmation session. Two-login browser/reload/history/logout remains PENDING independent observation. One plan/one purchase remain unchanged. Current public-history proposal keeps GitHub PRIVATE. See [current C6 matrix](asm3-c6-final-live-acceptance.md) and [release audit](../assessment/c7/ASM3_FINAL_TECHNICAL_RELEASE_AUDIT.md). No SMTP or financial setting/data change occurred.

@@ -9,12 +9,23 @@ assert.ok(expectedUser)
 const browser = await chromium.launch({ headless: false })
 const context = await browser.newContext({ viewport: { width: 1280, height: 900 } })
 // No video, trace, storage-state export, password extraction or Auth body logging.
+// A read-only safety guard blocks accidental financial mutations, never fakes success.
+await context.route(`${origin}/api/**`, route => route.request().method() === 'GET'
+  ? route.continue() : route.abort('blockedbyclient'))
 const page = await context.newPage()
 const result = { origin, category: 'REAL HTTPS; HUMAN PASSWORD ENTRY; READ-ONLY FINANCIAL CHECKS',
-  milestones: [], financialWrites: 0, passwordGrantStatuses: [], status: 'PENDING', phase: 'first password login' }
+  milestones: [], financialWrites: 0, passwordGrantStatuses: [], financialGetStatuses: [],
+  status: 'PENDING', phase: 'first password login' }
 const evidence = 'docs/implementation/evidence/c6/fresh-password-login-results.json'
 await mkdir('docs/implementation/evidence/c6', { recursive: true })
-async function save() { await writeFile(evidence, JSON.stringify(result, null, 2)) }
+let saving = Promise.resolve()
+function save() {
+  // Persist each sanitized event, not just final milestones. Serialize writes so
+  // a pending UI cannot leave a stale initial file or overlapping partial JSON.
+  const snapshot = JSON.stringify(result, null, 2)
+  saving = saving.then(() => writeFile(evidence, snapshot))
+  return saving
+}
 page.on('request', request => {
   const url = new URL(request.url())
   if (url.origin === origin && url.pathname.startsWith('/api/') && request.method() !== 'GET') result.financialWrites++
@@ -22,7 +33,14 @@ page.on('request', request => {
 page.on('response', response => {
   const url = new URL(response.url())
   if (url.hostname === 'mnjmugwkjtihqswssiwa.supabase.co' && url.pathname === '/auth/v1/token'
-    && url.searchParams.get('grant_type') === 'password') result.passwordGrantStatuses.push(response.status())
+    && url.searchParams.get('grant_type') === 'password') {
+    result.passwordGrantStatuses.push(response.status())
+    void save()
+  }
+  if (url.origin === origin && url.pathname.startsWith('/api/') && response.request().method() === 'GET') {
+    result.financialGetStatuses.push({ path: url.pathname, status: response.status() })
+    void save()
+  }
 })
 async function planAfterLogin() {
   const response = await page.waitForResponse(r => new URL(r.url()).origin === origin

@@ -1,6 +1,6 @@
 {
-  "reachableCommits": 12,
-  "reachableBlobsScanned": 493,
+  "reachableCommits": 13,
+  "reachableBlobsScanned": 528,
   "findings": [
     {
       "scope": "reachable-history",

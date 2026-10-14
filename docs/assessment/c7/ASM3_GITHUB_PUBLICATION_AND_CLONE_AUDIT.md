@@ -21,3 +21,10 @@ Independent private fresh-clone installation is permitted and will be recorded s
 ## Required next approval
 
 Review the scoped history-redaction proposal and choose either continued private assessment access or explicitly authorize the concrete isolated redaction/ref-update process. Only after that privacy gate can a public switch and genuine anonymous clone be considered. Current newly redacted HEAD does not erase old disclosures.
+
+
+## Executed private-clone result
+
+Audited source commit `b481da0adcba08fee525e251212547ecf8aa2d7c` was committed and pushed normally to the verified PRIVATE exact repository; local and remote HEAD matched. Vercel project has no Git integration link, so this push did not trigger a deployment. A new authenticated clone outside the workspace installed fresh npm dependencies and Python3.12 virtual environment/runtime/development requirements. **PASS:** 152 frontend tests; 184 backend passed, two hosted skipped; lint/build/compile/pip check;19 local HTTP checks;24 routing checks; bundle/source scans; assessment artifact validation; exact README Uvicorn env-file startup using only the blank template, health200/financial401 and clean shutdown. No real credentials or existing dependencies were copied. The privacy gate correctly returned1 for historical peer identifiers. [Machine evidence](evidence/private-fresh-clone.json). This is PRIVATE reproducibility, not anonymous/public-clone PASS.
+
+The fresh clone tested all runtime/test/tool source in b481da0. Subsequent follow-up changes are evidence/docs and focused read-only observer diagnostics; any such later observer change is explicitly separate from the tested runtime snapshot. The public switch remains blocked and unexecuted.
