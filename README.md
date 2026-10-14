@@ -2,7 +2,7 @@
 
 A React and Python budgeting application developed by Thien Khuong Vu for BUS4012 Assignment 03, building on the Assignment 02 six-screen MVP. Students can protect essential costs and a safety buffer, see discretionary runway, preview a purchase, and explicitly record spending.
 
-[Live Preview](https://student-money-runway-asm3-preview.vercel.app/login) | [GitHub source](https://github.com/khuongvuthien1995-png/student-money-runway-asm3) | [Assessment manifest](docs/assessment/c7/ASM3_SUBMISSION_MANIFEST.md)
+[Live Preview](https://student-money-runway-asm3-preview.vercel.app/login) | [GitHub source](https://github.com/khuongvuthien1995-png/student-money-runway-asm3-public-reviewed) | [Assessment manifest](docs/assessment/c7/ASM3_SUBMISSION_MANIFEST.md)
 
 ## 1. Assignment context and current status
 
@@ -10,7 +10,7 @@ The official six-page `BUS4012-AS03.pdf` has now been inspected locally. It requ
 
 C1-C5 local code/QA checks are complete. The public Vercel **Preview** serves the React app and Python health endpoint; unauthenticated financial requests are rejected. A permitted organization-member account's email confirmation is corroborated. At least one fresh password grant is corroborated by structured server logs (HTTP 200). The complete two-login browser/reload/history workflow remains pending independent observation; user-reported sign-ins alone are not a verified full live workflow. No Production release is claimed.
 
-This checkout is a **locally sanitized publication candidate**, prepared from the original private repository. Known unapproved peer identifiers were removed from the candidate history; original academic records and the old-to-new commit mapping remain private. The target GitHub repository is still PRIVATE pending explicit remote-remediation approval and independent checks of retained references/caches. Anonymous public cloning is not yet verified. No open-source license has been selected. See the [candidate status](docs/assessment/c7/ASM3_SANITIZED_SOURCE_STATUS.md); older publication audit reports describe the original history before local remediation.
+This repository contains the reviewed sanitized source and development history, published separately from the original private repository. Known unapproved peer identifiers were removed before upload; original academic records and the old-to-new commit mapping remain private. The original repository remains private because old GitHub objects are still retained there. Public availability and clean-clone results are verified separately during release; they do not establish hosted financial acceptance. No open-source license has been selected. See [source provenance](docs/assessment/c7/ASM3_SANITIZED_SOURCE_STATUS.md); older publication audits describe the original history before remediation.
 
 ## 2. Problem, users and MVP boundaries
 
@@ -69,13 +69,13 @@ Original ASM1/Figma design exports are reference material, not runtime resources
 
 ## 6. Windows prerequisites
 
-Install Git, Node.js **24.x** with npm, and Python **3.12** with the Windows `py` launcher. PowerShell commands below run from the repository root. While the repository is private, authorized GitHub access/Git Credential Manager is needed. Never embed a token in a clone URL.
+Install Git, Node.js **24.x** with npm, and Python **3.12** with the Windows `py` launcher. PowerShell commands below run from the repository root. The public source can be cloned without GitHub credentials. Never embed a token in a clone URL.
 
 ## 7. Clone and install
 
 ```powershell
-git clone https://github.com/khuongvuthien1995-png/student-money-runway-asm3.git
-cd student-money-runway-asm3
+git clone https://github.com/khuongvuthien1995-png/student-money-runway-asm3-public-reviewed.git
+cd student-money-runway-asm3-public-reviewed
 npm ci
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
