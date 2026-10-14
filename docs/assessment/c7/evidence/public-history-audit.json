@@ -1,16 +1,16 @@
 {
-  "reachableCommits": 13,
-  "reachableBlobsScanned": 528,
+  "reachableCommits": 14,
+  "reachableBlobsScanned": 544,
   "findings": [
     {
       "scope": "reachable-history",
-      "object": "cbf84b2feeca7fc1764ad7858debd89dadd6a1bf",
+      "object": "6c2cf6ad2cc9a029ee4970fb902b6ffcf7d5954a",
       "path": "docs/assessment/c7/ASM3_C7_FINAL_REPORT.md",
       "category": "peer-student-identifier-consent-unverified"
     },
     {
       "scope": "reachable-history",
-      "object": "d5a81dfac78be49ce8752501fd8ddfb45370e364",
+      "object": "0eafba2e43ca1189b9e1fa1894bdb3ccd8196138",
       "path": "docs/assessment/c7/ASM3_SUBMISSION_MANIFEST.md",
       "category": "peer-student-identifier-consent-unverified"
     },
@@ -30,18 +30,6 @@
       "scope": "reachable-history",
       "object": "c2db6f0da99039f2e202a9365ff3101544a77a95",
       "path": "docs/assessment/c7/PEER_REVIEW_03.md",
-      "category": "peer-student-identifier-consent-unverified"
-    },
-    {
-      "scope": "reachable-history",
-      "object": "6c2cf6ad2cc9a029ee4970fb902b6ffcf7d5954a",
-      "path": "docs/assessment/c7/ASM3_C7_FINAL_REPORT.md",
-      "category": "peer-student-identifier-consent-unverified"
-    },
-    {
-      "scope": "reachable-history",
-      "object": "0eafba2e43ca1189b9e1fa1894bdb3ccd8196138",
-      "path": "docs/assessment/c7/ASM3_SUBMISSION_MANIFEST.md",
       "category": "peer-student-identifier-consent-unverified"
     },
     {

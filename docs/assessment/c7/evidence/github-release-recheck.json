@@ -1,0 +1,75 @@
+{
+  "scope": "LOCAL ONLY; NO VERCEL OR SUPABASE OPERATIONS",
+  "checks": [
+    {
+      "command": [
+        "npm.cmd",
+        "test"
+      ],
+      "exitCode": 0,
+      "summary": [
+        "Test Files  9 passed (9)",
+        "Tests  152 passed (152)"
+      ]
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "npm.cmd",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "summary": [
+        "\u2713 494 modules transformed.",
+        "\u2713 built in 884ms"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "backend/tests",
+        "-q"
+      ],
+      "exitCode": 0,
+      "summary": [
+        "184 passed, 2 skipped, 1 warning in 3.87s"
+      ]
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "backend",
+        "api"
+      ],
+      "exitCode": 0,
+      "summary": []
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exitCode": 0,
+      "summary": [
+        "No broken requirements found."
+      ]
+    }
+  ],
+  "publicTransition": "BLOCKED: historical peer identifiers; separate history-remediation approval absent"
+}
