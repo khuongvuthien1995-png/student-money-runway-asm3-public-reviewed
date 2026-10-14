@@ -1,0 +1,96 @@
+[
+  {
+    "week": 1,
+    "name": "Week_1_Introduction.pdf",
+    "pages": 47,
+    "sha256": "5aece04586142fff6895a80f6f13a094d1dbddfcdf451127a28c701cbd46275e",
+    "reviewedTextPages": [
+      2,
+      3
+    ],
+    "scope": "Selected extracted-text pages only; not every slide or image"
+  },
+  {
+    "week": 2,
+    "name": "Week_02_Startups_and_MVPs_NewTemplate.pdf",
+    "pages": 24,
+    "sha256": "0ee7de5006975a375c5cc11cf06229f91ad9efc346d044f8f13ad26924f721f2",
+    "reviewedTextPages": [
+      1,
+      6
+    ],
+    "scope": "Selected extracted-text pages only; not every slide or image"
+  },
+  {
+    "week": 3,
+    "name": "Week_3_Prompt_Engineering_Vibe_Coding.pdf",
+    "pages": 47,
+    "sha256": "5fa40f6cac0331252f88cd777ab9531735d7e78c209a8ec971524b57d10f9088",
+    "reviewedTextPages": [
+      3
+    ],
+    "scope": "Selected extracted-text pages; not every slide or image"
+  },
+  {
+    "week": 4,
+    "name": "Week-04-Advanced-Prompting.pdf",
+    "pages": 42,
+    "sha256": "4d23633c76f439fedbb8f860e9464c11ca46de2f4fef337ac1f97e8b3554c411",
+    "reviewedTextPages": [
+      3,
+      4
+    ],
+    "scope": "Selected extracted-text pages only; not every slide or image"
+  },
+  {
+    "week": 5,
+    "name": "Week 5 React.pdf",
+    "pages": 7,
+    "sha256": "383def937f14f3baf95a512c049548b759baf1741df0b15dcfc698c00f77e000",
+    "reviewedTextPages": [
+      1,
+      2
+    ],
+    "scope": "Selected extracted-text pages only; not every slide or image"
+  },
+  {
+    "week": 6,
+    "name": "Week 6 Multi-Page application-2026-S2.pdf",
+    "pages": 7,
+    "sha256": "a9975ff607dba7402d5162d1a9c16391244ccc44f0a7418a4345de292645ae97",
+    "reviewedTextPages": [
+      2
+    ],
+    "scope": "Selected extracted-text pages; not every slide or image"
+  },
+  {
+    "week": 7,
+    "name": "Week_07_Database_Development_Fundamentals.pdf",
+    "pages": 17,
+    "sha256": "1b6e5f8d55380c974a84e7ff15be884be412afe8d98c3cd1f9ca3f0c00c8498e",
+    "reviewedTextPages": [
+      14
+    ],
+    "scope": "Selected extracted-text pages only; not every slide or image"
+  },
+  {
+    "week": 8,
+    "name": "Week 8 - Tutorial.pdf",
+    "pages": 15,
+    "sha256": "1ad13487c92f82ab036538f683f64a16a5392362427932d85c1783e8cf1a5472",
+    "reviewedTextPages": [
+      1
+    ],
+    "scope": "Selected extracted-text pages; not every slide or image"
+  },
+  {
+    "week": 9,
+    "name": "Week 9 Tutorial - Updates2.pdf",
+    "pages": 21,
+    "sha256": "7e56b9f2ac898525912db576ce685d935729739254801ad4e4e1e8eb849a316a",
+    "reviewedTextPages": [
+      2
+    ],
+    "scope": "Selected extracted-text pages; not every slide or image"
+  }
+]

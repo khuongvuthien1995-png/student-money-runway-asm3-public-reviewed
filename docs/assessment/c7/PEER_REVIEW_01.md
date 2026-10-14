@@ -2,7 +2,7 @@
 
 Reviewer: Thien Khuong Vu. Application owner: **Peer application owner 01 — [student ID retained privately]** (user-supplied identity).
 
-**PENDING — TEMPLATE ONLY.** URL, application purpose, permitted test access and genuine screenshots are unavailable. No strengths, defects or recommendations are asserted as observed facts. Requirements below come from the C7 request, not an independently verified official rubric.
+**PENDING — TEMPLATE ONLY.** URL, application purpose, permitted test access and genuine screenshots are unavailable. No strengths, defects or recommendations are asserted as observed facts. The official BUS4012-AS03.pdf pages 2-3 confirms the review scope below; marking criteria are on pages 5-6.
 
 ## Access and scope
 
@@ -51,6 +51,6 @@ Every recommendation must be grounded in the tested app; generic advice is not a
 - Evidence-grounded recommendations: **0 / 3**.
 - Strengths and weaknesses assessed: **NO**.
 - Functional and UI/UX workflows tested: **NO**.
-- Application owner/ID recorded: **YES**.
+- Application owner/ID: retained in private academic original; public proposal is anonymized. Required peer role, communication attempts and outcome must be completed privately before submission.
 - URL and test permission received: **NO**.
 - Final review status: **PENDING, not ready to submit**.

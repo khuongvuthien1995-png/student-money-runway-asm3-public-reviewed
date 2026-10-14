@@ -24,7 +24,11 @@ try {
     const errors = []
     page.on('pageerror', error => errors.push(error.name))
     let writes = 0
-    page.on('request', request => { if (request.url().startsWith(`${origin}/api/`) && request.method() !== 'GET') writes++ })
+    let loopbackRequests = 0
+    page.on('request', request => {
+      if (request.url().startsWith(`${origin}/api/`) && request.method() !== 'GET') writes++
+      if (['localhost', '127.0.0.1', '[::1]'].includes(new URL(request.url()).hostname)) loopbackRequests++
+    })
     for (const path of ['/login', '/setup', '/essentials', '/runway', '/purchase', '/result']) {
       await page.goto(`${origin}${path}`)
       await page.getByRole('heading', { name: 'Sign in', exact: true }).waitFor()
@@ -37,8 +41,9 @@ try {
     await page.getByRole('heading', { name: 'Sign in', exact: true }).waitFor()
     await page.screenshot({ path: `${evidence}/${width}-${publicAccess ? 'public' : 'preview'}-login.png`, fullPage: true })
     assert.equal(writes, 0)
+    assert.equal(loopbackRequests, 0)
     assert.deepEqual(errors, [])
-    results.push({ width, anonymousRoutes: 6, signupToggle: true, horizontalOverflow: false, pageErrors: errors.length, financialWrites: writes })
+    results.push({ width, anonymousRoutes: 6, signupToggle: true, horizontalOverflow: false, pageErrors: errors.length, financialWrites: writes, loopbackRequests })
     await context.close()
   }
 } finally { await browser.close() }

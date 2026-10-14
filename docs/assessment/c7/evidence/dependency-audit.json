@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 4,
+      "high": 5,
+      "critical": 0,
+      "total": 9
+    },
+    "dependencies": {
+      "prod": 19,
+      "dev": 340,
+      "optional": 37,
+      "peer": 8,
+      "peerOptional": 0,
+      "total": 358
+    }
+  },
+  "advisories": [
+    {
+      "name": "braces",
+      "severity": "high",
+      "direct": false,
+      "range": "*",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+          "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+          "range": "<=3.0.3",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "name": "chokidar",
+      "severity": "high",
+      "direct": false,
+      "range": "2.0.0 - 3.6.0",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        "braces"
+      ]
+    },
+    {
+      "name": "fast-glob",
+      "severity": "high",
+      "direct": false,
+      "range": "*",
+      "fixAvailable": true,
+      "via": [
+        "micromatch"
+      ]
+    },
+    {
+      "name": "micromatch",
+      "severity": "high",
+      "direct": false,
+      "range": ">=0.2.0",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        "braces"
+      ]
+    },
+    {
+      "name": "postcss-nested",
+      "severity": "moderate",
+      "direct": false,
+      "range": "2.0.3 - 6.2.0",
+      "fixAvailable": true,
+      "via": [
+        "postcss-selector-parser"
+      ]
+    },
+    {
+      "name": "postcss-selector-parser",
+      "severity": "moderate",
+      "direct": false,
+      "range": "<7.1.6",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "title": "PostCSS: Quadratic complexity in flat selector parsing allows CPU exhaustion",
+          "url": "https://github.com/advisories/GHSA-rj75-hqrm-r3gf",
+          "range": "<7.1.6",
+          "severity": "moderate"
+        }
+      ]
+    },
+    {
+      "name": "react-router",
+      "severity": "moderate",
+      "direct": false,
+      "range": "6.0.0 - 7.17.0",
+      "fixAvailable": {
+        "name": "react-router-dom",
+        "version": "7.18.4",
+        "isSemVerMajor": true
+      },
+      "via": [
+        {
+          "title": "React Router: Open redirect via backslash in <Link> and useNavigate (CVE-2025-68470 bypass)",
+          "url": "https://github.com/advisories/GHSA-wrjc-x8rr-h8h6",
+          "range": ">=6.0.0 <7.18.0",
+          "severity": "moderate"
+        },
+        {
+          "title": "React Router: Arbitrary Constructor Injection via deserializeErrors() in React Router SSR Hydration",
+          "url": "https://github.com/advisories/GHSA-337j-9hxr-rhxg",
+          "range": ">=6.4.0 <7.18.0",
+          "severity": "moderate"
+        }
+      ]
+    },
+    {
+      "name": "react-router-dom",
+      "severity": "moderate",
+      "direct": true,
+      "range": "6.0.0-alpha.0 - 7.17.0",
+      "fixAvailable": {
+        "name": "react-router-dom",
+        "version": "7.18.4",
+        "isSemVerMajor": true
+      },
+      "via": [
+        "react-router"
+      ]
+    },
+    {
+      "name": "tailwindcss",
+      "severity": "high",
+      "direct": true,
+      "range": "<=0.0.0-oxide-insiders.ff2c25f || 0.5.0 - 3.4.19",
+      "fixAvailable": {
+        "name": "tailwindcss",
+        "version": "4.3.3",
+        "isSemVerMajor": true
+      },
+      "via": [
+        "chokidar",
+        "fast-glob",
+        "micromatch",
+        "postcss-nested",
+        "postcss-selector-parser"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "origin": "https://student-money-runway-asm3-preview.vercel.app",
+  "anonymousHttps": [
+    {
+      "route": "/login",
+      "httpStatus": 200,
+      "status": "PASS"
+    },
+    {
+      "route": "/runway",
+      "httpStatus": 200,
+      "status": "PASS"
+    },
+    {
+      "route": "/api/health",
+      "httpStatus": 200,
+      "status": "PASS"
+    },
+    {
+      "route": "/api/plans/current",
+      "httpStatus": 401,
+      "status": "PASS"
+    },
+    {
+      "route": "/api/plans/current/purchases",
+      "httpStatus": 401,
+      "status": "PASS"
+    }
+  ],
+  "github": {
+    "fullName": "khuongvuthien1995-png/student-money-runway-asm3",
+    "private": true,
+    "defaultBranch": "main",
+    "head": "bcbad4dfb09c68ddae55eaad258604ee6aa79001"
+  },
+  "financialWrites": 0
+}

@@ -9,7 +9,8 @@
       "signupToggle": true,
       "horizontalOverflow": false,
       "pageErrors": 0,
-      "financialWrites": 0
+      "financialWrites": 0,
+      "loopbackRequests": 0
     },
     {
       "width": 768,
@@ -17,7 +18,8 @@
       "signupToggle": true,
       "horizontalOverflow": false,
       "pageErrors": 0,
-      "financialWrites": 0
+      "financialWrites": 0,
+      "loopbackRequests": 0
     },
     {
       "width": 1024,
@@ -25,7 +27,8 @@
       "signupToggle": true,
       "horizontalOverflow": false,
       "pageErrors": 0,
-      "financialWrites": 0
+      "financialWrites": 0,
+      "loopbackRequests": 0
     },
     {
       "width": 1280,
@@ -33,7 +36,8 @@
       "signupToggle": true,
       "horizontalOverflow": false,
       "pageErrors": 0,
-      "financialWrites": 0
+      "financialWrites": 0,
+      "loopbackRequests": 0
     }
   ]
 }

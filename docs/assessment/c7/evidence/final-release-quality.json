@@ -1,0 +1,77 @@
+{
+  "mode": "LOCAL/OFFLINE EXCEPT EXPLICIT READ-ONLY LIVE CHECKS",
+  "checks": [
+    {
+      "command": "npm ci",
+      "exitCode": 0,
+      "result": "326 packages installed; 9 advisories"
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0,
+      "result": "152 passed; 9 files; 0 failed/skipped"
+    },
+    {
+      "command": "npm run lint",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "result": "494 modules; non-failing chunk warning"
+    },
+    {
+      "command": "python -m pytest backend/tests -q",
+      "exitCode": 0,
+      "result": "184 passed, 2 hosted skipped; existing warning"
+    },
+    {
+      "command": "python -m compileall -q backend api tools/audit-public-history.py tools/validate-c7.py",
+      "exitCode": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "python -m pip check",
+      "exitCode": 0,
+      "result": "No broken requirements"
+    },
+    {
+      "command": "node tools/demo-recorder/verify-c4-integration.mjs",
+      "exitCode": 0,
+      "result": "124 offline browser scenarios"
+    },
+    {
+      "command": "python tools/verify-local-http.py",
+      "exitCode": 0,
+      "result": "19 loopback HTTP checks"
+    },
+    {
+      "command": "python tools/verify-deployment.py",
+      "exitCode": 0,
+      "result": "24 local routing checks"
+    },
+    {
+      "command": "python tools/check-client-bundle.py",
+      "exitCode": 0,
+      "result": "5 files; 0 unsafe paths"
+    },
+    {
+      "command": "python tools/check-repository-secrets.py",
+      "exitCode": 0,
+      "result": "0 flagged candidate/staged paths at pre-stage scan"
+    },
+    {
+      "command": "python tools/audit-public-history.py",
+      "exitCode": 1,
+      "result": "Expected privacy gate BLOCKED; 0 credential matches; historical peer identifiers"
+    },
+    {
+      "command": "npx supabase migration list --project-ref mnjmugwkjtihqswssiwa",
+      "exitCode": 0,
+      "result": "Local/remote 20261012020847; read-only"
+    }
+  ],
+  "hostedWrites": 0,
+  "migrationSha256": "0303356445efd8ee72666569902e3d483fe6a48cfbdd3e390ce86fe50f38d7ee"
+}

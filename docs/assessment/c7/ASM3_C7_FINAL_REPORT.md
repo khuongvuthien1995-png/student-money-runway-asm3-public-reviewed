@@ -1,3 +1,11 @@
+# Latest final-engineering checkpoint - 14 October 2026
+
+The official six-page ASM3 brief/rubric was found and read completely. Earlier unavailable-brief and pending-SMTP statements below are historical, superseded by the [current official audit](ASM3_FINAL_MARKING_AUDIT.md), [technical audit](ASM3_FINAL_TECHNICAL_RELEASE_AUDIT.md) and [publication proposal](ASM3_HISTORY_REDACTION_PROPOSAL.md). Current worktree peer identifiers are redacted; originals are preserved privately and historical disclosures remain. GitHub stays PRIVATE at the user's explicit instruction. No rewrite/force-push/visibility change or hosted financial write occurred.
+
+Current local checks: 152 frontend passed; 184 backend passed, two hosted skipped; lint/build/compile/pip check pass; 124 offline browser, 19 local HTTP and 24 routing checks pass. Real scoped DB reads show the existing personal plan/purchase unchanged. Fresh password login/browser retrieval remains independently PENDING; no mock or prior confirmation-session event is relabelled as a password-login PASS. SMTP remains PAUSED. Final video and genuine peer reviews are missing: ASM3 SUBMISSION PARTIAL.
+
+---
+
 # ASM3 C7 final execution report
 
 > Student: Thien Khuong Vu
@@ -89,3 +97,10 @@ The user reported successful real verification-email delivery and explicitly pau
 A/B remain unconfirmed and are not organization members. Recipient authorization and the previously observed transient quota exhaustion explain the distinction; it is incorrect to describe all email delivery as broken. Custom SMTP is not needed for the successful personal test but is needed for broader nonmember registration under the built-in policy. The previous app-password/private-entry request is withdrawn while setup is paused. See [read-only reassessment](../../implementation/asm3-c6-auth-readonly-reassessment.md) and `evidence/auth-readonly-reassessment.json`.
 
 Continue using existing working settings. No new SMTP change is requested. Agent-run independent password verification needs privately supplied access; the user's personal financial data must not be modified without applicable authorization. Full live demo footage, personal narration, peer URLs/reviews and the official rubric remain pending. The current C7 verdict is **C7 PARTIAL — SPECIFIC DELIVERABLES REMAIN**, replacing the earlier blanket live-Auth blocker.
+
+
+## Latest C6 read-only handoff - 14 October 2026
+
+The student explicitly chose to preserve the main account's records. Real read-only database comparison confirms its one plan and one purchase are unchanged; no save/confirmation write was performed or authorized. Fresh HTTPS health and missing-bearer checks pass, and private GitHub main matches local `bcbad4dfb09c68ddae55eaad258604ee6aa79001`. The student reports two successful password sign-ins, but the separate browser observer captured none and still awaits its first authenticated GET. This remains USER-REPORTED PASS / INDEPENDENT VERIFICATION PENDING, not a verified fresh-login or UI persistence PASS. See [current acceptance matrix](../../implementation/asm3-c6-final-live-acceptance.md). Earlier matrix rows are phase-dated history.
+
+Canonical financial demo writes must use separately authorized disposable fixtures, not this preserved personal account. Video, three actual peer reviews and official brief/rubric remain missing. Custom SMTP stays PAUSED.

@@ -1,0 +1,43 @@
+{
+  "commits": [
+    {
+      "commit": "bcbad4dfb09c68ddae55eaad258604ee6aa79001",
+      "affectedPaths": [
+        "docs/assessment/c7/ASM3_C7_FINAL_REPORT.md",
+        "docs/assessment/c7/ASM3_SUBMISSION_MANIFEST.md",
+        "docs/assessment/c7/PEER_REVIEW_01.md",
+        "docs/assessment/c7/PEER_REVIEW_02.md",
+        "docs/assessment/c7/PEER_REVIEW_03.md"
+      ]
+    },
+    {
+      "commit": "4e0113ddce75e783e84af72cb10f90f047c7b606",
+      "affectedPaths": [
+        "docs/assessment/c7/ASM3_C7_FINAL_REPORT.md",
+        "docs/assessment/c7/ASM3_SUBMISSION_MANIFEST.md",
+        "docs/assessment/c7/PEER_REVIEW_01.md",
+        "docs/assessment/c7/PEER_REVIEW_02.md",
+        "docs/assessment/c7/PEER_REVIEW_03.md"
+      ]
+    },
+    {
+      "commit": "3bb535df294973470548e01b29368f0dfc1306b5",
+      "affectedPaths": [
+        "docs/assessment/c7/ASM3_C7_FINAL_REPORT.md",
+        "docs/assessment/c7/ASM3_SUBMISSION_MANIFEST.md",
+        "docs/assessment/c7/PEER_REVIEW_01.md",
+        "docs/assessment/c7/PEER_REVIEW_02.md",
+        "docs/assessment/c7/PEER_REVIEW_03.md"
+      ]
+    }
+  ],
+  "workingPathsRedacted": [
+    "docs/assessment/c7/ASM3_C7_FINAL_REPORT.md",
+    "docs/assessment/c7/ASM3_SUBMISSION_MANIFEST.md",
+    "docs/assessment/c7/PEER_REVIEW_01.md",
+    "docs/assessment/c7/PEER_REVIEW_02.md",
+    "docs/assessment/c7/PEER_REVIEW_03.md"
+  ],
+  "historyRewritten": false,
+  "originalsPreservedPrivately": true
+}

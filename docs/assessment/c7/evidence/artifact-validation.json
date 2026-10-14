@@ -1,12 +1,12 @@
 {
-  "requiredMarkdownFiles": 11,
-  "localLinksChecked": 19,
+  "requiredMarkdownFiles": 16,
+  "localLinksChecked": 30,
   "brokenLocalLinks": [],
   "peerReports": "PENDING, 0/5 screenshots and 0/3 recommendations each",
-  "promptAppendices": 13,
+  "promptAppendices": 14,
   "rawClipDurationSeconds": 12.64,
   "completeIndividualDemo": false,
-  "officialRubric": "PENDING",
+  "officialRubric": "VERIFIED LOCAL COPY; COMPLETION PARTIAL",
   "plannedTimelineSeconds": 300,
   "vietnameseUtf8": true
 }

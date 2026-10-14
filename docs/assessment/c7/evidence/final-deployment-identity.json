@@ -1,0 +1,13 @@
+{
+  "id": "dpl_2rZ463Uvk5Ad3kcaEvrXG11UKrAy",
+  "projectId": "prj_AlYUIbncfbSBJfCibzimnQ2xyyWv",
+  "projectName": "student-money-runway-asm3",
+  "accountId": "team_25uKzfGR30fkm3IHIZ04FReA",
+  "readyState": "READY",
+  "target": null,
+  "gitCommit": "08c2f38d97b3c580fcf73f3b6e2808d609c79ae9",
+  "ssoProtectionEnabled": false,
+  "url": "student-money-runway-asm3-24pijimjx-khuong-projects.vercel.app",
+  "targetFromCli": "preview",
+  "runtimeTreeMatchesCurrentCommittedSource": true
+}

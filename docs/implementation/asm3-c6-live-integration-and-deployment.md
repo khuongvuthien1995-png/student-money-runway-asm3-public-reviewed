@@ -68,3 +68,6 @@ Prepared the smallest safe repair: connect an authorized external SMTP service u
 Sanitized definitive configuration evidence: `docs/assessment/c7/evidence/email-delivery-diagnosis.json`. C7 can complete documentation/raw anonymous captures independently, but real Auth, financial acceptance and the complete live demo remain pending.
 
 The user subsequently authorized free custom SMTP setup. Selected low-volume Gmail SMTP, prepared ignored private-entry fields and a guarded SMTP-only tool. Nine focused safety tests and the full **180-pass/two-hosted-skip** backend regression passed. No SMTP patch or send has occurred: Google app-password verification/private entry is still required. See [SMTP preparation and human checkpoint](asm3-c6-smtp-repair.md). Prior references to pending setup authorization are historical; authorization is now granted, credentials are missing.
+
+
+Latest read-only final acceptance: [current per-workflow matrix](asm3-c6-final-live-acceptance.md). Personal records remain unchanged; writes are not authorized. Password sign-ins are user-reported and still require observer corroboration. SMTP remains paused.

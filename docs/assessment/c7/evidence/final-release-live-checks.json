@@ -1,0 +1,82 @@
+{
+  "category": "REAL HTTPS + SCOPED READ-ONLY DATABASE; NO FINANCIAL WRITES",
+  "checks": [
+    {
+      "check": "SPA /login",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "check": "SPA /setup",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "check": "SPA /essentials",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "check": "SPA /runway",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "check": "SPA /purchase",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "check": "SPA /result",
+      "status": "PASS",
+      "http": 200
+    },
+    {
+      "check": "/api/health",
+      "status": "PASS",
+      "http": 200,
+      "cacheControl": "private, no-store"
+    },
+    {
+      "check": "/api/missing",
+      "status": "PASS",
+      "http": 404,
+      "cacheControl": "private, no-store"
+    },
+    {
+      "check": "/api/plans/current",
+      "status": "PASS",
+      "http": 401,
+      "cacheControl": "private, no-store"
+    },
+    {
+      "check": "/api/plans/current/purchases",
+      "status": "PASS",
+      "http": 401,
+      "cacheControl": "private, no-store"
+    },
+    {
+      "check": "asset /assets/index-B9hcpKww.js",
+      "status": "PASS",
+      "http": 200,
+      "privateMatches": 0
+    },
+    {
+      "check": "asset /assets/index-OnpO4RXq.css",
+      "status": "PASS",
+      "http": 200,
+      "privateMatches": 0
+    }
+  ],
+  "database": {
+    "counts": {
+      "plans": 1,
+      "purchases": 1
+    },
+    "unchanged": true
+  },
+  "passwordLogin": "PENDING independent browser observation",
+  "twoUserIsolation": "PENDING",
+  "generalSignup": "PENDING",
+  "smtp": "PAUSED"
+}

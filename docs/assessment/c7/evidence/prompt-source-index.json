@@ -76,5 +76,11 @@
     "source": "docs/implementation/Student_Money_Runway_ASM3_CODE_FIRST_MASTER_PLAN.md",
     "sha256": "4130689a14b44f9faccd9d254326a0ee29f5d5a82621f90a803c7fc84020acd3",
     "provenance": "Supplied implementation plan; not a transcript"
+  },
+  {
+    "appendix": 14,
+    "source": "docs/prompts/asm3-final-engineering-publication.md",
+    "sha256": "b889c3d4e75c3936d225797fea3c7db65e4bd6e6f29fc01e0a7931983141e91b",
+    "provenance": "Original user-supplied final-engineering attachment; retained verbatim"
   }
 ]

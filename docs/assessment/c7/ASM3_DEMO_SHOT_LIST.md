@@ -26,3 +26,10 @@
 - Export the final video in the LMS-supported format, verify audio intelligibility and measure duration against the official brief when supplied.
 - Open the exact submitted file/link in a fresh permitted session.
 - No final MP4 or complete narrated WEBM is currently claimed.
+
+
+## Latest C6 read-only handoff - 14 October 2026
+
+The student explicitly chose to preserve the main account's records. Real read-only database comparison confirms its one plan and one purchase are unchanged; no save/confirmation write was performed or authorized. Fresh HTTPS health and missing-bearer checks pass, and private GitHub main matches local `bcbad4dfb09c68ddae55eaad258604ee6aa79001`. The student reports two successful password sign-ins, but the separate browser observer captured none and still awaits its first authenticated GET. This remains USER-REPORTED PASS / INDEPENDENT VERIFICATION PENDING, not a verified fresh-login or UI persistence PASS. See [current acceptance matrix](../../implementation/asm3-c6-final-live-acceptance.md). Earlier matrix rows are phase-dated history.
+
+Canonical financial demo writes must use separately authorized disposable fixtures, not this preserved personal account. Video, three actual peer reviews and official brief/rubric remain missing. Custom SMTP stays PAUSED.

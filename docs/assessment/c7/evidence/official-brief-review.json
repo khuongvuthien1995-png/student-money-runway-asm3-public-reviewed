@@ -1,0 +1,36 @@
+{
+  "fileName": "BUS4012-AS03.pdf",
+  "sha256": "f72ff8d6f28bda46350d44afc3f0292035e98cf3a0e7a9afb127887ad3f2afca",
+  "pagesRead": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "review": "LOCAL OFFICIAL COPY; EXTRACTED TEXT READ COMPLETELY",
+  "copyrightedPdfPublished": false,
+  "deadline": "2026-10-15 23:59 AEST",
+  "partA": {
+    "marks": 20,
+    "cloudDeployment": 2.5,
+    "demoPresentation": 15,
+    "promptDocument": 2.5
+  },
+  "partB": {
+    "marks": 20,
+    "overviewAndUi": 6,
+    "functionalityAndUserFlow": 6,
+    "security": 4,
+    "constructiveFeedback": 4
+  },
+  "privateOrPublicRepositoryPermitted": true,
+  "peerDatabaseAccessRequired": false,
+  "peerSourceAccessRequired": false,
+  "fiveMinuteVideoRequired": true,
+  "githubWalkthroughMaximumSeconds": 45,
+  "peerDocuments": 3,
+  "annotatedScreenshotsPerPeer": 5,
+  "recommendationsPerPeer": 3
+}

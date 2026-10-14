@@ -1,0 +1,9 @@
+{
+  "category": "READ-ONLY DATABASE PREFLIGHT",
+  "plans": 1,
+  "purchases": 1,
+  "planRowsDigest": "ae7b70d05ed037bf2e0f84e109de33bd7517fa5b4c9b817567a75c2a98a72af2",
+  "purchaseRowsDigest": "23aea6d3d8ffe5e5a1e3d0e9b903f9a501d0530dd18c502d00d1026253a89d2f",
+  "writesAuthorized": false,
+  "personalValuesRetainedInGit": false
+}
