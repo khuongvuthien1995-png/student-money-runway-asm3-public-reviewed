@@ -10,7 +10,7 @@ The official six-page `BUS4012-AS03.pdf` has now been inspected locally. It requ
 
 C1-C5 local code/QA checks are complete. The public Vercel **Preview** serves the React app and Python health endpoint; unauthenticated financial requests are rejected. A permitted organization-member account's email confirmation is corroborated. At least one fresh password grant is corroborated by structured server logs (HTTP 200). The complete two-login browser/reload/history workflow remains pending independent observation; user-reported sign-ins alone are not a verified full live workflow. No Production release is claimed.
 
-The repository currently remains **PRIVATE**: proposed working documentation is redacted, but earlier history contains peer identifiers and awaits a separately approved remediation. A public URL/anonymous clone is not yet available. No open-source license has been selected. See the [publication audit](docs/assessment/c7/ASM3_GITHUB_PUBLICATION_AND_CLONE_AUDIT.md).
+This checkout is a **locally sanitized publication candidate**, prepared from the original private repository. Known unapproved peer identifiers were removed from the candidate history; original academic records and the old-to-new commit mapping remain private. The target GitHub repository is still PRIVATE pending explicit remote-remediation approval and independent checks of retained references/caches. Anonymous public cloning is not yet verified. No open-source license has been selected. See the [candidate status](docs/assessment/c7/ASM3_SANITIZED_SOURCE_STATUS.md); older publication audit reports describe the original history before local remediation.
 
 ## 2. Problem, users and MVP boundaries
 
